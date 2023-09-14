@@ -8,6 +8,17 @@ import './BookSchedule.css'
 import {useState} from "react";
 import {sendMessage} from "../../api/bookSchedule.ts";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
+import {DemoContainer, DemoItem} from "@mui/x-date-pickers/internals/demo";
+import {DatePicker} from "@mui/x-date-pickers/DatePicker";
+import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
+
+import dayjs from 'dayjs';
+
+
+
+const today = dayjs();
+const yesterday = dayjs().subtract(1, 'day');
 
 
 const service_list = [
@@ -151,7 +162,8 @@ export default function BookSchedule() {
                     '& .MuiFormControl-root': {padding: '8px 8px 16px',},
                     '& .MuiInputLabel-root': {
                         marginBottom: '10px'
-                    }
+                    },
+                    '& .MuiStack-root': {padding: '0', width:'100%'}
                 }}
                 noValidate
                 autoComplete="off"
@@ -288,18 +300,24 @@ export default function BookSchedule() {
                         <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
                             <h4 className={'form_name'}>Date (time)</h4>
                         </InputLabel>
-                        <TextField
-                            type="date"
-                            fullWidth
-                            name='Type of Service'
-                            id="outlined-select-currency"
-                            placeholder="Placeholder"
-                            defaultValue="Placeholder"
-                            onChange={e => serviceHandler(e)}
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DemoContainer
 
-                        >
+                                components={[
+                                    'DatePicker',
+                                ]}
 
-                        </TextField>
+                            >
+                                <DemoItem>
+                                    <DatePicker
+                                        defaultValue={today}
+                                        disablePast
+                                        views={['year', 'month', 'day']}
+                                    />
+                                </DemoItem>
+
+                            </DemoContainer>
+                        </LocalizationProvider>
                     </FormControl>
                     <FormControl
                         sx={{

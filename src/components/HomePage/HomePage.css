@@ -31,6 +31,7 @@
   filter: blur(150px);
 }
 .homePage .ellipse__one {
+  z-index: -1;
   top: 358px;
   right: 1414px;
 }

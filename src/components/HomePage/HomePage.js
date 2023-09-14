@@ -3,11 +3,13 @@ import DrawerAppBar from "../UI/DrawerAppBar/DrawerAppBar";
 import {Grid} from "@mui/material";
 import './HomePage.css'
 import Kitchen from '../imgs/Kitchen.png'
+import CleaningButton from "../CleaningButton/CleaningButton";
 
 function HomePage(props) {
     return (
         <Grid container className={'homePage'}>
             <Grid item xs={12}><DrawerAppBar/></Grid>
+            <Grid item xs={12}><CleaningButton/></Grid>
             <Grid item xs={5} className={'text'}>
                 <h1>Chicago <span>Sparkle</span><br/>
                     Elite Cleaning</h1>

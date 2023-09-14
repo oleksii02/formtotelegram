@@ -14,6 +14,7 @@ import CleaningAfter from "./components/TypeCleaning/CleaningAfter";
 import OfficeCleaning from "./components/TypeCleaning/OfficeCleaning";
 import Gallery from "./components/UI/Gallery/Gallery";
 import Customers from "./components/Customers/Customers";
+import DateValidationDisablePast from "./components/BookSchedule/DateValidationDisablePast";
 
 
 
@@ -27,10 +28,12 @@ function App() {
     return (
             <Box className="App">
                 <HomePage/>
+                <DateValidationDisablePast/>
                 <Offering/>
                 <Gallery/>
                 <BookSchedule/>
                 <Customers/>
+
 
 
 
