@@ -1,0 +1,68 @@
+.homePage{
+  padding: 0 51px 0 ;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto 50px;
+
+
+  .text{
+    //margin-top: 230px;
+    h1{
+      color: #3C87C0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 50px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      span{
+        color: #003156;
+      }
+
+
+    }
+    p{
+      max-width: 528px;
+      display: flex;
+      color: var(--Primery-Color-2, #003156);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px; /* 120% */
+    }
+  }
+    .Kitchen{
+     // margin-top: 230px;
+    }
+  .ellipse{
+    position: absolute;
+
+    width: 349px;
+    height: 326px;
+    border-radius: 349px;
+    background: rgba(17, 149, 255, 0.50);
+    filter: blur(150px);
+
+  }
+  .ellipse__one{
+    top: 358px;
+    right: 1414px;
+
+  }
+  .ellipse__two{
+    z-index: -1;
+    right: 0;
+
+  }
+
+
+  .stars__one{
+    position: absolute;
+    left: 1305px;
+    top: 220px
+  }
+  .stars__two{
+    position: absolute;
+    transform: rotate(180deg);
+    left: 940px;
+    top: 100px
+  }
+}

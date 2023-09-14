@@ -1,0 +1,100 @@
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 800px;
+    width: 100%;
+}
+
+.mySwiper {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 130px;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    height: 120px;
+    width: 25%;
+    opacity: 0.6;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+
+.group {
+    align-items: center;
+    display: revert;
+    border-radius: 5px;
+    padding: 10px 0 0 10px;
+    width: 350px;
+    height: 100px;
+
+
+}
+.Regular{
+    background-color: #EFE5D9;
+}
+.OneTime{
+    background-color: #E5E2D6;
+}
+.Move_in{
+    background-color: #EDECE9;
+}
+.Office{
+    background-color: #EFE5D9;
+}
+.After_Repair{
+    background-color: #E5E2D6;
+}
+.Deep{
+    background-color: #EDECE9;
+}
+h4{
+    justify-content: center;
+    display: flex;
+    margin: 10px 0;
+    color: #003156;
+    font-family: 'Zen Antique', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+p{
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    color: #003156;
+    font-family: 'Zen Antique', serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+

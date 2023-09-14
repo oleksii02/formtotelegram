@@ -1,0 +1,53 @@
+.homePage {
+  padding: 0 51px 0;
+  font-family: "Work Sans", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto 50px;
+}
+.homePage .text h1 {
+  color: #3C87C0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 50px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.homePage .text h1 span {
+  color: #003156;
+}
+.homePage .text p {
+  max-width: 528px;
+  display: flex;
+  color: var(--Primery-Color-2, #003156);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+}
+.homePage .ellipse {
+  position: absolute;
+  width: 349px;
+  height: 326px;
+  border-radius: 349px;
+  background: rgba(17, 149, 255, 0.5);
+  filter: blur(150px);
+}
+.homePage .ellipse__one {
+  top: 358px;
+  right: 1414px;
+}
+.homePage .ellipse__two {
+  z-index: -1;
+  right: 0;
+}
+.homePage .stars__one {
+  position: absolute;
+  left: 1305px;
+  top: 220px;
+}
+.homePage .stars__two {
+  position: absolute;
+  transform: rotate(180deg);
+  left: 940px;
+  top: 100px;
+}
+
+/*# sourceMappingURL=HomePage.css.map */

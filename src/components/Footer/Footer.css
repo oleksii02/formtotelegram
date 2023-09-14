@@ -1,0 +1,130 @@
+.Footer {
+  background-color: #003156;
+}
+.Footer .newsLetter {
+  max-width: 1170px;
+  max-height: 156px;
+  font-family: "Roboto Light", sans-serif;
+  margin: 30px auto;
+}
+.Footer .newsLetter h3 {
+  margin: 0;
+  color: var(--Pure-White, #FFF);
+  text-align: left;
+  font-family: "Work Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  text-transform: capitalize;
+}
+.Footer .newsLetter p {
+  font-family: "Work Sans", sans-serif;
+  justify-content: start;
+  margin: 7px 0 0;
+  padding: 0;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 138.889% */
+  letter-spacing: -0.54px;
+  text-transform: capitalize;
+}
+.Footer .newsLetter .InputSubscription {
+  align-items: center;
+  display: grid;
+}
+.Footer .Section {
+  max-height: 210px;
+  margin: 0 auto;
+}
+.Footer .Section .logo {
+  margin-left: 110px;
+  max-width: 477px;
+  height: 149px;
+}
+.Footer .Section .logo img {
+  width: 100%;
+}
+.Footer .Section .link {
+  justify-content: center;
+  display: flex;
+}
+.Footer .Section .links {
+  margin-top: 50px;
+  display: grid;
+}
+.Footer .Section .links hr {
+  width: 100px;
+  height: 1px;
+  text-align: left;
+  margin: 15px 0 25px;
+}
+.Footer .Section .links h4 {
+  color: #FFF;
+  font-family: "Work Sans", sans-serif;
+  justify-content: start;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.Footer .Section .links a {
+  font-family: "Work Sans", sans-serif;
+  height: 24px;
+  margin-bottom: 27px;
+  align-items: center;
+  display: flex;
+  color: #BCBCBC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Footer .Section .links a:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.Footer .social__networks {
+  max-width: 1170px;
+  margin: 0 auto;
+  color: #BCBCBC;
+  display: flex;
+}
+.Footer .social__networks .network {
+  width: 50px;
+}
+.Footer .social__networks .network:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.Footer .Copyright {
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Footer .Copyright p {
+  font-family: "Work Sans", sans-serif;
+  min-width: 365.217px;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  text-transform: capitalize;
+  color: var(--Pure-White, #FFF);
+}
+.Footer .Copyright hr {
+  width: 100%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(168, 193, 255, 0.15);
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=Footer.css.map */

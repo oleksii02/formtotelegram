@@ -1,25 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import BookSchedule from "./components/BookSchedule/BookSchedule";
+import DrawerAppBar from "./components/UI/DrawerAppBar/DrawerAppBar";
+import HomePage from "./components/HomePage/HomePage";
+import Footer from "./components/Footer/Footer";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import React from 'react';
+import Box from "@mui/material/Box";
+import Offering from "./components/OFFERING/Offering";
+import RegularCleaning from "./components/TypeCleaning/RegularCleaning";
+import DeepCleaning from "./components/TypeCleaning/DeepCleaning";
+import MoveInCleaning from "./components/TypeCleaning/MoveInCleaning";
+import CleaningAfter from "./components/TypeCleaning/CleaningAfter";
+import OfficeCleaning from "./components/TypeCleaning/OfficeCleaning";
+import Gallery from "./components/UI/Gallery/Gallery";
+import Customers from "./components/Customers/Customers";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+
+
+    return (
+            <Box className="App">
+                <HomePage/>
+                <Offering/>
+                <Gallery/>
+                <BookSchedule/>
+                <Customers/>
+
+
+
+                <Footer/>
+
+
+            </Box>
+    );
 }
 
 export default App;

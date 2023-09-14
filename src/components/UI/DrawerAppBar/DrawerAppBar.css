@@ -1,0 +1,31 @@
+a {
+  width: 300px;
+}
+
+.hide {
+  display: flex;
+}
+
+.name-logo {
+  margin: 0;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  width: 350px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.nav-wrapper {
+  top: 35px;
+  z-index: 900;
+}
+.nav-wrapper a {
+  max-width: 200px;
+  height: 38px;
+  text-decoration: none;
+  color: #292D32;
+  font-style: normal;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=DrawerAppBar.css.map */

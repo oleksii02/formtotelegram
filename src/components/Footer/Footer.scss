@@ -1,0 +1,151 @@
+.Footer{
+  background-color: #003156;
+
+
+
+  .newsLetter{
+    max-width: 1170px;
+    max-height: 156px;
+    font-family: 'Roboto Light', sans-serif;
+    margin: 30px auto;
+
+    h3{
+      margin: 0;
+      color: var(--Pure-White, #FFF);
+      text-align: left;
+      font-family: 'Work Sans' ,sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -0.96px;
+      text-transform: capitalize;
+    }
+    p{
+      font-family: 'Work Sans' ,sans-serif;
+      justify-content: start;
+      margin: 7px 0 0;
+      padding: 0;
+      color: #FFF;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px; /* 138.889% */
+      letter-spacing: -0.54px;
+      text-transform: capitalize;
+
+    }
+    .InputSubscription{
+      align-items: center;
+      display: grid;
+    }
+  }
+  .Section{
+
+    max-height: 210px;
+
+    margin: 0 auto;
+
+    .logo{
+      margin-left: 110px;
+      max-width: 477px;
+      height: 149px;
+      img{
+        width: 100%;
+      }
+    }
+    .link{
+      justify-content: center;
+      display: flex;
+    }
+    .links{
+      margin-top: 50px;
+      display: grid;
+      hr{
+        width: 100px;
+        height: 1px;
+        text-align:left;
+        margin: 15px 0 25px;
+
+      }
+      h4{
+        color: #FFF;
+        font-family: 'Work Sans' ,sans-serif;
+        justify-content: start;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      a{
+        font-family: 'Work Sans' ,sans-serif;
+        height: 24px;
+        margin-bottom: 27px;
+        align-items: center;
+        display: flex;
+
+        color: #BCBCBC;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &:hover{
+          color: #FFFFFF;
+          cursor: pointer;
+        }
+      }
+    }
+
+
+
+  }
+  .social__networks{
+    max-width: 1170px;
+    margin: 0 auto;
+    color: #BCBCBC;
+    display: flex;
+
+    .network{
+      width: 50px;
+
+      &:hover{
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+  .Copyright{
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    p{
+      font-family: 'Work Sans' ,sans-serif;
+      min-width: 365.217px;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.48px;
+      text-transform: capitalize;
+      color: var(--Pure-White, #FFF);
+
+    }
+    hr{
+      width: 100%;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid rgba(168, 193, 255, 0.15);
+      margin: 1em 0;
+      padding: 0;
+    }
+
+  }
+
+
+}
