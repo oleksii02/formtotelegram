@@ -27,9 +27,8 @@ function App() {
 
     return (
             <Box className="App">
-                <HomePage/>
-                {/*<DateValidationDisablePast/>*/}
-                {/*<Offering/>*/}
+                {/*<HomePage/>*/}
+                <Offering/>
                 {/*<Gallery/>*/}
                 {/*<BookSchedule/>*/}
                 {/*<Customers/>*/}

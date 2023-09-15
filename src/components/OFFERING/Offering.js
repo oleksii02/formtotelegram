@@ -22,7 +22,7 @@ function Offering(props) {
 
             </div>
             <Grid container className={'container'}>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={Regular} alt={'Regular Cleaning'}/>
                         <div className={'group Regular'}>
@@ -31,7 +31,7 @@ function Offering(props) {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={One_Time} alt={'Offering'}/>
                         <div className={'group OneTime'}>
@@ -40,7 +40,7 @@ function Offering(props) {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={Move_in} alt={'Offering'}/>
                         <div className={'group Move_in'}>
@@ -49,7 +49,7 @@ function Offering(props) {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={Office} alt={'Offering'}/>
                         <div className={'group Office'}>
@@ -58,7 +58,7 @@ function Offering(props) {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={After_Repair} alt={'Offering'}/>
                         <div className={'group After_Repair'}>
@@ -67,7 +67,7 @@ function Offering(props) {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={4} className={'content'}>
+                <Grid item xs={6} md={4} className={'content'}>
                     <div className={'Offering__groups'}>
                         <img src={Deep} alt={'Offering'}/>
                         <div className={'group Deep'}>

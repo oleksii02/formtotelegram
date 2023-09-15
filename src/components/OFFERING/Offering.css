@@ -25,10 +25,11 @@
   margin-left: 25px;
   position: absolute;
   width: 425px;
-  height: 95px;
+  height: auto;
   background-color: #003156;
 }
 .Offering .Offering__groups {
+  justify-content: center;
   display: grid;
   align-items: center;
   width: 380px;
@@ -44,12 +45,13 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .Offering .group {
+  box-sizing: border-box;
   z-index: -100;
   margin-top: -27px;
+  padding-top: 30px;
   border-radius: 5px;
-  padding: 27px 18px;
   width: 380px;
-  height: 111px;
+  height: 120px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .Offering .group h4 {
@@ -92,6 +94,103 @@
   margin-top: 42px;
   justify-content: center;
   display: flex;
+}
+@media only screen and (min-width: 600px) and (max-width: 1439px) {
+  .Offering .logo {
+    padding: 30px 0;
+  }
+  .Offering .logo h3 {
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .Offering .logo img {
+    z-index: 10;
+    position: revert;
+    margin-left: 30px;
+    width: 200px;
+    height: auto;
+  }
+  .Offering .Offering__groups {
+    width: 270px;
+    justify-content: center;
+  }
+  .Offering .Offering__groups img {
+    z-index: 100;
+    border-radius: 250px;
+    width: 250px;
+    height: 250px;
+  }
+  .Offering .group {
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: -100;
+    margin-top: -27px;
+    border-radius: 5px;
+    padding: 27px 8px;
+    width: 100%;
+    height: 100px;
+  }
+  .Offering .group h4 {
+    font-size: 18px;
+  }
+  .Offering .group p {
+    font-size: 24px;
+  }
+  .Offering .container .content {
+    width: 300px;
+    margin-top: 42px;
+    justify-content: center;
+    display: flex;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .Offering .logo {
+    padding: 15px 0 0;
+  }
+  .Offering .logo h3 {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .Offering .logo img {
+    z-index: 10;
+    position: revert;
+    margin-left: 15px;
+    width: 150px;
+    height: auto;
+  }
+  .Offering .Offering__groups {
+    width: 170px;
+    justify-content: center;
+  }
+  .Offering .Offering__groups img {
+    z-index: 100;
+    border-radius: 250px;
+    width: 150px;
+    height: 150px;
+  }
+  .Offering .group {
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: -100;
+    margin-top: -27px;
+    border-radius: 5px;
+    padding: 27px 4px;
+    width: 100%;
+    height: 110px;
+  }
+  .Offering .group h4 {
+    font-size: 16px;
+  }
+  .Offering .group p {
+    font-size: 20px;
+  }
+  .Offering .container .content {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=Offering.css.map */
