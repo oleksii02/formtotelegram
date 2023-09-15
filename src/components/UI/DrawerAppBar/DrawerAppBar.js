@@ -14,9 +14,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/logo2.png'
 import BookScheduleButton from "../BookScheduleButton/BookScheduleButton";
 import './DrawerAppBar.css'
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 const drawerWidth = 240;
 const navItems = [
@@ -26,6 +27,15 @@ const navItems = [
     {name: 'CONTACT', id: '#contact'},
 
 ];
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#003156',
+        },
+
+    },
+});
 
 function DrawerAppBar(props) {
     const {window} = props;
@@ -37,7 +47,7 @@ function DrawerAppBar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: "center"}} className={'nav-wrapper'}>
-            <Typography  sx={{my: 2}}>
+            <Typography  sx={{my: 1}}>
                 <a href="/" className="brand-logo"><h1>LOGO HERE!</h1></a>
             </Typography>
             <Divider/>
@@ -57,19 +67,27 @@ function DrawerAppBar(props) {
         window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{display: "flex"}} className={'nav-wrapper'} >
+        <ThemeProvider theme={theme}>
+        <Box
+            sx={{display: "flex",
+            '& .MuiToolbar-root':{
+                paddingLeft:0,
+                paddingRight:'0',
+            }}}
+             className={'nav-wrapper'} >
             <CssBaseline/>
             <AppBar component="nav" sx={{
                 zIndex:999,
                 backgroundColor: '#11ffee00',
-                padding:'20px 0',
-                position: 'inherit', boxShadow: 'none'
+                padding:'0',
+                position: 'inherit', boxShadow: 'none',
+
             }}>
-                <Toolbar sx={{justifyContent: 'flex-end', padding:0, alignItems:'flex-start'}}>
+                <Toolbar sx={{justifyContent: 'flex-end', p:0, alignItems:'flex-start'}}>
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{flexGrow: 1, color: "#292D32",}}
+                        sx={{flexGrow: 1, color: "#292D32"}}
                     >
                         <a href="/" className="brand-logo"><img src={logo} alt={'logo'}/></a>
                         <h3 className={'name-logo'}>HIGHLY PROFESSIONAL CLEANING</h3>
@@ -86,10 +104,15 @@ function DrawerAppBar(props) {
                         <MenuIcon/>
                     </IconButton>
 
-                    <Box sx={{display: {xs: 'none', md: 'block'}}}>
+                    <Box sx={{display: {xs: 'none', md: 'block'},
+                    '& .MuiButtonBase-root':{
+                        '&:hover':{
+                            border: "1px solid #003156"
+                        }
+                    }}}>
                         <div className={'hide'} style={{display:'flex'}}>
                         {navItems.map((item) => (
-                            <Button key={item.name} sx={{color: "#292D32",display:'block', marginRight:'32px'}}>
+                            <Button key={item.name} sx={{display:'block', marginRight:'32px'}}>
                                 <a href={item.id}>{item.name}</a>
                             </Button>
 
@@ -120,6 +143,7 @@ function DrawerAppBar(props) {
             </nav>
 
         </Box>
+        </ThemeProvider>
     );
 }
 

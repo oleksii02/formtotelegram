@@ -1,69 +1,214 @@
-.homePage{
-  padding: 0 51px 0 ;
+.homePage {
   font-family: 'Work Sans', sans-serif;
-  max-width: 1440px;
   margin: 0 auto 50px;
 
+  .text__container {
+    max-width: 1340px;
+    margin: -30px auto;
 
-  .text{
-    //margin-top: 230px;
-    h1{
-      color: #3C87C0;
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 50px;
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-      span{
-        color: #003156;
+    .text {
+      //margin-top: 230px;
+      margin-top: -50px;
+
+      h1 {
+        color: #3C87C0;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px #EED170, 2px 0 #EED170, 0 -1px #EED170;
+
+
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 50px;
+
+        span {
+          color: #003156;
+        }
+
+
       }
 
-
+      p {
+        max-width: 528px;
+        display: flex;
+        color: var(--Primery-Color-2, #003156);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px; /* 120% */
+      }
     }
-    p{
-      max-width: 528px;
-      display: flex;
-      color: var(--Primery-Color-2, #003156);
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px; /* 120% */
+
+    .Kitchen {
+      // margin-top: 230px;
+      img {
+        width: 776px;
+        max-height: 486px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
     }
   }
-    .Kitchen{
-     // margin-top: 230px;
-    }
-  .ellipse{
-    position: absolute;
 
-    width: 349px;
+  .ellipse {
+    position: absolute;
+    width: 200px;
     height: 326px;
     border-radius: 349px;
     background: rgba(17, 149, 255, 0.50);
     filter: blur(150px);
 
   }
-  .ellipse__one{
+
+  .ellipse__one {
     z-index: -1;
     top: 358px;
     right: 1414px;
 
   }
-  .ellipse__two{
+
+  .ellipse__two {
     z-index: -1;
     right: 0;
-
   }
 
 
-  .stars__one{
+  .stars__one {
+    width: 100px;
     position: absolute;
-    left: 1305px;
-    top: 220px
+    left: 1320px;
+    top: 320px
   }
-  .stars__two{
+
+  .stars__two {
+    width: 100px;
     position: absolute;
     transform: rotate(180deg);
-    left: 940px;
-    top: 100px
+    left: 840px;
+    top: 60px
+  }
+
+  @media only screen and (min-device-width: 600px) and (max-device-width: 1439px) {
+    .text__container{
+
+      margin: 20px auto;
+      padding: 0 30px;
+
+      .text{
+        margin-top: -10px;
+        h1{
+          margin: 0;
+          font-size: 32px;
+          line-height: 35px;
+
+        }
+        p{
+          font-size: 16px;
+          line-height: 18px;
+          margin-right: 10px;
+        }
+      br{
+        line-height: 12px;
+      }
+
+      }
+
+      .Kitchen {
+        // margin-top: 230px;
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 350px;
+          border-radius: 30px;
+          object-fit: cover;
+        }
+      }
+    }
+    .ellipse__one{
+      width: 200px;
+      top: 200px;
+      left: -150px;
+    }
+    .ellipse__two{
+      width: 200px;
+      position: absolute;
+      top: 100px;
+      right: 0;
+    }
+    .stars__two{
+      height: 100px;
+      width: 50px;
+      top: 200px;
+      left: 840px;
+    }
+    .stars__one{
+      left: 0;
+      right: 0;
+      z-index: 10;
+      height: 100px;
+      width: 50px;
+      top: 130px;
+    }
+  }
+  @media only screen and  (max-device-width: 599px) {
+    .text__container{
+
+      margin: 10px auto;
+      padding: 0 15px;
+
+      .text{
+        margin-top: -10px;
+        margin-bottom: 10px;
+        h1{
+          margin: 0 0 10px;
+          font-size: 28px;
+          line-height: 30px;
+
+        }
+        p{
+          font-size: 14px;
+          line-height: 16px;
+          margin-right: 0;
+        }
+        br{
+          line-height: 12px;
+        }
+
+      }
+
+      .Kitchen {
+        // margin-top: 230px;
+        img {
+          border-radius: 20px;
+          width: 100%;
+          height: auto;
+          max-height: 350px;
+          object-fit: cover;
+        }
+      }
+    }
+    .ellipse__one{
+      width: 100px;
+      top: 200px;
+      left: -150px;
+    }
+    .ellipse__two{
+      width: 100px;
+      position: absolute;
+      top: 100px;
+      right: 0;
+    }
+    .stars__two{
+      height: 100px;
+      width: 50px;
+      top: 200px;
+      left: 840px;
+    }
+    .stars__one{
+      left: 0;
+      right: 0;
+      z-index: 10;
+      height: 100px;
+      width: 50px;
+      top: 130px;
+    }
   }
 }

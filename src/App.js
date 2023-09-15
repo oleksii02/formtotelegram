@@ -28,16 +28,16 @@ function App() {
     return (
             <Box className="App">
                 <HomePage/>
-                <DateValidationDisablePast/>
-                <Offering/>
-                <Gallery/>
-                <BookSchedule/>
-                <Customers/>
+                {/*<DateValidationDisablePast/>*/}
+                {/*<Offering/>*/}
+                {/*<Gallery/>*/}
+                {/*<BookSchedule/>*/}
+                {/*<Customers/>*/}
 
 
 
 
-                <Footer/>
+                {/*<Footer/>*/}
 
 
             </Box>
