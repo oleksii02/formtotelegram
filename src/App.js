@@ -27,10 +27,10 @@ function App() {
 
     return (
             <Box className="App">
-                {/*<HomePage/>*/}
+                <HomePage/>
                 <Offering/>
-                {/*<Gallery/>*/}
-                {/*<BookSchedule/>*/}
+                <Gallery/>
+                <BookSchedule/>
                 {/*<Customers/>*/}
 
 

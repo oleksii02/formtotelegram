@@ -1,4 +1,5 @@
 .Cleaning__container {
+  margin: 0 auto;
   width: 100%;
 }
 .Cleaning__container .background {
@@ -8,16 +9,20 @@
   background: linear-gradient(180deg, rgba(43, 95, 137, 0.66) 0%, rgba(15, 133, 226, 0) 100%);
 }
 .Cleaning__container .logo {
+  max-width: 1440px;
   display: flex;
-  margin: 0 45px;
+  padding: 0 50px;
+  margin: 0 auto;
 }
 .Cleaning__container .logo .logo__img {
+  z-index: 10;
   width: 420px;
   height: 139px;
   margin: 39px 0 0;
   background-color: #003156;
 }
 .Cleaning__container .logo span {
+  z-index: 10;
   display: inline-flex;
   width: 100%;
   height: 139px;
@@ -39,7 +44,7 @@
   line-height: normal;
 }
 .Cleaning__container .logo span .type_img {
-  margin: -21px 0 0 -40px;
+  margin: -30px 0 0 -70px;
   position: absolute;
   width: 154.632px;
   height: 146px;
@@ -49,8 +54,11 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .Cleaning__container .rooms {
+  max-width: 1440px;
+  padding: 0 50px;
   justify-content: center;
-  margin: 50px 0;
+  display: flex;
+  margin: 50px auto;
 }
 .Cleaning__container .rooms .room {
   justify-content: center;
@@ -116,10 +124,12 @@
   width: 942px;
   height: 488px;
   border-radius: 5px;
+  object-fit: cover;
 }
 .Cleaning__container .rooms .room__button {
   margin-top: 20px;
   justify-content: center;
+  align-items: end;
   display: flex;
 }
 .Cleaning__container .MoveIn {
@@ -185,10 +195,11 @@
 .Cleaning__container .DeepC {
   justify-content: center;
   display: flex;
+  padding: 0 50px;
 }
 .Cleaning__container .DeepC .text {
   display: flex;
-  margin: 5px;
+  margin: 10px 0 5px;
 }
 .Cleaning__container .DeepC .text span {
   background-color: #FFFFFF;
@@ -229,7 +240,7 @@
   display: flex;
 }
 .Cleaning__container .DeepC .room .text ul {
-  width: 959px;
+  width: 70%;
   margin: 0;
   padding: 0 5px 10px 25px;
   overflow: hidden;
@@ -249,11 +260,319 @@
   border-radius: 5px;
   width: 350px;
   height: 180px;
+  margin: 10px;
 }
 .Cleaning__container .DeepC .room__button {
   margin-top: 20px;
   justify-content: center;
   display: flex;
+}
+@media only screen and (min-width: 600px) and (max-width: 1439px) {
+  .Cleaning__container .logo {
+    display: flex;
+    margin: 0 30px;
+    padding: 0;
+  }
+  .Cleaning__container .logo .logo__img {
+    width: 200px;
+    height: 62px;
+    margin: 30px 0 0;
+    background-color: #003156;
+  }
+  .Cleaning__container .logo span {
+    width: 100%;
+    height: 62px;
+    margin: 30px 0 0 60px;
+  }
+  .Cleaning__container .logo span h4 {
+    margin-left: 0;
+    width: 100%;
+    font-size: 24px;
+  }
+  .Cleaning__container .logo span .type_img {
+    margin: -25px 0 0 -30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+  }
+  .Cleaning__container .MoveIn {
+    padding: 0 50px;
+    margin: 30px 0;
+  }
+  .Cleaning__container .MoveIn .room {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .Cleaning__container .MoveIn .room div span {
+    margin-top: -25px;
+    margin-left: 70px;
+    width: 55px;
+    height: 50px;
+  }
+  .Cleaning__container .MoveIn .room div h5 {
+    font-size: 28px;
+  }
+  .Cleaning__container .MoveIn .room div ul {
+    padding: 10px 5px 10px 25px;
+    font-size: 16px;
+  }
+  .Cleaning__container .MoveIn .three div {
+    height: auto;
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+  .Cleaning__container .rooms {
+    padding: 0 50px;
+    margin: 30px 0;
+  }
+  .Cleaning__container .rooms .room {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .Cleaning__container .rooms .room div {
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .rooms .room div span {
+    margin-top: -25px;
+    margin-left: 30px;
+    width: 55px;
+    height: 55px;
+  }
+  .Cleaning__container .rooms .room div h5 {
+    z-index: 100;
+    margin: 8px 0 0 60px;
+    font-size: 28px;
+  }
+  .Cleaning__container .rooms .room div ul {
+    margin: 0;
+    width: 80%;
+    padding: 10px 5px 10px 25px;
+    font-size: 16px;
+  }
+  .Cleaning__container .rooms .room .three h5 {
+    position: relative;
+    width: 80%;
+    font-size: 18px;
+    margin: 8px 0 0 50px;
+  }
+  .Cleaning__container .rooms .room .big_img {
+    width: 95%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 5px;
+  }
+  .Cleaning__container .rooms .room__button {
+    margin-top: -20px;
+    justify-content: center;
+    display: flex;
+  }
+  .Cleaning__container .DeepC {
+    padding: 0 50px;
+    margin: 0;
+  }
+  .Cleaning__container .DeepC .text span {
+    background-color: #FFFFFF;
+    margin-left: 0;
+    width: 75px;
+    height: 65px;
+  }
+  .Cleaning__container .DeepC .text p {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    width: 100%;
+    height: auto;
+  }
+  .Cleaning__container .DeepC .room {
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .DeepC .room .text {
+    display: flex;
+  }
+  .Cleaning__container .DeepC .room .text ul {
+    width: 70%;
+    font-size: 16px;
+  }
+  .Cleaning__container .DeepC .room .text div {
+    width: 30%;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .Cleaning__container .DeepC .room .text div img {
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    margin: 10px;
+    object-fit: cover;
+  }
+  .Cleaning__container .DeepC .room__button {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .Cleaning__container .logo {
+    padding: 0;
+    margin: 0 15px;
+  }
+  .Cleaning__container .logo .logo__img {
+    width: 150px;
+    height: 47px;
+    margin: 15px 0 0;
+  }
+  .Cleaning__container .logo span {
+    height: 47px;
+    margin: 15px 0 0 30px;
+  }
+  .Cleaning__container .logo span h4 {
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    font-size: 18px;
+  }
+  .Cleaning__container .logo span .type_img {
+    margin: -10px 0 0 -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 70px;
+  }
+  .Cleaning__container .MoveIn {
+    padding: 0 15px;
+    margin: 25px 0;
+  }
+  .Cleaning__container .MoveIn .room {
+    margin-bottom: 25px;
+  }
+  .Cleaning__container .MoveIn .room div {
+    width: 95%;
+    height: auto;
+    min-height: 250px;
+  }
+  .Cleaning__container .MoveIn .room div span {
+    margin-top: -20px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .Cleaning__container .MoveIn .room div h5 {
+    margin: 8px 0 0 30px;
+    font-size: 20px;
+  }
+  .Cleaning__container .MoveIn .room div ul {
+    padding: 10px 5px 10px 25px;
+    font-size: 14px;
+  }
+  .Cleaning__container .MoveIn .room__button {
+    margin-top: 10px;
+  }
+  .Cleaning__container .MoveIn .three div {
+    height: 281px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+  }
+  .Cleaning__container .rooms {
+    padding: 0 15px;
+    margin: 25px 0 0;
+  }
+  .Cleaning__container .rooms .room {
+    margin-bottom: 25px;
+  }
+  .Cleaning__container .rooms .room div {
+    width: 95%;
+    height: auto;
+    min-height: 250px;
+  }
+  .Cleaning__container .rooms .room div span {
+    margin-top: -20px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .Cleaning__container .rooms .room div h5 {
+    z-index: 100;
+    margin: 8px 0 0 30px;
+    font-size: 20px;
+  }
+  .Cleaning__container .rooms .room div ul {
+    margin: 0;
+    width: 80%;
+    padding: 10px 5px 10px 25px;
+    font-size: 14px;
+  }
+  .Cleaning__container .rooms .room .three h5 {
+    width: 80%;
+    font-size: 18px;
+    margin: 8px 0 0 40px;
+  }
+  .Cleaning__container .rooms .room .big_img {
+    width: 95%;
+    height: auto;
+    min-height: 550px;
+    border-radius: 5px;
+  }
+  .Cleaning__container .rooms .room__button {
+    margin-top: -10px;
+    justify-content: center;
+    display: flex;
+  }
+  .Cleaning__container .DeepC {
+    padding: 0 15px;
+    margin: 15px 0;
+  }
+  .Cleaning__container .DeepC .text {
+    margin: 0 0 5px;
+  }
+  .Cleaning__container .DeepC .text span {
+    background-color: #FFFFFF;
+    margin-left: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .Cleaning__container .DeepC .text p {
+    text-align: inherit;
+    margin: 0 0 0 5px;
+    font-size: 18px;
+    width: 100%;
+    height: auto;
+  }
+  .Cleaning__container .DeepC .room {
+    height: auto;
+    margin: 0 10px;
+  }
+  .Cleaning__container .DeepC .room .text {
+    display: block;
+  }
+  .Cleaning__container .DeepC .room .text ul {
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
+  }
+  .Cleaning__container .DeepC .room .text div {
+    width: 90%;
+    min-height: 180px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .Cleaning__container .DeepC .room .text div img {
+    border-radius: 5px;
+    width: 50%;
+    height: 90%;
+    margin: 10px;
+    object-fit: cover;
+  }
+  .Cleaning__container .DeepC .room__button {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=TypeCleaning.css.map */

@@ -1,5 +1,6 @@
 .form {
   margin-bottom: 50px;
+  padding: 0 50px;
 }
 .form h3 {
   text-align: center;
@@ -19,4 +20,4 @@
   display: flex;
 }
 
-/*# sourceMappingURL=BookScheduleButton.css.map */
+/*# sourceMappingURL=BookSchedule.css.map */

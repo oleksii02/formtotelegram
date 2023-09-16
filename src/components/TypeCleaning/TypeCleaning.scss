@@ -1,4 +1,5 @@
 .Cleaning__container {
+  margin: 0 auto;
   width: 100%;
 
   .background {
@@ -9,11 +10,13 @@
   }
 
   .logo {
+    max-width: 1440px;
     display: flex;
-
-    margin: 0 45px;
+    padding: 0 50px;
+    margin: 0 auto;
 
     .logo__img {
+      z-index: 10;
       width: 420px;
       height: 139px;
       margin: 39px 0 0;
@@ -22,6 +25,7 @@
     }
 
     span {
+      z-index: 10;
       display: inline-flex;
       width: 100%;
       height: 139px;
@@ -45,7 +49,7 @@
       }
 
       .type_img {
-        margin: -21px 0 0 -40px;
+        margin: -30px 0 0 -70px;
         position: absolute;
         width: 154.632px;
         height: 146px;
@@ -58,9 +62,11 @@
   }
 
   .rooms {
+    max-width: 1440px;
+    padding: 0 50px;
     justify-content: center;
-
-    margin: 50px 0;
+    display: flex;
+    margin: 50px auto;
 
     .room {
       justify-content: center;
@@ -74,8 +80,6 @@
         border-radius: 5px;
 
         span {
-
-
           background-color: #FFFFFF;
           margin-top: -34px;
           margin-left: 44px;
@@ -148,6 +152,7 @@
         width: 942px;
         height: 488px;
         border-radius: 5px;
+        object-fit: cover;
       }
     }
 
@@ -155,6 +160,7 @@
     .room__button {
       margin-top: 20px;
       justify-content: center;
+      align-items: end;
       display: flex;
     }
   }
@@ -241,10 +247,11 @@
   .DeepC {
     justify-content: center;
     display: flex;
+    padding: 0 50px;
 
     .text {
       display: flex;
-      margin: 5px;
+      margin: 10px 0 5px;
 
       span {
         background-color: #FFFFFF;
@@ -290,7 +297,7 @@
         display: flex;
 
         ul {
-          width: 959px;
+          width: 70%;
           margin: 0;
           padding: 0 5px 10px 25px;
           overflow: hidden;
@@ -312,6 +319,7 @@
             border-radius: 5px;
             width: 350px;
             height: 180px;
+            margin: 10px;
           }
         }
 
@@ -323,6 +331,444 @@
       margin-top: 20px;
       justify-content: center;
       display: flex;
+    }
+
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1439px){
+    .logo {
+      display: flex;
+
+      margin: 0 30px;
+      padding: 0;
+
+      .logo__img {
+        width: 200px;
+        height: 62px;
+        margin: 30px 0 0;
+
+        background-color: #003156;
+      }
+
+      span {
+
+        width: 100%;
+        height: 62px;
+        margin: 30px 0 0 60px;
+
+
+        h4 {
+          margin-left: 0;
+          width: 100%;
+          font-size: 24px;
+        }
+
+        .type_img {
+          margin: -25px 0 0 -30px;
+          width: 70px;
+          height: 70px;
+          border-radius: 70px;
+
+        }
+      }
+    }
+    .MoveIn {
+      padding: 0 50px;
+      margin: 30px 0;
+
+      .room {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 30px;
+
+        div {
+
+          span {
+            margin-top: -25px;
+            margin-left: 70px;
+            width: 55px;
+            height: 50px;
+
+          }
+
+          h5 {
+            font-size: 28px;
+          }
+
+          ul {
+            padding: 10px 5px 10px 25px;
+            font-size: 16px;
+          }
+
+
+        }
+
+      }
+
+      .three {
+        div {
+          height: auto;
+          margin-top: -20px;
+          margin-bottom: -20px;
+        }
+
+      }
+
+
+    }
+    .rooms {
+
+      padding: 0 50px;
+      margin: 30px 0;
+
+      .room {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 30px;
+
+        div {
+          width: 95%;
+          height: auto;
+
+
+          span {
+            margin-top: -25px;
+            margin-left: 30px;
+            width: 55px;
+            height: 55px;
+
+          }
+
+          h5 {
+            z-index: 100;
+            margin: 8px 0 0 60px;
+            font-size: 28px;
+
+          }
+
+          ul {
+            margin: 0;
+            width: 80%;
+            padding: 10px 5px 10px 25px;
+            font-size: 16px;
+
+
+            li {
+
+            }
+          }
+        }
+
+
+
+        .three {
+
+          h5 {
+            position: relative;
+            width: 80%;
+            font-size: 18px;
+            margin: 8px 0 0 50px;
+          }
+
+
+        }
+
+        .big_img {
+          width: 95%;
+          height: auto;
+          max-height: 400px;
+          border-radius: 5px;
+        }
+      }
+
+
+      .room__button {
+        margin-top: -20px;
+        justify-content: center;
+        display: flex;
+      }
+    }
+    .DeepC {
+      padding: 0 50px;
+      margin:  0;
+
+      .text {
+
+
+        span {
+          background-color: #FFFFFF;
+          margin-left: 0;
+          width: 75px;
+          height: 65px;
+
+        }
+
+        p {
+          margin: 0 0 0 10px;
+          font-size: 18px;
+          width: 100%;
+          height: auto;
+        }
+
+      }
+
+      .room {
+        width: 95%;
+        height: auto;
+
+        .text {
+          display: flex;
+
+          ul {
+            width: 70%;
+            font-size: 16px;
+          }
+
+          div {
+            width: 30%;
+            align-items: center;
+            display: grid;
+            justify-content: center;
+            margin: 0 auto;
+
+            img {
+              border-radius: 5px;
+              width: 90%;
+              height: 90%;
+              margin: 10px;
+              object-fit: cover;
+            }
+          }
+
+        }
+
+      }
+
+      .room__button {
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+      }
+
+    }
+
+  }
+  @media only screen and  (max-width: 599px){
+    .logo {
+      padding: 0;
+      margin: 0 15px;
+
+      .logo__img {
+        width: 150px;
+        height: 47px;
+        margin: 15px 0 0;
+      }
+
+      span {
+        height: 47px;
+        margin: 15px 0 0 30px;
+
+
+        h4 {
+          position: relative;
+          margin-left: 0;
+          width: 100%;
+          font-size: 18px;
+        }
+
+        .type_img {
+          margin: -10px 0 0 -20px;
+          width: 40px;
+          height: 40px;
+          border-radius: 70px;
+
+        }
+      }
+    }
+    .MoveIn {
+      padding: 0 15px;
+      margin: 25px 0;
+
+      .room {
+
+        margin-bottom: 25px;
+
+        div {
+          width: 95%;
+          height: auto;
+          min-height: 250px;
+
+          span {
+            margin-top: -20px;
+            margin-left: 30px;
+            width: 40px;
+            height: 40px;
+
+          }
+
+          h5 {
+            margin: 8px 0 0 30px;
+            font-size: 20px;
+          }
+
+          ul {
+            padding: 10px 5px 10px 25px;
+            font-size: 14px;
+          }
+
+
+        }
+
+      }
+      .room__button{
+        margin-top: 10px;
+      }
+
+      .three {
+        div {
+          height: 281px;
+          margin-top: -10px;
+          margin-bottom: -20px;
+        }
+
+      }
+
+
+    }
+    .rooms {
+
+      padding: 0 15px;
+      margin: 25px 0 0;
+
+      .room {
+        margin-bottom: 25px;
+
+        div {
+          width: 95%;
+          height: auto;
+          min-height: 250px;
+
+
+          span {
+            margin-top: -20px;
+            margin-left: 30px;
+            width: 40px;
+            height: 40px;
+
+          }
+
+          h5 {
+            z-index: 100;
+            margin: 8px 0 0 30px;
+            font-size: 20px;
+
+          }
+
+          ul {
+            margin: 0;
+            width: 80%;
+            padding: 10px 5px 10px 25px;
+            font-size: 14px;
+
+
+            li {
+
+            }
+          }
+        }
+
+
+        .three {
+
+          h5 {
+            width: 80%;
+            font-size: 18px;
+            margin: 8px 0 0 40px;
+          }
+
+
+        }
+
+        .big_img {
+          width: 95%;
+          height: auto;
+          min-height: 550px;
+          border-radius: 5px;
+        }
+      }
+
+
+      .room__button {
+        margin-top: -10px;
+        justify-content: center;
+        display: flex;
+      }
+    }
+    .DeepC {
+      padding: 0 15px;
+      margin: 15px 0;
+
+      .text {
+        margin: 0 0 5px;
+
+        span {
+          background-color: #FFFFFF;
+          margin-left: 0;
+          width: 50px;
+          height: 50px;
+
+        }
+
+        p {
+          text-align: inherit;
+          margin: 0 0 0 5px;
+          font-size: 18px;
+          width: 100%;
+          height: auto;
+        }
+
+      }
+
+      .room {
+        height: auto;
+        margin: 0 10px;
+
+        .text {
+
+          display: block;
+
+          ul {
+            margin-top: 10px;
+            width: 90%;
+            font-size: 14px;
+          }
+
+          div {
+            width: 90%;
+            min-height: 180px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            img {
+              border-radius: 5px;
+              width: 50%;
+              height: 90%;
+              margin: 10px;
+              object-fit: cover;
+            }
+          }
+
+        }
+
+      }
+
+      .room__button {
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+      }
+
     }
 
   }

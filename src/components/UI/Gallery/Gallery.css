@@ -24,7 +24,7 @@
 }
 
 .mySwiper2 {
-    height: 800px;
+    height: auto;
     width: 100%;
 }
 
@@ -98,3 +98,90 @@ p{
     line-height: normal;
 }
 
+.swiper-button-next:after, .swiper-button-prev:after{
+    justify-content: end;
+    font-size: 50px;
+
+}
+.swiper-button-next{
+    height: 500px;
+    width: 50px;
+    top:150px;
+    right: 5px;
+    align-items: center;
+    justify-content: end;
+}
+.swiper-button-prev{
+    height: 500px;
+    width: 50px;
+    top:150px;
+    left: 5px;
+    align-items: center;
+    justify-content: start;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1439px){
+
+    .group {
+        border-radius: 5px;
+        padding: 5px 0 0 5px;
+        width: 250px;
+        height: 80px;
+        align-items: center;
+    }
+    h4{
+        margin: 0;
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+}
+@media only screen and  (max-width: 599px) {
+    .group {
+        border-radius: 5px;
+        padding: 5px 0 0 5px;
+        width: 150px;
+        height: 50px;
+        align-items: center;
+        display: flex;
+    }
+
+    h4{
+        display: none;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        justify-content: end;
+        font-size: 20px;
+        max-width: 20px;
+        height: 20px;
+
+    }
+    .swiper-button-next{
+        height: 700px;
+        width: 30px;
+        top:150px;
+        right: 5px;
+        align-items: center;
+        justify-content: end;
+    }
+    .swiper-button-prev{
+        height: 700px;
+        width: 30px;
+        top:150px;
+        left: 5px;
+        align-items: center;
+        justify-content: start;
+    }
+    .mySwiper {
+        padding: 0 5px;
+    }
+
+}
