@@ -29,6 +29,7 @@
 }
 
 .mySwiper {
+    max-width: 1440px;
     box-sizing: border-box;
 
     width: 100%;
@@ -37,6 +38,7 @@
 }
 
 .mySwiper .swiper-slide {
+    justify-content: center;
     height: 120px;
     width: 25%;
     opacity: 0.6;
@@ -148,11 +150,13 @@ p{
         height: 50px;
         align-items: center;
         display: flex;
-    }
 
-    h4{
+    }
+    .group h4{
         display: none;
     }
+
+
     p{
         font-size: 12px;
         font-weight: 500;

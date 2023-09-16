@@ -1,13 +1,13 @@
 .Footer{
   background-color: #003156;
+  height: auto;
 
 
 
   .newsLetter{
-    max-width: 1170px;
-    max-height: 156px;
+
     font-family: 'Roboto Light', sans-serif;
-    margin: 30px auto;
+    margin: 30px 50px;
 
     h3{
       margin: 0;
@@ -33,20 +33,25 @@
       letter-spacing: -0.54px;
       text-transform: capitalize;
 
-    }
-    .InputSubscription{
+    .Subscribe{
       align-items: center;
       display: grid;
     }
+    }
+    .InputSubscription{
+      margin-top: 30px;
+      align-items: center;
+      display: grid;
+    }
+
   }
   .Section{
 
-    max-height: 210px;
 
-    margin: 0 auto;
+    margin: 0 50px;
 
     .logo{
-      margin-left: 110px;
+      margin: 0 auto;
       max-width: 477px;
       height: 149px;
       img{
@@ -100,8 +105,9 @@
 
   }
   .social__networks{
-    max-width: 1170px;
-    margin: 0 auto;
+    justify-content: center;
+
+    margin: 0 50px;
     color: #BCBCBC;
     display: flex;
 

@@ -1,22 +1,54 @@
 .form{
   margin-bottom: 50px;
-  padding: 0 50px;
+  div{
   h3{
+    font-family: 'Zen Antique', serif;
+    font-size: 32px;
     text-align: center;
     width: 500px;
     margin: 50px auto 50px;
+  }}
+  .form_name{
+    margin: 0;
+    padding: 0 0 16px 8px;
+    color: #003156;
+    font-family: 'Zen Antique', serif;
+    font-weight: 600;
+    font-size: 24px;
   }
 
-}
+  .button{
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+  }
+  .width60ch{
+    width: 60ch;
+  }
+  .width30ch{
+    width: 30ch;
+  }
+  @media only screen and  (max-width: 599px){
 
-.form_name{
-  margin: 0;
-  color: black;
-  font-size: 20px;
-}
+    div{
+      h3{
+        font-family: 'Zen Antique', serif;
+        font-size: 24px;
+        text-align: center;
+        width: 300px;
+        margin: 15px auto 15px;
+      }}
+    .width60ch{
+      width: 40ch;
+    }
+    .width30ch{
+      width: 20ch;
+    }
 
-.button{
-  margin-top: 50px;
-  justify-content: center;
-  display: flex;
-}
+  }
+
+
+
+  }
+
+

@@ -20,30 +20,30 @@ function Footer(props) {
             <Grid container className={'Footer'}>
 
                 <Grid container className={'newsLetter'}>
-                    <Grid item xs={6} className={''}>
+                    <Grid item xs={12} md={6} className={'Subscribe'}>
                         <h3>
                             Subscribe To Our News Letter
                         </h3>
                         <p>Subscribe our news letter to get <br/>
                             latest news and updates</p>
                     </Grid>
-                    <Grid item xs={6} className={'InputSubscription'}>
+                    <Grid item xs={12} md={6} className={'InputSubscription'}>
                         <InputSubscription/>
                     </Grid>
                 </Grid>
                 <Grid container className={'Section'}>
-                    <Grid item xs={5} className={'logo'}>
+                    <Grid item xs={12} md={5} className={'logo'}>
                         <img src={logo} alt={'logo'}/>
                     </Grid>
-                    <Grid item container xs={7} className={'link'} >
-                        <Grid item xs={4} className={'links'}>
+                    <Grid item container xs={12} md={7} className={'link'} >
+                        <Grid item xs={12} sm={4} className={'links'}>
                             <h4>Services</h4>
                             <hr/>
                             <a>House Cleaning</a>
                             <a>Office Cleaning</a>
                             <a>Apartment Cleaning</a>
                         </Grid>
-                        <Grid item xs={4} className={'links'}>
+                        <Grid item xs={12} sm={4} className={'links'}>
                             <h4>Contact</h4>
                             <hr/>
                             <a><LocalPhoneOutlinedIcon/>&nbsp;(+021) 254 4458 187</a>
@@ -54,7 +54,7 @@ function Footer(props) {
 
 
                 </Grid>
-                <Grid item xs={12} className={'social__networks'}>
+                <Grid item xs={12} md={3} className={'social__networks'}>
                     <FacebookOutlinedIcon className={'network'}/>
                     <TwitterIcon className={'network'}/>
                     <LinkedInIcon className={'network'}/>

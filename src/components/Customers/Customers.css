@@ -7,17 +7,19 @@
 .Customers .background h3 {
   color: #003156;
   text-align: center;
-  font-family: "Work Sans", sans-serif;
-  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+  font-family: "Zen Antique", serif;
+  font-size: 32px;
+  font-weight: 400;
 }
 .Customers .comments {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  max-width: 1440px;
 }
 .Customers .comments .steamy {
   background: #B5D5ED !important;
@@ -32,16 +34,16 @@
   color: #FFFFFF !important;
 }
 .Customers .comments .comment {
-  margin: -30px 12px 0;
-  width: 465.611px;
-  height: 344.086px;
+  width: 90%;
+  height: auto;
   border-radius: 5px;
   border: 1px solid #B5D5ED;
   background: #FFF;
   justify-content: center;
 }
 .Customers .comments .comment h4 {
-  margin: 68px 0 0;
+  width: 170px;
+  margin: 50px auto 0;
   color: #003156;
   text-align: center;
   font-family: "Work Sans", sans-serif;
@@ -52,7 +54,8 @@
   text-transform: capitalize;
 }
 .Customers .comments .comment h5 {
-  margin: 7px 0 0;
+  width: 170px;
+  margin: 7px auto 0;
   color: #003156;
   text-align: center;
   font-family: "Work Sans", sans-serif;
@@ -63,9 +66,10 @@
   text-transform: capitalize;
 }
 .Customers .comments .comment p {
-  width: 328.521px;
-  height: 100px;
-  margin: 28px auto;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 28px;
   color: #003156;
   text-align: center;
   font-family: "Work Sans", sans-serif;
@@ -74,6 +78,11 @@
   font-weight: 400;
   line-height: 20px; /* 142.857% */
   text-transform: capitalize;
+}
+.Customers .MuiGrid-root {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 24px;
 }
 
 /*# sourceMappingURL=Customers.css.map */

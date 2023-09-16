@@ -8,6 +8,8 @@
   background: linear-gradient(180deg, rgba(43, 95, 137, 0.66) 0%, rgba(15, 133, 226, 0) 100%);
 }
 .Offering .logo {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   padding: 25px 0 0;
 }
@@ -29,6 +31,7 @@
   background-color: #003156;
 }
 .Offering .Offering__groups {
+  max-width: 1440px;
   justify-content: center;
   display: grid;
   align-items: center;
@@ -89,6 +92,10 @@
 }
 .Offering .Deep {
   background-color: #D7EAF4;
+}
+.Offering .container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .Offering .container .content {
   margin-top: 42px;

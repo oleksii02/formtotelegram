@@ -31,12 +31,12 @@ function App() {
                 <Offering/>
                 <Gallery/>
                 <BookSchedule/>
-                {/*<Customers/>*/}
+                <Customers/>
 
 
 
 
-                {/*<Footer/>*/}
+                <Footer/>
 
 
             </Box>

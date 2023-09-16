@@ -16,7 +16,6 @@ import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
 import dayjs from 'dayjs';
 
 
-
 const today = dayjs();
 const yesterday = dayjs().subtract(1, 'day');
 
@@ -153,29 +152,28 @@ export default function BookSchedule() {
     return (
         <ThemeProvider theme={theme}>
             <Box
+                className={'form'}
                 component="form"
                 sx={{
                     maxWidth: '1170px',
                     margin: '0 auto 50px',
                     textAlign: 'center',
-                    '& .MuiTextField-root': {m: 1,   margin: '0', textAlign: 'left',},
-                    '& .MuiFormControl-root': {padding: '8px 8px 16px',},
+                    '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left',},
+                    '& .MuiFormControl-root': {padding: '10px 8px 8px',},
                     '& .MuiInputLabel-root': {
                         marginBottom: '10px'
                     },
-                    '& .MuiStack-root': {padding: '0', width:'100%'}
+                    '& .MuiStack-root': {padding: '0', width: '100%'}
                 }}
                 noValidate
                 autoComplete="off"
             >
                 <div><h3>Book your cleaning 2 minutes!</h3></div>
 
-                <div >
+                <div>
                     <FormControl
-                        sx={{
+                        className={'width60ch'}
 
-                            width:'60ch'
-                        }}
                     >
                         <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
                             <h4 className={'form_name'}>Name</h4>
@@ -189,9 +187,8 @@ export default function BookSchedule() {
                         </TextField>
                     </FormControl>
                     <FormControl
-                        sx={{
-                            width:'60ch'
-                        }}>
+                        className={'width60ch'}
+                    >
                         <InputLabel shrink htmlFor="bootstrap-input">
                             <h4 className={'form_name'}>Phone</h4>
                         </InputLabel>
@@ -210,10 +207,7 @@ export default function BookSchedule() {
                 </div>
                 <div>
                     <FormControl
-                        sx={{
-
-                            width:'60ch'
-                        }}
+                        className={'width60ch'}
                     >
                         <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
                             <h4 className={'form_name'}>Type of Service</h4>
@@ -241,61 +235,61 @@ export default function BookSchedule() {
                     </FormControl>
                     <FormControl
                         sx={{
-
-                            width:'30ch'
+                            padding:'0 !important',
                         }}>
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}> Bedrooms</h4>
-                        </InputLabel>
-                        <TextField
-                            id="outlined-select-currency"
-                            select
-                            defaultValue="Placeholder"
-                            onChange={e => bedroomsHandler(e)}
-                        >
-                            <MenuItem disabled value="Placeholder">
-                                <em>Placeholder</em>
-                            </MenuItem>
+                        <div style={{display:'flex'}}>
+                            <FormControl
+                                className={'width30ch'}
+                                >
+                                <InputLabel shrink htmlFor="bootstrap-input">
+                                    <h4 className={'form_name'}> Bedrooms</h4>
+                                </InputLabel>
+                                <TextField
+                                    id="outlined-select-currency"
+                                    select
+                                    defaultValue="Placeholder"
+                                    onChange={e => bedroomsHandler(e)}
+                                >
+                                    <MenuItem disabled value="Placeholder">
+                                        <em>Placeholder</em>
+                                    </MenuItem>
 
-                            {bedrooms_list.map((option) => (
-                                <MenuItem key={option.value} value={option.label}>
-                                    {option.label}
-                                </MenuItem>
-                            ))}
-                        </TextField>
-                    </FormControl>
-                    <FormControl
-                        sx={{
+                                    {bedrooms_list.map((option) => (
+                                        <MenuItem key={option.value} value={option.label}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </FormControl>
+                            <FormControl
+                                className={'width30ch'} >
+                                <InputLabel shrink htmlFor="bootstrap-input">
+                                    <h4 className={'form_name'}> Bathrooms</h4>
+                                </InputLabel>
+                                <TextField
+                                    id="outlined-select-currency"
+                                    select
+                                    defaultValue="Placeholder"
+                                    onChange={e => bathroomsHandler(e)}
+                                >
+                                    <MenuItem disabled value="Placeholder">
+                                        <em>Placeholder</em>
+                                    </MenuItem>
 
-                            width:'30ch'
-                        }}>
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}> Bathrooms</h4>
-                        </InputLabel>
-                        <TextField
-                            id="outlined-select-currency"
-                            select
-                            defaultValue="Placeholder"
-                            onChange={e => bathroomsHandler(e)}
-                        >
-                            <MenuItem disabled value="Placeholder">
-                                <em>Placeholder</em>
-                            </MenuItem>
+                                    {bathrooms_list.map((option) => (
+                                        <MenuItem key={option.value} value={option.label}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
 
-                            {bathrooms_list.map((option) => (
-                                <MenuItem key={option.value} value={option.label}>
-                                    {option.label}
-                                </MenuItem>
-                            ))}
-                        </TextField>
+                            </FormControl>
+                        </div>
                     </FormControl>
                 </div>
-                <div >
+                <div>
                     <FormControl
-                        sx={{
-
-                            width:'60ch'
-                        }}
+                        className={'width60ch'}
                     >
                         <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
                             <h4 className={'form_name'}>Date (time)</h4>
@@ -320,9 +314,7 @@ export default function BookSchedule() {
                         </LocalizationProvider>
                     </FormControl>
                     <FormControl
-                        sx={{
-                            width:'60ch'
-                        }}>
+                        className={'width60ch'}>
                         <InputLabel shrink htmlFor="bootstrap-input">
                             <h4 className={'form_name'}>Address</h4>
                         </InputLabel>
@@ -341,9 +333,7 @@ export default function BookSchedule() {
                 <div>
 
                     <FormControl
-                        sx={{
-                            width:'120ch'
-                        }}>
+                        className={'width60ch'}>
                         <InputLabel shrink htmlFor="bootstrap-input">
                             <h4 className={'form_name'}>Total Square Footage</h4>
                         </InputLabel>

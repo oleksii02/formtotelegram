@@ -10,21 +10,23 @@
     h3 {
       color: #003156;
       text-align: center;
-      font-family: 'Work Sans', sans-serif;
-      font-size: 18px;
       font-style: normal;
-      font-weight: 500;
       line-height: normal;
       letter-spacing: 1.8px;
       text-transform: uppercase;
+      font-family: 'Zen Antique', serif;
+      font-size: 32px;
+      font-weight: 400;
     }
 
 
   }
 
   .comments {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    max-width: 1440px;
 
 
     .steamy{
@@ -36,16 +38,16 @@
     }
 
     .comment {
-      margin: -30px 12px 0;
-      width: 465.611px;
-      height: 344.086px;
+      width: 90%;
+      height: auto;
       border-radius: 5px;
       border: 1px solid #B5D5ED;
       background: #FFF;
       justify-content: center;
 
       h4 {
-        margin: 68px 0 0;
+        width: 170px;
+        margin: 50px auto 0;
         color: #003156;
         text-align: center;
         font-family: 'Work Sans', sans-serif;
@@ -57,7 +59,8 @@
       }
 
       h5 {
-        margin: 7px 0 0;
+        width: 170px;
+        margin: 7px auto 0;
         color: #003156;
         text-align: center;
         font-family: 'Work Sans', sans-serif;
@@ -69,9 +72,10 @@
       }
 
       p {
-        width: 328.521px;
-        height: 100px;
-        margin: 28px auto;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        padding: 28px ;
         color: #003156;
         text-align: center;
         font-family: 'Work Sans', sans-serif;
@@ -84,4 +88,24 @@
     }
   }
 
-}
+  .MuiGrid-root{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  @media only screen and (min-width: 600px) and  (max-width: 1440px) {
+    .comments{
+      .comment{
+
+
+
+        p{
+        }
+
+      }
+    }
+
+  }
+
+  }
