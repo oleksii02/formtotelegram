@@ -20,7 +20,7 @@ function CleaningAfter(props) {
                 </span>
             </div>
             <Grid container className={'rooms'}>
-                <Grid item xs={12} md={4} className={'room'}>
+                <Grid item xs={12} sm={4} className={'room'}>
                     <div>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="70%" viewBox="0 0 46 43" fill="none">
@@ -59,7 +59,7 @@ function CleaningAfter(props) {
                     </div>
 
                 </Grid>
-                <Grid item xs={12} md={8} className={'room'}>
+                <Grid item xs={12} sm={8} className={'room'}>
                     <img src={After_Repair_big} alt={'After_Repair_big'} className={'big_img'}/>
 
                 </Grid>

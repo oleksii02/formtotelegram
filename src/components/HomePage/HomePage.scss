@@ -86,7 +86,7 @@
     top: 60px
   }
 
-  @media only screen and (min-device-width: 600px) and (max-device-width: 1439px) {
+  @media only screen and (min-width: 600px) and (max-width: 1439px) {
     .text__container{
 
       margin: 20px auto;
@@ -148,7 +148,7 @@
       top: 130px;
     }
   }
-  @media only screen and  (max-device-width: 599px) {
+  @media only screen and  (max-width: 599px) {
     .text__container{
 
       margin: 10px auto;

@@ -51,7 +51,7 @@
   transform: rotate(-0.145deg);
   border-radius: 154.632px;
   border: 1px solid #EDD070;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .Cleaning__container .rooms {
   max-width: 1440px;
@@ -361,7 +361,6 @@
   .Cleaning__container .rooms .room .big_img {
     width: 95%;
     height: auto;
-    max-height: 400px;
     border-radius: 5px;
   }
   .Cleaning__container .rooms .room__button {

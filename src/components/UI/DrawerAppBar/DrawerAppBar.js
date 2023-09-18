@@ -48,7 +48,9 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: "center"}} className={'nav-wrapper'}>
             <Typography  sx={{my: 1}}>
-                <a href="/" className="brand-logo"><h1>LOGO HERE!</h1></a>
+                <a href="/" className="brand-logo">
+                    <img src={logo} alt={'logo'}/>
+                </a>
             </Typography>
             <Divider/>
             <List>

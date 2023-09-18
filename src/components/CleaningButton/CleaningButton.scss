@@ -44,7 +44,7 @@
 
   }
 
-  @media only screen and (min-device-width: 600px) and (max-device-width: 1439px) {
+  @media only screen and (min-width: 600px) and (max-width: 1439px) {
     position: revert;
     max-width: 768px;
     justify-content: center;
@@ -72,7 +72,7 @@
     }
 
   }
-  @media only screen and  (max-device-width: 599px) {
+  @media only screen and  (max-width: 599px) {
     display: none;
   }
 

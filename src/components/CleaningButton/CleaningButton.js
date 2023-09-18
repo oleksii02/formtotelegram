@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import house from '../imgs/home.svg'
 import lounge from '../imgs/lounge.svg'
 import office from '../imgs/office.svg'
-import { Link } from 'react-router-dom'
 
 
 

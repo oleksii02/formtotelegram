@@ -7,7 +7,6 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
 const today = dayjs();
-const yesterday = dayjs().subtract(1, 'day');
 
 export default function DateValidationDisablePast() {
     return (
