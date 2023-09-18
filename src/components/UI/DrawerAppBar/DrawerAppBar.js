@@ -112,12 +112,13 @@ function DrawerAppBar(props) {
                     }}}>
                         <div className={'hide'} style={{display:'flex'}}>
                         {navItems.map((item) => (
-                            <Button key={item.name} sx={{display:'block', marginRight:'32px'}}>
+                            <Button key={item.name} sx={{display:'block', marginRight:'32px', padding:0}}>
                                 <a href={item.id}>{item.name}</a>
                             </Button>
 
                         ))}
-                        <BookScheduleButton/></div>
+                        <BookScheduleButton/>
+                        </div>
                     </Box>
                 </Toolbar>
             </AppBar>

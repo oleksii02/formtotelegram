@@ -12,7 +12,7 @@ import Deep from '../imgs/Deep.png'
 
 function Offering(props) {
     return (
-        <div className={'Offering'}>
+        <div className={'Offering'} id={'what_we_are_offering'}>
             <div className={'background'}/>
             <div className={'logo'}>
                 <img src={logo} alt={'logo'}/>

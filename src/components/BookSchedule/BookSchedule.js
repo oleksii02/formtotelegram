@@ -152,6 +152,7 @@ export default function BookSchedule() {
     return (
         <ThemeProvider theme={theme}>
             <Box
+                id={'form'}
                 className={'form'}
                 component="form"
                 sx={{

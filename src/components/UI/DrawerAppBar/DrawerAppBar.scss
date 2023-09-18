@@ -1,6 +1,7 @@
 
 a{
   width: 300px;
+  height: auto;
 }
 
 .hide {
@@ -24,7 +25,8 @@ a{
 
   a {
     max-width: 200px;
-    height: 38px;
+    height: 50px;
+    padding: 20px;
     text-decoration: none;
     color: #003156;
     font-style: normal;
@@ -47,7 +49,7 @@ a{
     line-height: normal;
   }
 
-  @media only screen and (min-device-width: 600px) and (max-device-width: 1439px) {
+  @media only screen and (min-width: 600px) and (max-width: 1439px) {
 
     margin: 20px auto 0;
     padding: 0 30px;
@@ -62,7 +64,7 @@ a{
       font-size: 10px;
     }
   }
-  @media only screen and  (max-device-width: 599px) {
+  @media only screen and  (max-width: 599px) {
     margin: 10px auto 0;
     padding: 0 15px;
 

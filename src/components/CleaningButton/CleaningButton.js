@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 import house from '../imgs/home.svg'
 import lounge from '../imgs/lounge.svg'
 import office from '../imgs/office.svg'
+import { Link } from 'react-router-dom'
+
 
 
 function CleaningButton(props) {
@@ -22,25 +24,33 @@ function CleaningButton(props) {
         <ThemeProvider theme={theme}>
 
             <Box className={'CleaningButton'}>
-                <Button variant="outlined">
-                    <img src={house} alt={'house'}/>
-                    <span className={'span__name'}><h6>
+                <a href={'#regular-cleaning'}>
+                    <Button variant="outlined">
+                        <img src={house} alt={'house'}/>
+                        <span className={'span__name'}><h6>
                         House<br/>cleaning
                     </h6></span>
 
-                </Button>
-                <Button variant="outlined">
-                    <img src={lounge} alt={'lounge'}/>
-                    <span className={'span__name'}><h6>
+                    </Button>
+                </a>
+                <a href={'#cleaning-after'}>
+                    <Button variant="outlined">
+                        <img src={lounge} alt={'lounge'}/>
+                        <span className={'span__name'}><h6>
                         Apartment<br/>cleaning
                     </h6></span>
 
-                </Button>
-                <Button variant="outlined">
-                    <img src={office} alt={'office'}/>
-                    <span className={'span__name'}><h6>Office<br/>cleaning</h6></span>
+                    </Button>
+                </a>
+                <a href={'#office-cleaning'}>
+                        <Button variant="outlined"
+                                to={'#office-cleaning'}
+                        >
+                            <img src={office} alt={'office'}/>
+                            <span className={'span__name'}><h6>Office<br/>cleaning</h6></span>
 
-                </Button>
+                        </Button>
+                </a>
             </Box>
         </ThemeProvider>
     );

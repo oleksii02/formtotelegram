@@ -17,7 +17,7 @@ function Footer(props) {
 
 
     return (
-            <Grid container className={'Footer'}>
+            <Grid container className={'Footer'} id={'contact'}>
 
                 <Grid container className={'newsLetter'}>
                     <Grid item xs={12} md={6} className={'Subscribe'}>

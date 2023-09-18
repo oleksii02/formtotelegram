@@ -30,7 +30,7 @@ function BookScheduleButton(props) {
                         fontWeight: 500,
                 }
                 }}
-            >
+            ><a href={'#form'}>
                 <Button
 
                     color={'primary'}
@@ -38,6 +38,7 @@ function BookScheduleButton(props) {
                     <EditCalendarOutlinedIcon/>
                     &nbsp;Book Schedule
                 </Button>
+            </a>
             </Box>
         </ThemeProvider>
     );

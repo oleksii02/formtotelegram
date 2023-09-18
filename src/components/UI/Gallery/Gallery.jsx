@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,12 +19,16 @@ import MoveInCleaning from "../../TypeCleaning/MoveInCleaning";
 import CleaningAfter from "../../TypeCleaning/CleaningAfter";
 import OfficeCleaning from "../../TypeCleaning/OfficeCleaning";
 import OneTime from "../../TypeCleaning/OneTime";
+import Box from "@mui/material/Box";
 
 export default function Gallery() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <>
+        <Box id={'our_services'}>
+            <span id={'office-cleaning'}/>
+            <span id={'cleaning-after'}/>
+            <span id={'regular-cleaning'}/>
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#003156',
@@ -37,33 +41,34 @@ export default function Gallery() {
                 pagination={true}
                 mousewheel={true}
                 keyboard={true}
-                thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-                modules={[FreeMode, Navigation, Thumbs,Mousewheel, Keyboard, HashNavigation]}
+                thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
+                modules={[FreeMode, Navigation, Thumbs, Mousewheel, Keyboard, HashNavigation]}
+
 
                 hashNavigation={{
-                    watchState: 'true'
+                    watchState: true,
                 }
-            }
+                }
                 className="mySwiper2"
             >
 
 
-                <SwiperSlide data-hash="slide1">
+                <SwiperSlide data-hash="regular-cleaning">
                     <RegularCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="slide2">
+                <SwiperSlide data-hash="one-time">
                     <OneTime/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="slide3">
+                <SwiperSlide data-hash="move-in-cleaning">
                     <MoveInCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="slide4">
+                <SwiperSlide data-hash="cleaning-after">
                     <CleaningAfter/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="slide5">
+                <SwiperSlide data-hash="office-cleaning">
                     <OfficeCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="slide6">
+                <SwiperSlide data-hash="deep-cleaning">
                     <DeepCleaning/>
                 </SwiperSlide>
 
@@ -118,6 +123,6 @@ export default function Gallery() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </Box>
     );
 }
