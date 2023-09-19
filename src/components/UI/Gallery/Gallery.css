@@ -13,7 +13,7 @@
 
 .swiper {
     width: 100%;
-    height: 300px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -59,22 +59,22 @@
 
 
 }
-.Regular{
+.mySwiper .Regular{
     background-color: #EFE5D9;
 }
-.OneTime{
+.mySwiper .OneTime{
     background-color: #E5E2D6;
 }
-.Move_in{
+.mySwiper .Move_in{
     background-color: #EDECE9;
 }
-.Office{
+.mySwiper .Office{
     background-color: #EFE5D9;
 }
-.After_Repair{
+.mySwiper .After_Repair{
     background-color: #E5E2D6;
 }
-.Deep{
+.mySwiper .Deep{
     background-color: #EDECE9;
 }
 h4{

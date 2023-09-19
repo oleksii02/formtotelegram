@@ -52,6 +52,10 @@
   border-radius: 154.632px;
   border: 1px solid #EDD070;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+.Cleaning__container .logo span .type_img:hover {
+  transform: scale(1.2);
 }
 .Cleaning__container .rooms {
   max-width: 1440px;

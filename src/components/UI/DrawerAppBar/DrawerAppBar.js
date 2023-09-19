@@ -114,9 +114,11 @@ function DrawerAppBar(props) {
                     }}}>
                         <div className={'hide'} style={{display:'flex'}}>
                         {navItems.map((item) => (
-                            <Button key={item.name} sx={{display:'block', marginRight:'32px', padding:0}}>
-                                <a href={item.id}>{item.name}</a>
+                            <a href={item.id}>
+                            <Button key={item.name} sx={{display:'block', marginRight:'32px', padding:'10px'}}>
+                                {item.name}
                             </Button>
+                            </a>
 
                         ))}
                         <BookScheduleButton/>

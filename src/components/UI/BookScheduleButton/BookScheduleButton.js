@@ -26,7 +26,7 @@ function BookScheduleButton(props) {
                         padding: '15px 35px',
                         borderRadius: '50px',
                         textTransform: 'none',
-                        fontSize: '16px',
+                        fontSize: '18px',
                         fontWeight: 500,
                 }
                 }}
@@ -36,7 +36,8 @@ function BookScheduleButton(props) {
                     color={'primary'}
                     variant="contained">
                     <EditCalendarOutlinedIcon/>
-                    &nbsp;Book Schedule
+                    &nbsp;
+                    <span>Book Schedule</span>
                 </Button>
             </a>
             </Box>

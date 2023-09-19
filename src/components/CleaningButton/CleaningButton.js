@@ -25,7 +25,7 @@ function CleaningButton(props) {
             <Box className={'CleaningButton'}>
                 <a href={'#regular-cleaning'}>
                     <Button variant="outlined">
-                        <img src={house} alt={'house'}/>
+                        <img src={house} alt={'house'} className={'regular-cleaning'}/>
                         <span className={'span__name'}><h6>
                         House<br/>cleaning
                     </h6></span>
@@ -34,7 +34,7 @@ function CleaningButton(props) {
                 </a>
                 <a href={'#cleaning-after'}>
                     <Button variant="outlined">
-                        <img src={lounge} alt={'lounge'}/>
+                        <img src={lounge} alt={'lounge'} className={'cleaning-after'}/>
                         <span className={'span__name'}><h6>
                         Apartment<br/>cleaning
                     </h6></span>
@@ -45,7 +45,7 @@ function CleaningButton(props) {
                         <Button variant="outlined"
                                 to={'#office-cleaning'}
                         >
-                            <img src={office} alt={'office'}/>
+                            <img src={office} alt={'office'} className={'office-cleaning'}/>
                             <span className={'span__name'}><h6>Office<br/>cleaning</h6></span>
 
                         </Button>

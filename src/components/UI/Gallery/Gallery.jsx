@@ -26,23 +26,19 @@ export default function Gallery() {
 
     return (
         <Box id={'our_services'}>
-            <span id={'office-cleaning'}/>
-            <span id={'cleaning-after'}/>
-            <span id={'regular-cleaning'}/>
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#003156',
                     '--swiper-pagination-color': '#003156',
                 }}
                 loop={true}
+                autoHeight={true}
                 spaceBetween={10}
-                cssMode={true}
                 navigation={true}
-                pagination={true}
-                mousewheel={true}
                 keyboard={true}
                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
-                modules={[FreeMode, Navigation, Thumbs, Mousewheel, Keyboard, HashNavigation]}
+
+                modules={[FreeMode, Navigation, Thumbs, Mousewheel, Keyboard,HashNavigation]}
 
 
                 hashNavigation={{
@@ -53,22 +49,35 @@ export default function Gallery() {
             >
 
 
-                <SwiperSlide data-hash="regular-cleaning">
+                <SwiperSlide
+                    data-hash={'regular-cleaning'}
+                    id={'regular-cleaning'}>
                     <RegularCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="one-time">
+                <SwiperSlide
+                    data-hash={'one-time'}
+                    id={'one-time'}>
                     <OneTime/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="move-in-cleaning">
+                <SwiperSlide
+                    data-hash={'move-in-cleaning'}
+                    id={'move-in-cleaning'}>
                     <MoveInCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="cleaning-after">
+                <SwiperSlide
+                    data-hash={'cleaning-after'}
+                    id={'cleaning-after'}>
                     <CleaningAfter/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="office-cleaning">
+                <SwiperSlide
+                    data-hash={'office-cleaning'}
+                    id={'office-cleaning'}
+                >
                     <OfficeCleaning/>
                 </SwiperSlide>
-                <SwiperSlide data-hash="deep-cleaning">
+                <SwiperSlide
+                data-hash={'deep-cleaning'}
+                id={'deep-cleaning'}>
                     <DeepCleaning/>
                 </SwiperSlide>
 
@@ -76,17 +85,17 @@ export default function Gallery() {
             <Swiper
 
                 onSwiper={setThumbsSwiper}
-                loop={true}
-                spaceBetween={5}
-                slidesPerView={4}
+                spaceBetween={10}
+                slidesPerView={'auto'}
                 freeMode={true}
-                watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs, Grid]}
+
+
 
 
                 className="mySwiper"
             >
-                <SwiperSlide>
+                <SwiperSlide onClick={()=>console.log(setThumbsSwiper)}>
                     <div className={'group Regular'}>
                         <h4>Regular Cleaning</h4>
                         <p>$41 /maid-hour</p>
