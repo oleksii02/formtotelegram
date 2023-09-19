@@ -30,6 +30,7 @@
   background-color: #003156;
 }
 .Offering .Offering__groups {
+  z-index: 100;
   max-width: 1440px;
   justify-content: center;
   display: grid;
@@ -139,13 +140,41 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .Offering .container {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
 }
 .Offering .container .content {
+  z-index: 10;
   margin-top: 42px;
   justify-content: center;
   display: flex;
+}
+.Offering .container .content a {
+  text-decoration: none;
+}
+.Offering .container .ellipse {
+  position: absolute;
+  width: 200px;
+  height: 326px;
+  border-radius: 349px;
+  background: rgba(17, 149, 255, 0.5);
+  filter: blur(150px);
+}
+.Offering .container .ellipse__one {
+  z-index: -1;
+  top: -100;
+  right: 0;
+}
+.Offering .container .ellipse__two {
+  z-index: -1;
+  bottom: 300px;
+  left: -100px;
+}
+.Offering .container .ellipse__three {
+  z-index: -1;
+  top: 150px;
+  left: 700px;
 }
 @media only screen and (min-width: 600px) and (max-width: 1439px) {
   .Offering .logo {
@@ -189,11 +218,19 @@
   .Offering .group p {
     font-size: 24px;
   }
+  .Offering .container {
+    justify-content: center;
+  }
   .Offering .container .content {
     width: 300px;
     margin-top: 42px;
     justify-content: center;
     display: flex;
+  }
+  .Offering .container .ellipse__three {
+    z-index: -1;
+    top: 900px;
+    left: 300px;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -242,6 +279,11 @@
   }
   .Offering .container .content {
     margin-top: 20px;
+  }
+  .Offering .container .ellipse__three {
+    z-index: -1;
+    top: 700px;
+    left: 100px;
   }
 }
 

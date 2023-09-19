@@ -46,43 +46,48 @@
 .Cleaning__container .logo span .type_img {
   margin: -30px 0 0 -70px;
   position: absolute;
-  width: 154.632px;
-  height: 146px;
+  width: 155px;
+  height: 155px;
   transform: rotate(-0.145deg);
   border-radius: 154.632px;
   border: 1px solid #EDD070;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: 1s;
+  object-fit: cover;
 }
 .Cleaning__container .logo span .type_img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .Cleaning__container .rooms {
   max-width: 1440px;
   padding: 0 50px;
   justify-content: center;
   display: flex;
-  margin: 50px auto;
+  margin: 50px auto 0;
 }
 .Cleaning__container .rooms .room {
   justify-content: center;
   display: flex;
 }
 .Cleaning__container .rooms .room div {
-  width: 391px;
+  width: 430px;
   height: 492px;
   border: 1px solid #003156;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  transition: 1s;
+}
+.Cleaning__container .rooms .room div:hover {
+  transform: scale(1.05);
 }
 .Cleaning__container .rooms .room div span {
   background-color: #FFFFFF;
-  margin-top: -34px;
-  margin-left: 44px;
+  margin-top: -40px;
+  margin-left: 10px;
   position: absolute;
   display: inline-flex;
-  width: 100.99px;
-  height: 94.787px;
+  width: 100px;
+  height: 100px;
   border: 1px solid #003156;
   border-radius: 50%;
   justify-content: center;
@@ -122,13 +127,17 @@
   position: relative;
   width: 297px;
   font-size: 24px;
-  margin: 13px 0 0 80px;
+  margin: 13px 0 0 110px;
 }
 .Cleaning__container .rooms .room .big_img {
   width: 942px;
   height: 488px;
   border-radius: 5px;
   object-fit: cover;
+  transition: 1s;
+}
+.Cleaning__container .rooms .room .big_img:hover {
+  transform: scale(1.05);
 }
 .Cleaning__container .rooms .room__button {
   margin-top: 20px;
@@ -137,7 +146,7 @@
   display: flex;
 }
 .Cleaning__container .MoveIn {
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 .Cleaning__container .MoveIn .room {
   justify-content: center;
@@ -150,6 +159,10 @@
   border: 1px solid #003156;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  transition: 1s;
+}
+.Cleaning__container .MoveIn .room div:hover {
+  transform: scale(1.05);
 }
 .Cleaning__container .MoveIn .room div span {
   background-color: #FFFFFF;
@@ -177,7 +190,7 @@
 }
 .Cleaning__container .MoveIn .room div ul {
   margin: 0;
-  padding: 0 5px 10px 25px;
+  padding: 10px 5px 10px 25px;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #003156;
@@ -189,8 +202,6 @@
 }
 .Cleaning__container .MoveIn .three div {
   height: 120px;
-  margin-top: -20px;
-  margin-bottom: -30px;
 }
 .Cleaning__container .MoveIn .room__button {
   justify-content: center;
@@ -233,6 +244,7 @@
   text-transform: capitalize;
 }
 .Cleaning__container .DeepC .room {
+  max-width: 1330px;
   width: 1310px;
   height: 420px;
   border: 1px solid #003156;
@@ -265,8 +277,239 @@
   width: 350px;
   height: 180px;
   margin: 10px;
+  transition: 1s;
+}
+.Cleaning__container .DeepC .room .text div img:hover {
+  transform: scale(1.05);
 }
 .Cleaning__container .DeepC .room__button {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.Cleaning__container .Pets {
+  justify-content: center;
+  display: flex;
+  padding: 0 50px;
+}
+.Cleaning__container .Pets .text {
+  display: flex;
+  margin: 10px 0 5px;
+}
+.Cleaning__container .Pets .text span {
+  background-color: #FFFFFF;
+  margin-left: 100px;
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #003156;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Cleaning__container .Pets .text p {
+  margin: 0 0 0 10px;
+  align-items: center;
+  display: flex;
+  padding: 0;
+  width: 1000px;
+  height: 100px;
+  color: #003156;
+  text-align: justify;
+  font-family: "Zen Antique Soft", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.Cleaning__container .Pets .room {
+  margin: 50px 0 0;
+  max-width: 1330px;
+  height: auto;
+  border: 1px solid #003156;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: #B5D5ED;
+  filter: drop-shadow(0px 4px 20px rgba(12, 82, 137, 0.2)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Cleaning__container .Pets .room span {
+  background-color: #FFFFFF;
+  top: -40px;
+  left: 90px;
+  position: absolute;
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #003156;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Cleaning__container .Pets .room h5 {
+  margin: 13px 0 0 128px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Zen Dots", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Cleaning__container .Pets .room .text {
+  display: flex;
+}
+.Cleaning__container .Pets .room .text ul {
+  width: 70%;
+  margin: 0;
+  padding: 0 5px 10px 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #FFF;
+  font-family: "Zen Antique Soft", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.Cleaning__container .Pets .room .text ul p {
+  width: 95%;
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+.Cleaning__container .Pets .room .text ul li {
+  margin-left: 25px;
+}
+.Cleaning__container .Pets .room .text ul .cat {
+  margin-top: -40px;
+  border-radius: 5px;
+  float: right;
+  width: 312px;
+  height: 99px;
+  transition: 1s;
+}
+.Cleaning__container .Pets .room .text ul .cat:hover {
+  transform: scale(1.05);
+}
+.Cleaning__container .Pets .room .text div {
+  align-items: center;
+  display: grid;
+  width: 25%;
+}
+.Cleaning__container .Pets .room .text div img {
+  border-radius: 5px;
+  width: 100%;
+  height: 180px;
+  margin: 10px;
+  transition: 1s;
+}
+.Cleaning__container .Pets .room .text div img:hover {
+  transform: scale(1.05);
+}
+.Cleaning__container .Pets .room__button {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.Cleaning__container .Holiday {
+  padding: 0 50px;
+  justify-content: center;
+}
+.Cleaning__container .Holiday .text {
+  display: flex;
+  margin: 10px 0 5px;
+}
+.Cleaning__container .Holiday .text span {
+  background-color: #FFFFFF;
+  margin-left: 100px;
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #003156;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Cleaning__container .Holiday .text p {
+  margin: 0 0 0 10px;
+  align-items: center;
+  display: flex;
+  padding: 0;
+  width: 1000px;
+  height: 100px;
+  color: #003156;
+  text-align: justify;
+  font-family: "Zen Antique Soft", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.Cleaning__container .Holiday .room {
+  margin: 50px 0 0;
+  max-width: 1330px;
+  height: auto;
+  border: 1px solid #003156;
+  color: #003156;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  filter: drop-shadow(0px 4px 20px rgba(12, 82, 137, 0.2)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Cleaning__container .Holiday .room span {
+  background-color: #FFFFFF;
+  margin-top: -100px;
+  margin-left: 140px;
+  position: absolute;
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #003156;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.Cleaning__container .Holiday .room h5 {
+  margin: 13px 0 0 128px;
+  color: #003156;
+  text-align: center;
+  font-family: "Zen Dots", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Cleaning__container .Holiday .room .text {
+  display: flex;
+}
+.Cleaning__container .Holiday .room .text ul {
+  margin-top: 50px;
+  width: 60%;
+  padding: 0 5px 10px 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Zen Antique Soft", serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.Cleaning__container .Holiday .room .text ul li {
+  margin-left: 25px;
+}
+.Cleaning__container .Holiday .room .text div {
+  align-items: center;
+  display: grid;
+}
+.Cleaning__container .Holiday .room .text div img {
+  border-radius: 5px;
+  width: 90%;
+  height: auto;
+  margin: 10px;
+  transition: 1s;
+}
+.Cleaning__container .Holiday .room .text div img:hover {
+  transform: scale(1.05);
+}
+.Cleaning__container .Holiday .room__button {
   margin-top: 20px;
   justify-content: center;
   display: flex;
@@ -418,6 +661,82 @@
     justify-content: center;
     display: flex;
   }
+  .Cleaning__container .Pets .room {
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .Pets .room span {
+    background-color: #FFFFFF;
+    top: -30px;
+    left: 70px;
+    width: 70px;
+    height: 70px;
+  }
+  .Cleaning__container .Pets .room h5 {
+    font-size: 28px;
+  }
+  .Cleaning__container .Pets .room .text {
+    display: flex;
+  }
+  .Cleaning__container .Pets .room .text ul {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .Cleaning__container .Pets .room .text ul p {
+    font-size: 16px;
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .Pets .room .text ul .cat {
+    margin-top: 0;
+  }
+  .Cleaning__container .Pets .room .text div img {
+    margin: 5px;
+  }
+  .Cleaning__container .Pets .room__button {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+  .Cleaning__container .Holiday .room {
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .Holiday .room span {
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 70px;
+    left: -80px;
+    width: 70px;
+    height: 70px;
+  }
+  .Cleaning__container .Holiday .room h5 {
+    font-size: 28px;
+  }
+  .Cleaning__container .Holiday .room .text {
+    display: flex;
+  }
+  .Cleaning__container .Holiday .room .text ul {
+    min-width: 350px;
+    font-size: 16px;
+    padding: 0 10px 0;
+  }
+  .Cleaning__container .Holiday .room .text ul p {
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .Holiday .room .text div {
+    width: 60%;
+  }
+  .Cleaning__container .Holiday .room .text div img {
+    margin: 0 auto;
+  }
+  .Cleaning__container .Holiday .room__button {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
 }
 @media only screen and (max-width: 599px) {
   .Cleaning__container .logo {
@@ -435,9 +754,9 @@
   }
   .Cleaning__container .logo span h4 {
     position: relative;
-    margin-left: 0;
+    margin-left: 10px;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
   }
   .Cleaning__container .logo span .type_img {
     margin: -10px 0 0 -20px;
@@ -558,7 +877,7 @@
   }
   .Cleaning__container .DeepC .room .text div {
     width: 90%;
-    min-height: 180px;
+    height: auto;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -572,6 +891,98 @@
     object-fit: cover;
   }
   .Cleaning__container .DeepC .room__button {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+  .Cleaning__container .Pets {
+    padding: 20px 15px 0;
+  }
+  .Cleaning__container .Pets .room {
+    margin: 15px 15px;
+    width: 95%;
+    height: auto;
+  }
+  .Cleaning__container .Pets .room span {
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 50px;
+    top: -20px;
+    left: 10px;
+  }
+  .Cleaning__container .Pets .room h5 {
+    margin: 8px 0 0 45px;
+    font-size: 16px;
+  }
+  .Cleaning__container .Pets .room .text {
+    display: block;
+  }
+  .Cleaning__container .Pets .room .text ul {
+    margin: 0;
+    padding: 0 15px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .Cleaning__container .Pets .room .text ul p {
+    font-size: 14px;
+    width: auto;
+    height: auto;
+  }
+  .Cleaning__container .Pets .room .text ul .cat {
+    object-fit: cover;
+    object-position: bottom 60px;
+    margin: 10px auto;
+    float: top;
+    width: 100%;
+  }
+  .Cleaning__container .Pets .room .text div {
+    width: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .Cleaning__container .Pets .room .text div img {
+    border-radius: 5px;
+    width: 50%;
+    height: 90%;
+    margin: 10px;
+    object-fit: cover;
+  }
+  .Cleaning__container .Holiday .room {
+    width: 95%;
+    height: auto;
+    padding: 15px 5px;
+  }
+  .Cleaning__container .Holiday .room span {
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 75px;
+    left: -130px;
+    width: 50px;
+    height: 50px;
+  }
+  .Cleaning__container .Holiday .room h5 {
+    margin: 8px 0 0 45px;
+    font-size: 16px;
+  }
+  .Cleaning__container .Holiday .room .text {
+    display: block;
+  }
+  .Cleaning__container .Holiday .room .text ul {
+    margin: 10px 0;
+    padding: 0 15px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .Cleaning__container .Holiday .room .text div {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .Cleaning__container .Holiday .room .text div img {
+    margin: 0 auto;
+  }
+  .Cleaning__container .Holiday .room__button {
     margin-top: 20px;
     justify-content: center;
     display: flex;

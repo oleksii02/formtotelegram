@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import {Swiper, SwiperSlide} from 'swiper/react';
 
@@ -12,7 +12,7 @@ import 'swiper/css/thumbs';
 import './Gallery.css';
 
 // import required modules
-import {FreeMode, Grid, HashNavigation, Keyboard, Mousewheel, Navigation, Thumbs} from 'swiper/modules';
+import {FreeMode, Grid, HashNavigation, Keyboard, Mousewheel, Navigation, Pagination, Thumbs} from 'swiper/modules';
 import RegularCleaning from "../../TypeCleaning/RegularCleaning";
 import DeepCleaning from "../../TypeCleaning/DeepCleaning";
 import MoveInCleaning from "../../TypeCleaning/MoveInCleaning";
@@ -20,6 +20,8 @@ import CleaningAfter from "../../TypeCleaning/CleaningAfter";
 import OfficeCleaning from "../../TypeCleaning/OfficeCleaning";
 import OneTime from "../../TypeCleaning/OneTime";
 import Box from "@mui/material/Box";
+import PetsCleaning from "../../TypeCleaning/PetsCleaning";
+import HolidayCleaning from "../../TypeCleaning/HolidayCleaning";
 
 export default function Gallery() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -80,15 +82,28 @@ export default function Gallery() {
                 id={'deep-cleaning'}>
                     <DeepCleaning/>
                 </SwiperSlide>
+                <SwiperSlide
+                    data-hash={'pets-cleaning'}
+                    id={'pets-cleaning'}>
+                    <PetsCleaning/>
+                </SwiperSlide>
+                <SwiperSlide
+                    data-hash={'holiday-cleaning'}
+                    id={'holiday-cleaning'}>
+                    <HolidayCleaning/>
+                </SwiperSlide>
+
 
             </Swiper>
             <Swiper
 
                 onSwiper={setThumbsSwiper}
-                spaceBetween={10}
                 slidesPerView={'auto'}
                 freeMode={true}
-                modules={[FreeMode, Navigation, Thumbs, Grid]}
+                spaceBetween={0}
+                centeredSlides={true}
+
+                modules={[FreeMode, Navigation, Thumbs]}
 
 
 
@@ -131,7 +146,22 @@ export default function Gallery() {
                         <p>$38/maid-hour</p>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div className={'group Holiday'}>
+                        <h4>Pets and a Clean Home</h4>
+                        <p>$38/maid-hour</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className={'group Pets'}>
+                        <h4>Holiday Cleaning</h4>
+                        <p>$45 /maid-hour</p>
+                    </div>
+                </SwiperSlide>
+
             </Swiper>
+
+
         </Box>
     );
 }

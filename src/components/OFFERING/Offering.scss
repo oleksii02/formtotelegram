@@ -37,6 +37,7 @@
   }
 
   .Offering__groups {
+    z-index: 100;
     max-width: 1440px;
     justify-content: center;
     display: grid;
@@ -199,15 +200,48 @@
 
 
   .container {
+    position: relative;
     max-width: 1440px;
     margin: 0 auto;
 
 
     .content {
+      z-index: 10;
       margin-top: 42px;
       justify-content: center;
       display: flex;
+      a{
+        text-decoration: none;
 
+      }
+
+    }
+    .ellipse {
+      position: absolute;
+      width: 200px;
+      height: 326px;
+      border-radius: 349px;
+      background: rgba(17, 149, 255, 0.50);
+      filter: blur(150px);
+
+    }
+
+    .ellipse__one {
+      z-index: -1;
+      top: -100;
+      right: 0;
+
+    }
+
+    .ellipse__two {
+      z-index: -1;
+      bottom: 300px;
+      left: -100px;
+    }
+    .ellipse__three{
+      z-index: -1;
+      top: 150px;
+      left: 700px;
     }
 
   }
@@ -264,6 +298,7 @@
       }
     }
     .container {
+      justify-content: center;
 
 
       .content {
@@ -272,6 +307,11 @@
         justify-content: center;
         display: flex;
 
+      }
+      .ellipse__three{
+        z-index: -1;
+        top: 900px;
+        left: 300px;
       }
 
     }
@@ -336,6 +376,11 @@
       .content {
         margin-top: 20px;
 
+      }
+      .ellipse__three{
+        z-index: -1;
+        top: 700px;
+        left: 100px;
       }
 
     }

@@ -24,14 +24,13 @@
 }
 
 .mySwiper2 {
+    position: relative;
     height: auto;
     width: 100%;
 }
 
 .mySwiper {
     max-width: 1440px;
-    box-sizing: border-box;
-
     width: 100%;
     height: 130px;
     padding: 10px 0;
@@ -39,9 +38,11 @@
 
 .mySwiper .swiper-slide {
     justify-content: center;
+    text-align: center;
+    align-items: center;
     height: 120px;
     width: 25%;
-    opacity: 0.6;
+    opacity: 0.2;
 }
 
 .mySwiper .swiper-slide-thumb-active {
@@ -50,6 +51,7 @@
 
 
 .group {
+    object-fit: cover;
     align-items: center;
     display: revert;
     border-radius: 5px;
@@ -61,21 +63,36 @@
 }
 .mySwiper .Regular{
     background-color: #EFE5D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .mySwiper .OneTime{
     background-color: #E5E2D6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .mySwiper .Move_in{
     background-color: #EDECE9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .mySwiper .Office{
-    background-color: #EFE5D9;
+    background-color: #F6F8FA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .mySwiper .After_Repair{
-    background-color: #E5E2D6;
+    background-color: rgba(192, 211, 222);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .mySwiper .Deep{
-    background-color: #EDECE9;
+    background-color: #D7EAF4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.mySwiper .Holiday{
+    background: #C0D3DE30;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.mySwiper .Pets{
+    background-color: #D7EAF4;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 h4{
     justify-content: center;
@@ -189,3 +206,5 @@ p{
     }
 
 }
+
+
