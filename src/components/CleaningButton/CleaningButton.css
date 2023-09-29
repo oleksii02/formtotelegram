@@ -21,10 +21,10 @@
   width: 90px;
 }
 .CleaningButton .cleaning-after {
-  width: 100px;
+  width: 90px;
 }
 .CleaningButton .office-cleaning {
-  width: 70px;
+  width: 90px;
 }
 .CleaningButton .span__name {
   width: 154px;
@@ -57,13 +57,13 @@
     min-height: 60px;
   }
   .CleaningButton .MuiButtonBase-root .regular-cleaning {
-    width: 45px;
+    width: 50px;
   }
   .CleaningButton .MuiButtonBase-root .cleaning-after {
     width: 50px;
   }
   .CleaningButton .MuiButtonBase-root .office-cleaning {
-    width: 40px;
+    width: 50px;
   }
 }
 .CleaningButton .span__name {
