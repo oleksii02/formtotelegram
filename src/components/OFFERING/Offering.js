@@ -30,7 +30,7 @@ function Offering(props) {
                             <img src={Regular} alt={'Regular Cleaning'} className={'Regular'}/>
                             <div className={'group '}>
                                 <h4>Regular Cleaning</h4>
-                                <p>$41 /maid-hour</p>
+                                <p>$40 /maid-hour</p>
                             </div>
                         </div>
                     </a>
@@ -63,7 +63,7 @@ function Offering(props) {
                             <img src={Office} alt={'Offering'} className={'Office'}/>
                             <div className={'group'}>
                                 <h4>Office/ Commercial Cleaning</h4>
-                                <p>$46 /maid-hour</p>
+                                <p>$45 /maid-hour</p>
                             </div>
                         </div>
                     </a>
@@ -74,7 +74,7 @@ function Offering(props) {
                             <img src={After_Repair} alt={'Offering'} className={'After_Repair'}/>
                             <div className={'group'}>
                                 <h4>After Repair Cleaning</h4>
-                                <p>$50 /maid-hour</p>
+                                <p>$48 /maid-hour</p>
                             </div>
                         </div>
                     </a>
@@ -85,7 +85,18 @@ function Offering(props) {
                             <img src={Deep} alt={'Offering'}/>
                             <div className={'group'}>
                                 <h4>Deep Cleaning</h4>
-                                <p>$38/maid-hour</p>
+                                <p>$50/maid-hour</p>
+                            </div>
+                        </div>
+                    </a>
+                </Grid>
+                <Grid item xs={6} md={4} lg={3} className={'content Pets'}>
+                    <a href={'#pets-cleaning'}>
+                        <div className={'Offering__groups'}>
+                            <img src={Pets} alt={'Pets'}/>
+                            <div className={'group'}>
+                                <h4> Pets and a Clean Home</h4>
+                                <p>$47/maid-hour</p>
                             </div>
                         </div>
                     </a>
@@ -96,22 +107,12 @@ function Offering(props) {
                         <img src={Holiday} alt={'Holiday'}/>
                         <div className={'group'}>
                             <h4>Holiday Cleaning</h4>
-                            <p>$45 /maid-hour</p>
+                            <p>$40 /maid-hour</p>
                         </div>
                     </div>
                     </a>
                 </Grid>
-                <Grid item xs={6} md={4} lg={3} className={'content Pets'}>
-                    <a href={'#pets-cleaning'}>
-                    <div className={'Offering__groups'}>
-                        <img src={Pets} alt={'Pets'}/>
-                        <div className={'group'}>
-                            <h4> Pets and a Clean Home</h4>
-                            <p>$38/maid-hour</p>
-                        </div>
-                    </div>
-                    </a>
-                </Grid>
+
 
                 <div className={'ellipse ellipse__one'}></div>
                 <div className={'ellipse ellipse__two'}></div>

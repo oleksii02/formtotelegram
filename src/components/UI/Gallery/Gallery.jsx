@@ -37,7 +37,6 @@ export default function Gallery() {
                 autoHeight={true}
                 spaceBetween={10}
                 navigation={true}
-                keyboard={true}
                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
 
                 modules={[FreeMode, Navigation, Thumbs, Mousewheel, Keyboard,HashNavigation]}
@@ -96,11 +95,11 @@ export default function Gallery() {
 
             </Swiper>
             <Swiper
-
+                loop={true}
                 onSwiper={setThumbsSwiper}
-                slidesPerView={'auto'}
+                slidesPerView={4}
                 freeMode={true}
-                spaceBetween={0}
+                spaceBetween={10}
                 centeredSlides={true}
 
                 modules={[FreeMode, Navigation, Thumbs]}
@@ -113,7 +112,7 @@ export default function Gallery() {
                 <SwiperSlide onClick={()=>console.log(setThumbsSwiper)}>
                     <div className={'group Regular'}>
                         <h4>Regular Cleaning</h4>
-                        <p>$41 /maid-hour</p>
+                        <p>$40 /maid-hour</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -131,31 +130,31 @@ export default function Gallery() {
                 <SwiperSlide>
                     <div className={'group Office'}>
                         <h4>After Repair Cleaning</h4>
-                        <p>$50 /maid-hour</p>
+                        <p>48 /maid-hour</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={'group After_Repair'}>
                         <h4>Office Cleaning</h4>
-                        <p>$46 /maid-hour</p>
+                        <p>$45 /maid-hour</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={'group Deep'}>
                         <h4>Deep Cleaning</h4>
-                        <p>$38/maid-hour</p>
+                        <p>$50 /maid-hour</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={'group Holiday'}>
                         <h4>Pets and a Clean Home</h4>
-                        <p>$38/maid-hour</p>
+                        <p>$47 /maid-hour</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={'group Pets'}>
                         <h4>Holiday Cleaning</h4>
-                        <p>$45 /maid-hour</p>
+                        <p>$40 /maid-hour</p>
                     </div>
                 </SwiperSlide>
 

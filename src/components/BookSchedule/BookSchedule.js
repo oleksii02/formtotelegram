@@ -14,10 +14,10 @@ import {DatePicker} from "@mui/x-date-pickers/DatePicker";
 import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
 
 import dayjs from 'dayjs';
+import {renderTimeViewClock, TimePicker} from "@mui/x-date-pickers";
 
 
 const today = dayjs();
-const yesterday = dayjs().subtract(1, 'day');
 
 
 const service_list = [
@@ -159,7 +159,7 @@ export default function BookSchedule() {
                     maxWidth: '1170px',
                     margin: '0 auto 50px',
                     textAlign: 'center',
-                    '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left',},
+                    '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left', width: '100%'},
                     '& .MuiFormControl-root': {padding: '10px 8px 8px',},
                     '& .MuiInputLabel-root': {
                         marginBottom: '10px'
@@ -317,6 +317,28 @@ export default function BookSchedule() {
                     <FormControl
                         className={'width60ch'}>
                         <InputLabel shrink htmlFor="bootstrap-input">
+                            <h4 className={'form_name'}>Time</h4>
+                        </InputLabel>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DemoContainer components={['TimePicker']}>
+                                <TimePicker
+                                    label=""
+                                    viewRenderers={{
+                                        hours: renderTimeViewClock,
+                                        minutes: renderTimeViewClock,
+                                        seconds: renderTimeViewClock,
+                                    }}
+                                />
+                            </DemoContainer>
+                        </LocalizationProvider>
+
+                    </FormControl>
+
+                </div>
+                <div>
+                    <FormControl
+                        className={'width60ch'}>
+                        <InputLabel shrink htmlFor="bootstrap-input">
                             <h4 className={'form_name'}>Address</h4>
                         </InputLabel>
                         <TextField
@@ -330,8 +352,6 @@ export default function BookSchedule() {
                         </TextField>
 
                     </FormControl>
-                </div>
-                <div>
 
                     <FormControl
                         className={'width60ch'}>

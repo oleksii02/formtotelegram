@@ -4,7 +4,7 @@
   position: relative;
   top: -80px;
   z-index: 900;
-  justify-content: end;
+  justify-content: flex-end;
   display: flex;
 }
 .CleaningButton .MuiButtonBase-root {
@@ -18,17 +18,17 @@
   background-color: #FFFFFF;
 }
 .CleaningButton .regular-cleaning {
-  width: 90px;
+  width: 80px;
 }
 .CleaningButton .cleaning-after {
-  width: 90px;
+  width: 80px;
 }
 .CleaningButton .office-cleaning {
-  width: 90px;
+  width: 80px;
 }
 .CleaningButton .span__name {
-  width: 154px;
-  height: 44px;
+  width: 160px;
+  height: 50px;
   border-radius: 5px;
   margin-left: 10px;
   background: #F1F9FF;
@@ -65,16 +65,12 @@
   .CleaningButton .MuiButtonBase-root .office-cleaning {
     width: 50px;
   }
-}
-.CleaningButton .span__name {
-  width: 100px;
-  height: auto;
-}
-.CleaningButton .span__name h6 {
-  margin: 0;
-  color: #003156;
-  text-align: center;
-  font-family: "Zen Antique", serif;
+  .CleaningButton .span__name {
+    width: 120px;
+  }
+  .CleaningButton .span__name h6 {
+    font-size: 13px;
+  }
 }
 @media only screen and (max-width: 599px) {
   .CleaningButton {

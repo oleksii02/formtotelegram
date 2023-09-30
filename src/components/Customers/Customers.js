@@ -11,18 +11,9 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 function Customers(props) {
 
-    const [allPage, setAllPage] = useState(Math.ceil(costomers.comments.length/3))
+    const [allPage] = useState(Math.ceil(costomers.comments.length/3))
     const [currentPage, setCurrentPage] = useState(1)
 
-    console.log(currentPage)
-
-    function addComment() {
-      //  let parse_obj = JSON.parse(costomers);
-      //   costomers['comments'].unshift({"teamId":"4","status":"pending"});
-      //   costomers = JSON.stringify(costomers);
-      //   console.log(costomers['comments'].unshift({"teamId":"4","status":"pending"}))
-
-    }
 
     const theme = createTheme({
         palette: {
@@ -77,11 +68,7 @@ function Customers(props) {
                     onChange={(event, value) => setCurrentPage(value)}
                     />
                 </Grid>
-                {/*<Button*/}
-                {/*onClick={() => addComment()*/}
-                {/*}>*/}
-                {/*    fdfd*/}
-                {/*</Button>*/}
+
             </Grid>
 
         </div>
