@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 // Import Swiper React components
 import {Swiper, SwiperSlide} from 'swiper/react';
 
@@ -12,7 +12,7 @@ import 'swiper/css/thumbs';
 import './Gallery.css';
 
 // import required modules
-import {FreeMode, Grid, HashNavigation, Keyboard, Mousewheel, Navigation, Pagination, Thumbs} from 'swiper/modules';
+import {FreeMode, HashNavigation, Keyboard, Mousewheel, Navigation, Thumbs} from 'swiper/modules';
 import RegularCleaning from "../../TypeCleaning/RegularCleaning";
 import DeepCleaning from "../../TypeCleaning/DeepCleaning";
 import MoveInCleaning from "../../TypeCleaning/MoveInCleaning";
@@ -37,6 +37,8 @@ export default function Gallery() {
                 autoHeight={true}
                 spaceBetween={10}
                 navigation={true}
+                grabCursor={true}
+
                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
 
                 modules={[FreeMode, Navigation, Thumbs, Mousewheel, Keyboard,HashNavigation]}
@@ -97,19 +99,13 @@ export default function Gallery() {
             <Swiper
                 loop={true}
                 onSwiper={setThumbsSwiper}
-                slidesPerView={4}
-                freeMode={true}
                 spaceBetween={10}
-                centeredSlides={true}
-
+                slidesPerView={4}
+                grabCursor={true}
                 modules={[FreeMode, Navigation, Thumbs]}
-
-
-
-
                 className="mySwiper"
             >
-                <SwiperSlide onClick={()=>console.log(setThumbsSwiper)}>
+                <SwiperSlide>
                     <div className={'group Regular'}>
                         <h4>Regular Cleaning</h4>
                         <p>$40 /maid-hour</p>

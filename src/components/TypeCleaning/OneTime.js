@@ -19,7 +19,7 @@ function DeepCleaning(props) {
                 </span>
             </div>
             <Grid container className={'rooms'}>
-                <Grid item xs={12} sm={4} className={'room'}>
+                <Grid item xs={12} sm={4} className={'room left'}>
                     <div>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="70%" viewBox="0 0 46 43" fill="none">
@@ -57,7 +57,7 @@ function DeepCleaning(props) {
                     </div>
 
                 </Grid>
-                <Grid item xs={12} sm={4} className={'room'}>
+                <Grid item xs={12} sm={4} className={'room center'}>
                     <div className={'two'}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="70%" viewBox="0 0 46 43" fill="none">
@@ -103,7 +103,7 @@ function DeepCleaning(props) {
                     </div>
 
                 </Grid>
-                <Grid item xs={12} sm={4} className={'room'}>
+                <Grid item xs={12} sm={4} className={'room right'}>
                     <div className={'three'}>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="70%" viewBox="0 0 46 43" fill="none">

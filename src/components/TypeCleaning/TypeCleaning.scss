@@ -62,14 +62,21 @@
   }
 
   .rooms {
-    max-width: 1440px;
-    padding: 0 50px;
+    max-width: 1540px;
+    padding: 0 50px ;
     justify-content: center;
     display: flex;
     margin: 50px auto 0;
-
-    .room {
+    .left{
+      justify-content: flex-start;
+    }
+    .center{
       justify-content: center;
+    }
+    .right{
+      justify-content: right;
+    }
+    .room {
       display: flex;
 
       div {
@@ -163,14 +170,13 @@
   .MoveIn {
 
     margin: 50px 0 0 ;
-
     .room {
-      justify-content: center;
-      display: flex;
-      margin-bottom: 40px;
+      max-width: 1540px;
+      padding: 0 50px;
+      margin: 0 auto 40px;
 
       div {
-        width: 1331px;
+        width: 100%;
         height: auto;
         border: 1px solid #003156;
         border-radius: 5px;
@@ -279,14 +285,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        text-transform: capitalize;
       }
 
     }
 
     .room {
-      max-width: 1330px;
-      width: 1310px;
+      width: 100%;
       height: 420px;
       border: 1px solid #003156;
       border-radius: 5px;
@@ -384,7 +388,7 @@
     .room {
       position: relative;
       margin: 50px 0 0 ;
-      max-width: 1330px;
+      max-width: 1440px;
       height: auto;
       border: 1px solid #003156;
       border-radius: 5px;
@@ -525,11 +529,12 @@
 
     .room {
       margin: 50px 0 0 ;
-      max-width: 1330px;
+      max-width: 1440px;
       height: auto;
       border: 1px solid #003156;
       color: #003156;
       border-radius: 5px;
+      position: relative;
 
       span {
         background-color: #FFFFFF;
@@ -644,11 +649,11 @@
       }
     }
     .MoveIn {
-      padding: 0 50px;
       margin: 30px 0;
 
       .room {
         justify-content: center;
+        padding: 0 30px;
         display: flex;
         margin-bottom: 30px;
 
@@ -689,11 +694,10 @@
     }
     .rooms {
 
-      padding: 0 50px;
+      padding: 0 30px;
       margin: 30px 0;
 
       .room {
-        justify-content: center;
         display: flex;
         margin-bottom: 30px;
 
@@ -704,7 +708,7 @@
 
           span {
             margin-top: -25px;
-            margin-left: 30px;
+            margin-left: 15px;
             width: 55px;
             height: 55px;
 
@@ -758,7 +762,7 @@
       }
     }
     .DeepC {
-      padding: 0 50px;
+      padding: 0 30px;
       margin: 0;
 
       .text {
@@ -821,9 +825,9 @@
 
     }
     .Pets {
+      padding: 0 30px;
 
       .room {
-        width: 95%;
         height: auto;
 
         span {
@@ -884,6 +888,7 @@
 
     }
     .Holiday {
+      padding: 0 30px;
 
       .room {
         width: 95%;
@@ -976,15 +981,15 @@
       }
     }
     .MoveIn {
-      padding: 0 15px;
       margin: 25px 0;
 
       .room {
+        padding: 0 15px;
 
         margin-bottom: 25px;
 
         div {
-          width: 95%;
+          width: 100%;
           height: auto;
           min-height: 250px;
 
@@ -1027,15 +1032,15 @@
 
     }
     .rooms {
-
       padding: 0 15px;
       margin: 25px 0 0;
 
       .room {
+        justify-content: center;
         margin-bottom: 25px;
 
         div {
-          width: 95%;
+          width: 100%;
           height: auto;
           min-height: 250px;
 
@@ -1081,7 +1086,7 @@
         }
 
         .big_img {
-          width: 95%;
+          width: 97%;
           height: auto;
           min-height: 550px;
           border-radius: 5px;
@@ -1122,7 +1127,7 @@
 
       .room {
         height: auto;
-        margin: 0 10px;
+        margin: 0;
 
         .text {
 
@@ -1166,8 +1171,8 @@
       padding: 20px 15px 0;
 
       .room {
-        margin: 15px 15px;
-        width: 95%;
+        margin: 15px auto;
+        width: 100%;
         height: auto;
 
         span {
@@ -1240,9 +1245,10 @@
 
     }
     .Holiday {
+      padding: 0 15px;
 
       .room {
-        width: 95%;
+        width: 100%;
         height: auto;
         padding: 15px 5px;
 

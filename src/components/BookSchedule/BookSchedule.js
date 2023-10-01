@@ -107,10 +107,10 @@ export default function BookSchedule() {
     const [squareFootage, setSquareFootage] = useState('')
     const [bedrooms, setBedrooms] = useState('')
     const [bathrooms, setBathrooms] = useState('')
-    const [serviceDirty, setServiceDirty] = useState(false)
+/*    const [serviceDirty, setServiceDirty] = useState(false)
     const [squareFootageDirty, setSquareFootageDirty] = useState(false)
     const [bedroomsDirty, setBedroomsDirty] = useState(false)
-    const [bathroomsDirty, setBathroomsDirty] = useState(false)
+    const [bathroomsDirty, setBathroomsDirty] = useState(false)*/
 
     const theme = createTheme({
         palette: {
@@ -156,7 +156,6 @@ export default function BookSchedule() {
                 className={'form'}
                 component="form"
                 sx={{
-                    maxWidth: '1170px',
                     margin: '0 auto 50px',
                     textAlign: 'center',
                     '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left', width: '100%'},
@@ -197,7 +196,7 @@ export default function BookSchedule() {
                             id="outlined-select-currency"
                             multiline
                             type="tel"
-                            placeholder="(+021) 254 4458 187"
+                            placeholder="+1 (331) 313-7082"
                             onChange={e => squareFootageHandler(e)}
                         >
 

@@ -4,7 +4,9 @@
 }
 .Footer .newsLetter {
   font-family: "Roboto Light", sans-serif;
-  margin: 30px 50px;
+  margin: 30px auto 0;
+  max-width: 1440px;
+  padding: 0 50px;
 }
 .Footer .newsLetter h3 {
   margin: 0;
@@ -40,14 +42,18 @@
   display: grid;
 }
 .Footer .Section {
-  margin: 0 50px;
+  max-width: 1440px;
+  padding: 0 50px;
+  margin: 30px auto;
 }
 .Footer .Section .logo {
-  margin: 0 auto;
+  margin: 0;
   max-width: 477px;
   height: 149px;
 }
 .Footer .Section .logo img {
+  margin-left: -25px;
+  justify-content: end;
   width: 100%;
 }
 .Footer .Section .link {
@@ -79,6 +85,7 @@
   margin-bottom: 27px;
   align-items: center;
   display: flex;
+  text-decoration: none;
   color: #BCBCBC;
   font-size: 16px;
   font-style: normal;
@@ -129,6 +136,88 @@
   border-top: 1px solid rgba(168, 193, 255, 0.15);
   margin: 1em 0;
   padding: 0;
+}
+@media only screen and (max-width: 599px) {
+  .Footer .newsLetter {
+    margin: 15px auto 0;
+    max-width: 599px;
+    padding: 0 10px;
+  }
+  .Footer .newsLetter h3 {
+    font-size: 26px;
+  }
+  .Footer .newsLetter p {
+    font-size: 14px;
+  }
+  .Footer .newsLetter p .Subscribe {
+    align-items: center;
+    display: grid;
+  }
+  .Footer .newsLetter .InputSubscription {
+    margin-top: 30px;
+    align-items: center;
+    display: grid;
+  }
+  .Footer .Section {
+    max-width: 599px;
+    padding: 0 10px;
+    margin: 15px auto;
+  }
+  .Footer .Section .logo {
+    margin: 0 auto;
+    max-width: 350px;
+    height: 100px;
+  }
+  .Footer .Section .logo img {
+    margin-left: 0;
+  }
+  .Footer .Section .link {
+    margin: 0;
+  }
+  .Footer .Section .links {
+    margin: 0;
+    justify-content: center;
+    display: grid;
+  }
+  .Footer .Section .links hr {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 1px;
+    text-align: center;
+    margin: 5px 0 10px;
+  }
+  .Footer .Section .links h4 {
+    justify-content: center;
+    color: #FFF;
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .Footer .Section .links a {
+    justify-content: center;
+    font-family: "Work Sans", sans-serif;
+    height: 24px;
+    margin-bottom: 27px;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: #BCBCBC;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .Footer .Copyright {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .Footer .Copyright p {
+    min-width: 220px;
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=Footer.css.map */
