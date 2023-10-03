@@ -3,65 +3,94 @@
     {
       "id": 1,
       "Name": "Courtney Henry",
-      "Offering": "Regular Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
-      "Rating": "4"
+      "Offering": "Commercial Cleaning",
+      "Massage": "They Consistently Maintain A Pristine Work Environment, Paying Attention To Every Detail. The Team Is Punctual, Professional, And Efficient. I Highly Recommend Their Services For Any Business Looking To Create A Clean And Welcoming Workspace.",
+      "Rating": "5"
     },
     {
       "id": 2,
       "Name": "Darrell Steward",
-      "Offering": "After Repair Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Offering": "Cleaning",
+      "Massage": "Sparkly Elite Were A Fantastic Choice! I Scheduled A Move Out Clean After I Had Vacated My Apartment. They Were So Easy To Communicate With And Left The Apartment Looking Brand New, Especially The Inside Of The Oven. Highly Recommend!",
       "Rating": "5"
     },
     {
       "id": 3,
       "Name": "Jerome Bell",
       "Offering": "Deep Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "Hanna Was Very Professional And Kind. She Worked Very Efficiently And Left The House Sparkling Clean. I Definitely Want Her Back!",
       "Rating": "4"
     },
     {
       "id": 4,
-      "Name": "Courtney Henry2",
+      "Name": "John Smith",
       "Offering": "Regular Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "We Feel You Cleaned Our Property Better Than Any Other Cleaning We Have Done With Handybook. The Carpets Were Very Well Vacuumed And The Bathroom And Kitchen Were Spotless. Please Come Back Again Next Month, You Were Great!",
       "Rating": "4"
     },
     {
       "id": 5,
-      "Name": "Darrell Steward2",
+      "Name": "Jennifer Johnson",
       "Offering": "After Repair Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "Christy Was Super Friendly And Super Fast. My Place Was So Dirty It Was Almost Gross. She Didn't Bat An Eye And Had Time To Do Some Other Fine Details To My Place. I Am Hoping That She Will Be Back Twice A Month.",
       "Rating": "5"
     },
     {
       "id": 6,
-      "Name": "Jerome Bell2",
-      "Offering": "Deep Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
-      "Rating": "4"
+      "Name": "Michael Brown",
+      "Offering": "Regular Cleaning",
+      "Massage": "5 Stars Is Not Enough!! I Came Home And Was Astounded At What She Accomplished In The Time She Was Here. My Place Is Amazing!! Thank You Svetlana!",
+      "Rating": "5"
     },
     {
       "id": 7,
-      "Name": "Courtney Henry3",
+      "Name": "Jessica Davis",
       "Offering": "Regular Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "Sparkle Elite Was Recommended To Me By A Friend And I'm Glad They Did The Work For Me, I Gave Them More Time Because They Didn't Have Time To Do All The Work, But I'm Happy With My New Home",
       "Rating": "4"
     },
     {
       "id": 8,
-      "Name": "Darrell Steward3",
+      "Name": "Robert Wilson",
       "Offering": "After Repair Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "Company Has Transformed My Home With Their Regular Cleaning Service. Aliqua Id Fugiat – They Take Care Of The Cleaning, So I Can Focus On Enjoying My Space. Thank You For Making My Life Easier!",
       "Rating": "5"
     },
     {
       "id": 9,
-      "Name": "Jerome Bell3",
+      "Name": "Lisa Martinez",
       "Offering": "Deep Cleaning",
-      "Massage": "Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.",
+      "Massage": "If You're Looking For Top-Notch Regular Cleaning Services, Look No Further Than Sparkle. Aliqua Id Fugiat Perfectly Describes Their Dedication To Perfection. I'm Thrilled With The Results Every Time.",
       "Rating": "4"
+    },
+    {
+      "id": 10,
+      "Name": "William Anderson",
+      "Offering": "Deep Cleaning",
+      "Massage": "Sparkle Has Been My Go-To For Regular Cleaning, And I Couldn't Be Happier. Their Attention To Detail And Friendly Staff Make Them Stand Out. I Wholeheartedly Recommend Their Services.",
+      "Rating": "4"
+    },
+    {
+      "id": 11,
+      "Name": "Mary Taylor",
+      "Offering": "Regular Cleaning",
+      "Massage": "Aliqua Id Fugiat – That's How I Feel After Each Visit From Company. Their Regular Cleaning Service Is A Breath Of Fresh Air, Leaving My Home Immaculate And Inviting. I Can't Thank Them Enough!",
+      "Rating": "4"
+    },
+    {
+      "id": 12,
+      "Name": "Michael Brown",
+      "Offering": "Deep Cleaning",
+      "Massage": "Sparkle Has Exceeded My Expectations With Their Regular Cleaning Service. Their Team Is Courteous And Efficient, Making My Life So Much Easier. I'm A Satisfied Customer For Years To Come!\n\n",
+      "Rating": "5"
+    },
+    {
+      "id": 13,
+      "Name": "Sarah Garcia",
+      "Offering": "Regular Cleaning",
+      "Massage": "I Can't Imagine Life Without Chicago Sparkle Elite Cleaning Regular Cleaning Service. Aliqua Id Fugiat Perfectly Captures The Relief And Satisfaction I Feel After Each Visit. Trust Them To Make Your Home Sparkle!",
+      "Rating": "5"
     }
+
   ]
 }

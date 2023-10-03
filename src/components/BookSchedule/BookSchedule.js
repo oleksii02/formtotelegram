@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from "@mui/material/InputLabel";
 import {Button, FormControl} from "@mui/material";
 import './BookSchedule.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {sendMessage} from "../../api/bookSchedule.ts";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
@@ -22,31 +22,43 @@ const today = dayjs();
 
 const service_list = [
     {
-        value: 6,
+        value: 1,
         label: 'Regular Cleaning',
     },
     {
-        value: 5,
+        value: 2,
         label: 'After Repair',
     },
     {
-        value: 1,
+        value: 3,
         label: 'Office/ Commercial',
     },
     {
-        value: 2,
+        value: 4,
         label: 'Move-in/ Move-out',
     },
     {
-        value: 3,
+        value: 5,
         label: 'Deep Cleaning',
     },
     {
-        value: 4,
+        value: 6,
         label: 'Basic Cleaning',
+    },
+    {
+        value: 7,
+        label: 'Pets and a Clean Home',
+    },
+    {
+        value: 8,
+        label: 'Holiday Cleaning',
     },
 ];
 const squareFootage_list = [
+    {
+        value: 5,
+        label: '100 Sq Ft - 200 Sq Ft'
+    },
     {
         value: 1,
         label: '200 Sq Ft - 400 Sq Ft'
@@ -62,6 +74,10 @@ const squareFootage_list = [
     {
         value: 4,
         label: '800 Sq Ft - 1500 Sq Ft'
+    },
+    {
+        value: 6,
+        label: '1500 Sq Ft - 2000 Sq Ft'
     },
 ];
 const bedrooms_list = [
@@ -81,6 +97,14 @@ const bedrooms_list = [
         value: 4,
         label: '4 Bedrooms'
     },
+    {
+        value: 5,
+        label: '5 Bedrooms'
+    },
+    {
+        value: 6,
+        label: '6 Bedrooms'
+    },
 ];
 const bathrooms_list = [
     {
@@ -99,19 +123,17 @@ const bathrooms_list = [
         value: 4,
         label: '4 Bathrooms'
     },
+    {
+        value: 5,
+        label: '5 Bathrooms'
+    },
+    {
+        value: 6,
+        label: '6 Bathrooms'
+    },
 ];
 
 export default function BookSchedule() {
-
-    const [service, setService] = useState('')
-    const [squareFootage, setSquareFootage] = useState('')
-    const [bedrooms, setBedrooms] = useState('')
-    const [bathrooms, setBathrooms] = useState('')
-/*    const [serviceDirty, setServiceDirty] = useState(false)
-    const [squareFootageDirty, setSquareFootageDirty] = useState(false)
-    const [bedroomsDirty, setBedroomsDirty] = useState(false)
-    const [bathroomsDirty, setBathroomsDirty] = useState(false)*/
-
     const theme = createTheme({
         palette: {
             primary: {
@@ -121,7 +143,63 @@ export default function BookSchedule() {
         },
     });
 
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [service, setService] = useState('')
+    const [bedrooms, setBedrooms] = useState('')
+    const [bathrooms, setBathrooms] = useState('')
+    const [date, setDate] = useState('')
+    const [time, setTime] = useState('')
+    const [address, setAddress] = useState('')
+    const [squareFootage, setSquareFootage] = useState('')
 
+    const [nameDirty, setNameDirty] = useState(false)
+    const [phoneDirty, setPhoneDirty] = useState(false)
+
+    const [nameError, setNameError] = useState('Name cannot be empty')
+    const [phoneError, setPhoneError] = useState('Phone cannot be empty')
+    const [formValid, setFormValid] = useState(false)
+
+
+
+
+
+    useEffect( () => {
+        if(nameError || phoneError){
+            setFormValid(false)
+        }
+        else {
+            setFormValid(true)
+        }
+    },[nameError, phoneError])
+
+    const blurHandler = (e) => {
+        switch (e.target.name) {
+            case 'name':
+                setNameDirty(true)
+                break
+            case 'phone' :
+                setPhoneDirty(true)
+                break
+        }
+
+    }
+
+    const nameHandler = (e) => {
+        setName(e.target.value)
+        if(!e.target.value){setNameError('Name cannot be empty')}
+        else {setNameError('')}
+
+    }
+    const phoneHandler = (e) => {
+        setPhone(e.target.value)
+        if (!e.target.value) {
+            setPhoneError('Phone is incorrect')
+        } else {
+            setPhoneError('')
+        }
+
+    }
     const serviceHandler = (e) => {
         setService(e.target.value)
 
@@ -138,14 +216,23 @@ export default function BookSchedule() {
         setBathrooms(e.target.value)
 
     }
+    const addressHandler = (e) => {
+        setAddress(e.target.value)
+
+    }
+    const dateHandler = (e) => {
+        setDate(e.$D, e.$M+1, e.$y)
+    }
+    const timeHandler = (e) => {
+        setTime(`${e.$d.getHours()}:${e.$d.getMinutes()}`)
+        console.log(e)
+
+    }
 
     const handleSubmit = async (values) => {
-        console.log('dsfsdfdsf')
         const message =
-            `New order!!!${'%0A'}Type of Service: ${service} ${'%0A'}Total Square Footage: ${squareFootage} ${'%0A'}Bedrooms: ${bedrooms} ${'%0A'}Bathrooms: ${bathrooms}`
+            `New order!!!${'%0A'}Name: ${name}${'%0A'}Phone: ${phone}${'%0A'}Date: ${date}${'%0A'}Time : ${time}${'%0A'}Address: ${address}${'%0A'}Type of Service: ${service} ${'%0A'}Total Square Footage: ${squareFootage}${'%0A'}Bedrooms: ${bedrooms}${'%0A'}Bathrooms: ${bathrooms}${'%0A'}`
         await sendMessage(message)
-        console.log('dsfsdfdsf')
-
 
     };
 
@@ -176,13 +263,15 @@ export default function BookSchedule() {
 
                     >
                         <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
-                            <h4 className={'form_name'}>Name</h4>
+                            {[(nameError && nameDirty) ? <h4 className={' form_name Error'}>{nameError}</h4> : <h4 className={'form_name'}>Name</h4>]}
                         </InputLabel>
                         <TextField
                             multiline
                             id="outlined-textarea"
                             placeholder="Jones Williams"
-                            onChange={e => serviceHandler(e)}
+                            name={'name'}
+                            onChange={e => nameHandler(e)}
+                            onBlur={e => blurHandler(e)}
                         >
                         </TextField>
                     </FormControl>
@@ -190,14 +279,16 @@ export default function BookSchedule() {
                         className={'width60ch'}
                     >
                         <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}>Phone</h4>
+                            {[(phoneError && phoneDirty) ? <h4 className={' form_name Error'}>{phoneError}</h4> : <h4 className={'form_name'}>Phone</h4>]}
                         </InputLabel>
                         <TextField
                             id="outlined-select-currency"
                             multiline
                             type="tel"
                             placeholder="+1 (331) 313-7082"
-                            onChange={e => squareFootageHandler(e)}
+                            name={'phone'}
+                            onChange={e => phoneHandler(e)}
+                            onBlur={e => blurHandler(e)}
                         >
 
 
@@ -217,14 +308,14 @@ export default function BookSchedule() {
                             name='Type of Service'
                             id="outlined-select-currency"
                             select
-                            placeholder="Placeholder"
-                            defaultValue="Placeholder"
+                            placeholder="Type of Service"
+                            defaultValue="Type of Service"
                             onChange={e => serviceHandler(e)}
 
                         >
 
-                            <MenuItem disabled value="Placeholder">
-                                <em>Placeholder</em>
+                            <MenuItem disabled value="Type of Service">
+                                <em>Type of Service</em>
                             </MenuItem>
                             {service_list.map((option) => (
                                 <MenuItem key={option.value} value={option.label}>
@@ -235,23 +326,23 @@ export default function BookSchedule() {
                     </FormControl>
                     <FormControl
                         sx={{
-                            padding:'0 !important',
+                            padding: '0 !important',
                         }}>
-                        <div style={{display:'flex'}}>
+                        <div style={{display: 'flex'}}>
                             <FormControl
                                 className={'width30ch'}
-                                >
+                            >
                                 <InputLabel shrink htmlFor="bootstrap-input">
-                                    <h4 className={'form_name'}> Bedrooms</h4>
+                                    <h4 className={'form_name'}>Bedrooms</h4>
                                 </InputLabel>
                                 <TextField
                                     id="outlined-select-currency"
                                     select
-                                    defaultValue="Placeholder"
+                                    defaultValue="Bedrooms"
                                     onChange={e => bedroomsHandler(e)}
                                 >
-                                    <MenuItem disabled value="Placeholder">
-                                        <em>Placeholder</em>
+                                    <MenuItem disabled value="Bedrooms">
+                                        <em>Bedrooms</em>
                                     </MenuItem>
 
                                     {bedrooms_list.map((option) => (
@@ -262,18 +353,18 @@ export default function BookSchedule() {
                                 </TextField>
                             </FormControl>
                             <FormControl
-                                className={'width30ch'} >
+                                className={'width30ch'}>
                                 <InputLabel shrink htmlFor="bootstrap-input">
                                     <h4 className={'form_name'}> Bathrooms</h4>
                                 </InputLabel>
                                 <TextField
                                     id="outlined-select-currency"
                                     select
-                                    defaultValue="Placeholder"
+                                    defaultValue="Bathrooms"
                                     onChange={e => bathroomsHandler(e)}
                                 >
-                                    <MenuItem disabled value="Placeholder">
-                                        <em>Placeholder</em>
+                                    <MenuItem disabled value="Bathrooms">
+                                        <em>Bathrooms</em>
                                     </MenuItem>
 
                                     {bathrooms_list.map((option) => (
@@ -304,11 +395,14 @@ export default function BookSchedule() {
                             >
                                 <DemoItem>
                                     <DatePicker
+                                        onChange={e => dateHandler(e)}
                                         defaultValue={today}
                                         disablePast
                                         views={['year', 'month', 'day']}
                                     />
                                 </DemoItem>
+
+
 
                             </DemoContainer>
                         </LocalizationProvider>
@@ -318,15 +412,19 @@ export default function BookSchedule() {
                         <InputLabel shrink htmlFor="bootstrap-input">
                             <h4 className={'form_name'}>Time</h4>
                         </InputLabel>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DemoContainer components={['TimePicker']}>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}
+                        >
+                            <DemoContainer components={['TimePicker']}
+                            >
                                 <TimePicker
+                                    onChange={e => timeHandler(e)}
                                     label=""
                                     viewRenderers={{
                                         hours: renderTimeViewClock,
                                         minutes: renderTimeViewClock,
                                         seconds: renderTimeViewClock,
                                     }}
+
                                 />
                             </DemoContainer>
                         </LocalizationProvider>
@@ -343,9 +441,8 @@ export default function BookSchedule() {
                         <TextField
                             fullWidth
                             id="outlined-select-currency"
-
                             placeholder="564 Kingstreate, Mailbourne"
-                            onChange={e => squareFootageHandler(e)}
+                            onChange={e => addressHandler(e)}
                         >
 
                         </TextField>
@@ -361,12 +458,12 @@ export default function BookSchedule() {
                             fullWidth
                             id="outlined-select-currency"
                             select
-                            defaultValue="Placeholder"
+                            defaultValue="Total Square Footage"
                             onChange={e => squareFootageHandler(e)}
                         >
 
-                            <MenuItem disabled value="Placeholder">
-                                <em>Placeholder</em>
+                            <MenuItem disabled value="Total Square Footage">
+                                <em>Total Square Footage</em>
                             </MenuItem>
                             {squareFootage_list.map((option) => (
                                 <MenuItem key={option.value} value={option.label}>
@@ -379,7 +476,8 @@ export default function BookSchedule() {
                 </div>
                 <div className={'button'}>
                     <Button variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
-                            onClick={handleSubmit}>
+                            onClick={handleSubmit}
+                            disabled={!formValid}>
                         Request a Quote
                     </Button>
                 </div>

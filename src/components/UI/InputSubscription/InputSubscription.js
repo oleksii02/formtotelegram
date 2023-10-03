@@ -5,6 +5,7 @@ import FormHelperText from '@mui/joy/FormHelperText';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import {sendMessage} from "../../../api/bookSchedule.ts";
 
 
 
@@ -18,11 +19,14 @@ function InputSubscription() {
         status: 'initial',
     });
 
-    const handleSubmit = (event) => {
+    const handleSubmit =  async (event) => {
         event.preventDefault();
         setData((current) => ({...current, status: 'loading'}));
         try {
             // Replace timeout with real backend operation
+            const message =
+            `New email!!!${'%0A'}Email: ${data.email}${'%0A'}`
+            await sendMessage(message)
             setTimeout(() => {
                 setData({email: '', status: 'sent'});
             }, 1500);
