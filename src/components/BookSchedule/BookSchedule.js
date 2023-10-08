@@ -181,6 +181,8 @@ export default function BookSchedule() {
             case 'phone' :
                 setPhoneDirty(true)
                 break
+            default:
+            // do nothing
         }
 
     }

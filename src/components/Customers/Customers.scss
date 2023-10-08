@@ -1,6 +1,8 @@
 .Customers {
 
 
+
+
   .background {
     position: relative;
     width: 100%;
@@ -86,7 +88,9 @@
         text-transform: capitalize;
       }
     }
+
   }
+
 
   .MuiGrid-root{
     justify-content: center;
@@ -108,4 +112,66 @@
 
   }
 
+}
+
+.Modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: white;
+  border: 2px solid #003156;
+  padding: 30px;
+
+  .width60ch{
+    width: 60ch;
   }
+  .Error{
+    color: red !important;
+  }
+  .form_name{
+    margin: 0;
+    padding: 0 0 16px 8px;
+    color: #003156;
+    font-family: 'Zen Antique', serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .button{
+    margin: 50px auto 0 ;
+    justify-content: center;
+    display: flex;
+  }
+
+  @media only screen and  (max-width: 700px) {
+    padding: 20px 0 0;
+
+
+    .width60ch{
+      width: 30ch;
+    }
+
+    .button{
+      margin: 20px auto 10px ;
+      width: 200px;
+
+    }
+  }
+
+}
+.Button__feedback{
+  width: 300px;
+  height: 50px;
+}
+@media only screen and  (max-width: 599px) {
+  .Button__feedback{
+    width: 150px;
+    height: 50px;
+  }
+
+}
+
+
+

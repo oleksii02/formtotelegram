@@ -84,5 +84,58 @@
   display: flex;
   margin-bottom: 24px;
 }
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: white;
+  border: 2px solid #003156;
+  padding: 30px;
+}
+.Modal .width60ch {
+  width: 60ch;
+}
+.Modal .Error {
+  color: red !important;
+}
+.Modal .form_name {
+  margin: 0;
+  padding: 0 0 16px 8px;
+  color: #003156;
+  font-family: "Zen Antique", serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.Modal .button {
+  margin: 50px auto 0;
+  justify-content: center;
+  display: flex;
+}
+@media only screen and (max-width: 700px) {
+  .Modal {
+    padding: 20px 0 0;
+  }
+  .Modal .width60ch {
+    width: 30ch;
+  }
+  .Modal .button {
+    margin: 20px auto 10px;
+    width: 200px;
+  }
+}
+
+.Button__feedback {
+  width: 300px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 599px) {
+  .Button__feedback {
+    width: 150px;
+    height: 50px;
+  }
+}
 
 /*# sourceMappingURL=Customers.css.map */
