@@ -15,6 +15,9 @@ import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
 
 import dayjs from 'dayjs';
 import {renderTimeViewClock, TimePicker} from "@mui/x-date-pickers";
+import * as PropTypes from "prop-types";
+import {MuiTelInput} from 'mui-tel-input'
+import { enqueueSnackbar} from 'notistack';
 
 
 const today = dayjs();
@@ -133,6 +136,15 @@ const bathrooms_list = [
     },
 ];
 
+function InputMask() {
+    return null;
+}
+
+InputMask.propTypes = {
+    value: PropTypes.string,
+    mask: PropTypes.string,
+    children: PropTypes.func
+};
 export default function BookSchedule() {
     const theme = createTheme({
         palette: {
@@ -161,19 +173,17 @@ export default function BookSchedule() {
     const [formValid, setFormValid] = useState(false)
 
 
-
-
-
-    useEffect( () => {
-        if(nameError || phoneError){
+    useEffect(() => {
+        if (nameError || phoneError) {
             setFormValid(false)
-        }
-        else {
+        } else {
             setFormValid(true)
         }
-    },[nameError, phoneError])
+    }, [nameError, phoneError])
 
     const blurHandler = (e) => {
+        console.log(e.target.name, 'switch')
+
         switch (e.target.name) {
             case 'name':
                 setNameDirty(true)
@@ -189,13 +199,16 @@ export default function BookSchedule() {
 
     const nameHandler = (e) => {
         setName(e.target.value)
-        if(!e.target.value){setNameError('Name cannot be empty')}
-        else {setNameError('')}
+        if (!e.target.value) {
+            setNameError('Name cannot be empty')
+        } else {
+            setNameError('')
+        }
 
     }
     const phoneHandler = (e) => {
-        setPhone(e.target.value)
-        if (!e.target.value) {
+        setPhone(e)
+        if (e.length < 13) {
             setPhoneError('Phone is incorrect')
         } else {
             setPhoneError('')
@@ -223,7 +236,7 @@ export default function BookSchedule() {
 
     }
     const dateHandler = (e) => {
-        setDate(e.$D, e.$M+1, e.$y)
+        setDate(e.$D, e.$M + 1, e.$y)
     }
     const timeHandler = (e) => {
         setTime(`${e.$d.getHours()}:${e.$d.getMinutes()}`)
@@ -231,59 +244,66 @@ export default function BookSchedule() {
 
     }
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = async () => {
         const message =
             `New order!!!${'%0A'}Name: ${name}${'%0A'}Phone: ${phone}${'%0A'}Date: ${date}${'%0A'}Time : ${time}${'%0A'}Address: ${address}${'%0A'}Type of Service: ${service} ${'%0A'}Total Square Footage: ${squareFootage}${'%0A'}Bedrooms: ${bedrooms}${'%0A'}Bathrooms: ${bathrooms}${'%0A'}`
         await sendMessage(message)
+        enqueueSnackbar('The message was successfully sent!!', {variant: 'success'});
+        setName('');
+        setPhone('');
+        setFormValid(false);
+
 
     };
 
     return (
         <ThemeProvider theme={theme}>
-            <Box
-                id={'form'}
-                className={'form'}
-                component="form"
-                sx={{
-                    margin: '0 auto 50px',
-                    textAlign: 'center',
-                    '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left', width: '100%'},
-                    '& .MuiFormControl-root': {padding: '10px 8px 8px',},
-                    '& .MuiInputLabel-root': {
-                        marginBottom: '10px'
-                    },
-                    '& .MuiStack-root': {padding: '0', width: '100%'}
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div><h3>Book your cleaning 2 minutes!</h3></div>
+                <Box
+                    id={'form'}
+                    className={'form'}
+                    component="form"
+                    sx={{
+                        margin: '0 auto 50px',
+                        textAlign: 'center',
+                        '& .MuiTextField-root': {m: 1, margin: '0', textAlign: 'left', width: '100%'},
+                        '& .MuiFormControl-root': {padding: '10px 8px 8px',},
+                        '& .MuiInputLabel-root': {
+                            marginBottom: '10px'
+                        },
+                        '& .MuiStack-root': {padding: '0', width: '100%'}
+                    }}
+                    noValidate
+                    autoComplete="off"
+                >
+                    <div><h3>Book your cleaning 2 minutes!</h3></div>
 
-                <div>
-                    <FormControl
-                        className={'width60ch'}
+                    <div>
+                        <FormControl
+                            className={'width60ch'}
 
-                    >
-                        <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
-                            {[(nameError && nameDirty) ? <h4 className={' form_name Error'}>{nameError}</h4> : <h4 className={'form_name'}>Name</h4>]}
-                        </InputLabel>
-                        <TextField
-                            multiline
-                            id="outlined-textarea"
-                            placeholder="Jones Williams"
-                            name={'name'}
-                            onChange={e => nameHandler(e)}
-                            onBlur={e => blurHandler(e)}
                         >
-                        </TextField>
-                    </FormControl>
-                    <FormControl
-                        className={'width60ch'}
-                    >
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            {[(phoneError && phoneDirty) ? <h4 className={' form_name Error'}>{phoneError}</h4> : <h4 className={'form_name'}>Phone</h4>]}
-                        </InputLabel>
-                        <TextField
+                            <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
+                                {[(nameError && nameDirty) ? <h4 className={' form_name Error'}>{nameError}</h4> :
+                                    <h4 className={'form_name'}>Name</h4>]}
+                            </InputLabel>
+                            <TextField
+                                multiline
+                                id="outlined-textarea"
+                                placeholder="Jones Williams"
+                                name={'name'}
+                                onChange={e => nameHandler(e)}
+                                onBlur={e => blurHandler(e)}
+                            >
+                            </TextField>
+                        </FormControl>
+                        <FormControl
+                            className={'width60ch'}
+                        >
+                            <InputLabel shrink htmlFor="bootstrap-input">
+                                {[(phoneError && phoneDirty) ? <h4 className={' form_name Error'}>{phoneError}</h4> :
+                                    <h4 className={'form_name'}>Phone</h4>]}
+                            </InputLabel>
+                            {/*<TextField
                             id="outlined-select-currency"
                             multiline
                             type="tel"
@@ -294,196 +314,201 @@ export default function BookSchedule() {
                         >
 
 
-                        </TextField>
+                        */}
+                            <MuiTelInput name={'phone'}
+                                         defaultCountry="US" onChange={e => phoneHandler(e)}
+                                         onBlur={e => blurHandler(e)} value={phone}
+                                         inputProps={{maxLength: 20}}
+                            />
 
-                    </FormControl>
-                </div>
-                <div>
-                    <FormControl
-                        className={'width60ch'}
-                    >
-                        <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
-                            <h4 className={'form_name'}>Type of Service</h4>
-                        </InputLabel>
-                        <TextField
-                            fullWidth
-                            name='Type of Service'
-                            id="outlined-select-currency"
-                            select
-                            placeholder="Type of Service"
-                            defaultValue="Type of Service"
-                            onChange={e => serviceHandler(e)}
 
+                        </FormControl>
+                    </div>
+                    <div>
+                        <FormControl
+                            className={'width60ch'}
                         >
+                            <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
+                                <h4 className={'form_name'}>Type of Service</h4>
+                            </InputLabel>
+                            <TextField
+                                fullWidth
+                                name='Type of Service'
+                                id="outlined-select-currency"
+                                select
+                                placeholder="Type of Service"
+                                defaultValue="Type of Service"
+                                onChange={e => serviceHandler(e)}
 
-                            <MenuItem disabled value="Type of Service">
-                                <em>Type of Service</em>
-                            </MenuItem>
-                            {service_list.map((option) => (
-                                <MenuItem key={option.value} value={option.label}>
-                                    {option.label}
+                            >
+
+                                <MenuItem disabled value="Type of Service">
+                                    <em>Type of Service</em>
                                 </MenuItem>
-                            ))}
-                        </TextField>
-                    </FormControl>
-                    <FormControl
-                        sx={{
-                            padding: '0 !important',
-                        }}>
-                        <div style={{display: 'flex'}}>
-                            <FormControl
-                                className={'width30ch'}
-                            >
-                                <InputLabel shrink htmlFor="bootstrap-input">
-                                    <h4 className={'form_name'}>Bedrooms</h4>
-                                </InputLabel>
-                                <TextField
-                                    id="outlined-select-currency"
-                                    select
-                                    defaultValue="Bedrooms"
-                                    onChange={e => bedroomsHandler(e)}
-                                >
-                                    <MenuItem disabled value="Bedrooms">
-                                        <em>Bedrooms</em>
+                                {service_list.map((option) => (
+                                    <MenuItem key={option.value} value={option.label}>
+                                        {option.label}
                                     </MenuItem>
-
-                                    {bedrooms_list.map((option) => (
-                                        <MenuItem key={option.value} value={option.label}>
-                                            {option.label}
-                                        </MenuItem>
-                                    ))}
-                                </TextField>
-                            </FormControl>
-                            <FormControl
-                                className={'width30ch'}>
-                                <InputLabel shrink htmlFor="bootstrap-input">
-                                    <h4 className={'form_name'}> Bathrooms</h4>
-                                </InputLabel>
-                                <TextField
-                                    id="outlined-select-currency"
-                                    select
-                                    defaultValue="Bathrooms"
-                                    onChange={e => bathroomsHandler(e)}
+                                ))}
+                            </TextField>
+                        </FormControl>
+                        <FormControl
+                            sx={{
+                                padding: '0 !important',
+                            }}>
+                            <div style={{display: 'flex'}}>
+                                <FormControl
+                                    className={'width30ch'}
                                 >
-                                    <MenuItem disabled value="Bathrooms">
-                                        <em>Bathrooms</em>
-                                    </MenuItem>
-
-                                    {bathrooms_list.map((option) => (
-                                        <MenuItem key={option.value} value={option.label}>
-                                            {option.label}
+                                    <InputLabel shrink htmlFor="bootstrap-input">
+                                        <h4 className={'form_name'}>Bedrooms</h4>
+                                    </InputLabel>
+                                    <TextField
+                                        id="outlined-select-currency"
+                                        select
+                                        defaultValue="Bedrooms"
+                                        onChange={e => bedroomsHandler(e)}
+                                    >
+                                        <MenuItem disabled value="Bedrooms">
+                                            <em>Bedrooms</em>
                                         </MenuItem>
-                                    ))}
-                                </TextField>
 
-                            </FormControl>
-                        </div>
-                    </FormControl>
-                </div>
-                <div>
-                    <FormControl
-                        className={'width60ch'}
-                    >
-                        <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
-                            <h4 className={'form_name'}>Date (time)</h4>
-                        </InputLabel>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DemoContainer
+                                        {bedrooms_list.map((option) => (
+                                            <MenuItem key={option.value} value={option.label}>
+                                                {option.label}
+                                            </MenuItem>
+                                        ))}
+                                    </TextField>
+                                </FormControl>
+                                <FormControl
+                                    className={'width30ch'}>
+                                    <InputLabel shrink htmlFor="bootstrap-input">
+                                        <h4 className={'form_name'}> Bathrooms</h4>
+                                    </InputLabel>
+                                    <TextField
+                                        id="outlined-select-currency"
+                                        select
+                                        defaultValue="Bathrooms"
+                                        onChange={e => bathroomsHandler(e)}
+                                    >
+                                        <MenuItem disabled value="Bathrooms">
+                                            <em>Bathrooms</em>
+                                        </MenuItem>
 
-                                components={[
-                                    'DatePicker',
-                                ]}
+                                        {bathrooms_list.map((option) => (
+                                            <MenuItem key={option.value} value={option.label}>
+                                                {option.label}
+                                            </MenuItem>
+                                        ))}
+                                    </TextField>
 
+                                </FormControl>
+                            </div>
+                        </FormControl>
+                    </div>
+                    <div>
+                        <FormControl
+                            className={'width60ch'}
+                        >
+                            <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
+                                <h4 className={'form_name'}>Date (time)</h4>
+                            </InputLabel>
+                            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                <DemoContainer
+
+                                    components={[
+                                        'DatePicker',
+                                    ]}
+
+                                >
+                                    <DemoItem>
+                                        <DatePicker
+                                            onChange={e => dateHandler(e)}
+                                            defaultValue={today}
+                                            disablePast
+                                            views={['year', 'month', 'day']}
+                                        />
+                                    </DemoItem>
+
+
+                                </DemoContainer>
+                            </LocalizationProvider>
+                        </FormControl>
+                        <FormControl
+                            className={'width60ch'}>
+                            <InputLabel shrink htmlFor="bootstrap-input">
+                                <h4 className={'form_name'}>Time</h4>
+                            </InputLabel>
+                            <LocalizationProvider dateAdapter={AdapterDayjs}
                             >
-                                <DemoItem>
-                                    <DatePicker
-                                        onChange={e => dateHandler(e)}
-                                        defaultValue={today}
-                                        disablePast
-                                        views={['year', 'month', 'day']}
+                                <DemoContainer components={['TimePicker']}
+                                >
+                                    <TimePicker
+                                        onChange={e => timeHandler(e)}
+                                        label=""
+                                        viewRenderers={{
+                                            hours: renderTimeViewClock,
+                                            minutes: renderTimeViewClock,
+                                            seconds: renderTimeViewClock,
+                                        }}
+
                                     />
-                                </DemoItem>
+                                </DemoContainer>
+                            </LocalizationProvider>
 
+                        </FormControl>
 
-
-                            </DemoContainer>
-                        </LocalizationProvider>
-                    </FormControl>
-                    <FormControl
-                        className={'width60ch'}>
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}>Time</h4>
-                        </InputLabel>
-                        <LocalizationProvider dateAdapter={AdapterDayjs}
-                        >
-                            <DemoContainer components={['TimePicker']}
+                    </div>
+                    <div>
+                        <FormControl
+                            className={'width60ch'}>
+                            <InputLabel shrink htmlFor="bootstrap-input">
+                                <h4 className={'form_name'}>Address</h4>
+                            </InputLabel>
+                            <TextField
+                                fullWidth
+                                id="outlined-select-currency"
+                                placeholder="564 Kingstreate, Mailbourne"
+                                onChange={e => addressHandler(e)}
                             >
-                                <TimePicker
-                                    onChange={e => timeHandler(e)}
-                                    label=""
-                                    viewRenderers={{
-                                        hours: renderTimeViewClock,
-                                        minutes: renderTimeViewClock,
-                                        seconds: renderTimeViewClock,
-                                    }}
 
-                                />
-                            </DemoContainer>
-                        </LocalizationProvider>
+                            </TextField>
 
-                    </FormControl>
+                        </FormControl>
 
-                </div>
-                <div>
-                    <FormControl
-                        className={'width60ch'}>
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}>Address</h4>
-                        </InputLabel>
-                        <TextField
-                            fullWidth
-                            id="outlined-select-currency"
-                            placeholder="564 Kingstreate, Mailbourne"
-                            onChange={e => addressHandler(e)}
-                        >
+                        <FormControl
+                            className={'width60ch'}>
+                            <InputLabel shrink htmlFor="bootstrap-input">
+                                <h4 className={'form_name'}>Total Square Footage</h4>
+                            </InputLabel>
+                            <TextField
+                                fullWidth
+                                id="outlined-select-currency"
+                                select
+                                defaultValue="Total Square Footage"
+                                onChange={e => squareFootageHandler(e)}
+                            >
 
-                        </TextField>
-
-                    </FormControl>
-
-                    <FormControl
-                        className={'width60ch'}>
-                        <InputLabel shrink htmlFor="bootstrap-input">
-                            <h4 className={'form_name'}>Total Square Footage</h4>
-                        </InputLabel>
-                        <TextField
-                            fullWidth
-                            id="outlined-select-currency"
-                            select
-                            defaultValue="Total Square Footage"
-                            onChange={e => squareFootageHandler(e)}
-                        >
-
-                            <MenuItem disabled value="Total Square Footage">
-                                <em>Total Square Footage</em>
-                            </MenuItem>
-                            {squareFootage_list.map((option) => (
-                                <MenuItem key={option.value} value={option.label}>
-                                    {option.label}
+                                <MenuItem disabled value="Total Square Footage">
+                                    <em>Total Square Footage</em>
                                 </MenuItem>
-                            ))}
-                        </TextField>
+                                {squareFootage_list.map((option) => (
+                                    <MenuItem key={option.value} value={option.label}>
+                                        {option.label}
+                                    </MenuItem>
+                                ))}
+                            </TextField>
 
-                    </FormControl>
-                </div>
-                <div className={'button'}>
-                    <Button variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
-                            onClick={handleSubmit}
-                            disabled={!formValid}>
-                        Request a Quote
-                    </Button>
-                </div>
-            </Box>
+                        </FormControl>
+                    </div>
+                    <div className={'button'}>
+                        <Button variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
+                                onClick={handleSubmit}
+                                disabled={!formValid}>
+                            Request a Quote
+                        </Button>
+                    </div>
+                </Box>
         </ThemeProvider>
     );
 }

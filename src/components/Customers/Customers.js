@@ -14,8 +14,8 @@ import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import axios from "axios";
 import {sendMessage} from "../../api/bookSchedule.ts";
-
-
+import {MuiTelInput} from "mui-tel-input";
+import {enqueueSnackbar} from "notistack";
 
 
 const service_list = [
@@ -55,16 +55,8 @@ const service_list = [
 
 
 
+function Customers() {
 
-function Customers(props) {
-
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => {
-        setOpen(false)
-        setFormValid(false)
-        console.log(name)
-    };
 
     const [costomers, setCostomers] = useState([]);
     const [allPage, setAllPage] = useState(Math.ceil(1))
@@ -76,20 +68,32 @@ function Customers(props) {
     const [comment, setComment] = useState('')
     const [rating, setRating] = useState();
     const [nameDirty, setNameDirty] = useState(false)
+    const [commentDirty, setCommentDirty] = useState(false)
     const [phoneDirty, setPhoneDirty] = useState(false)
     const [nameError, setNameError] = useState('Name cannot be empty')
     const [phoneError, setPhoneError] = useState('Phone cannot be empty')
-    const [formValid, setFormValid] = useState(false)
+    const [commentError, setCommentError] = useState('22 cannot be empty')
+    const [formValid, setFormValid] = useState(true)
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => {
+        setOpen(false);
+        if(!formValid){
+            setFormValid( !formValid)
+        }
 
 
-    useEffect( () => {
-        if(nameError || phoneError){
+    };
+
+
+    useEffect(() => {
+        if (nameError || phoneError || commentError) {
+            setFormValid(true)
+        } else {
             setFormValid(false)
         }
-        else {
-            setFormValid(true)
-        }
-    },[nameError, phoneError,name, phone])
+    }, [nameError, phoneError, commentError, name, phone, comment])
 
     const blurHandler = (e) => {
         switch (e.target.name) {
@@ -99,6 +103,9 @@ function Customers(props) {
             case 'phone' :
                 setPhoneDirty(true)
                 break
+            case 'comment' :
+                setCommentDirty(true)
+                break
             default:
             // do nothing
         }
@@ -107,13 +114,16 @@ function Customers(props) {
 
     const nameHandler = (e) => {
         setName(e.target.value)
-        if(!e.target.value){setNameError('Name cannot be empty')}
-        else {setNameError('')}
+        if (!e.target.value) {
+            setNameError('Name cannot be empty')
+        } else {
+            setNameError('')
+        }
 
     }
     const phoneHandler = (e) => {
-        setPhone(e.target.value)
-        if (!e.target.value) {
+        setPhone(e)
+        if (e.length < 13) {
             setPhoneError('Phone is incorrect')
         } else {
             setPhoneError('')
@@ -126,6 +136,11 @@ function Customers(props) {
     }
     const commentHandler = (e) => {
         setComment(e.target.value)
+        if (!e.target.value) {
+            setCommentError('Comment cannot be empty')
+        } else {
+            setCommentError('')
+        }
 
     }
     const ratingHandler = (e) => {
@@ -168,22 +183,29 @@ function Customers(props) {
                 Offering: service,
                 Massage: comment,
                 Rating: rating,
-                Phone: phone})
+                Phone: phone
+            })
         }
-        const res =  await fetch('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json',
+        const res = await fetch('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json',
             options
         )
-        if(res){
-            alert("Message Sent")
+        if (res) {
+            enqueueSnackbar('The feedback was successfully sent!!', {variant: 'success'});
+        } else {
+            enqueueSnackbar('Error Occurred', {variant: 'error'})
+
         }
-        else{
-            alert('Error Occurred')
-        }
-        handleClose()
+
 
         const message =
             `New feedback!!!${'%0A'}Name: ${name}${'%0A'}Phone: ${phone}${'%0A'}Type of Service: ${service}${'%0A'}Massage: ${comment}${'%0A'}Rating: ${rating}`
         await sendMessage(message)
+
+        setName('');
+        setPhone('');
+        setComment('');
+        setOpen(false);
+        handleClose()
 
 
     };
@@ -293,18 +315,12 @@ function Customers(props) {
                                                     <h4 className={' form_name Error'}>{phoneError}</h4> :
                                                     <h4 className={'form_name'}>Phone</h4>]}
                                             </InputLabel>
-                                            <TextField
-                                                id="outlined-select-currency"
-                                                multiline
-                                                type="tel"
-                                                placeholder="+1 (331) 313-7082"
-                                                name={'phone'}
-                                                onChange={e => phoneHandler(e)}
-                                                onBlur={e => blurHandler(e)}
-                                            >
+                                            <MuiTelInput name={'phone'}
+                                                         defaultCountry="US" onChange={e => phoneHandler(e)}
+                                                         onBlur={e => blurHandler(e)} value={phone}
+                                                         inputProps={{maxLength: 20}}
+                                            />
 
-
-                                            </TextField>
 
                                         </FormControl>
                                     </div>
@@ -342,7 +358,9 @@ function Customers(props) {
                                             className={'width60ch'}
                                         >
                                             <InputLabel shrink htmlFor="bootstrap-input">
-                                                <h4 className={'form_name'}>Comment</h4>
+                                                {[(commentError && commentDirty) ?
+                                                    <h4 className={' form_name Error'}>{commentError}</h4> :
+                                                    <h4 className={'form_name'}>Comment</h4>]}
                                             </InputLabel>
                                             <TextField
                                                 id="outlined-select-currency"
@@ -352,6 +370,8 @@ function Customers(props) {
                                                 placeholder="Comment"
                                                 name={'comment'}
                                                 onChange={e => commentHandler(e)}
+                                                onBlur={e => blurHandler(e)}
+
                                             >
 
 
@@ -380,12 +400,11 @@ function Customers(props) {
                                         </Box>
 
 
-
                                     </div>
                                     <div className={'button'}>
                                         <Button variant="contained" sx={{p: 2, margin: '0 auto'}}
                                                 onClick={handleSubmit}
-                                                disabled={!formValid}>
+                                                disabled={formValid}>
                                             Leave feedback
                                         </Button>
                                     </div>
