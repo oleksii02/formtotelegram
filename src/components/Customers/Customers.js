@@ -17,6 +17,7 @@ import {sendMessage} from "../../api/bookSchedule.ts";
 
 
 
+
 const service_list = [
     {
         value: 1,
@@ -53,11 +54,17 @@ const service_list = [
 ];
 
 
+
+
 function Customers(props) {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        setOpen(false)
+        setFormValid(false)
+        console.log(name)
+    };
 
     const [costomers, setCostomers] = useState([]);
     const [allPage, setAllPage] = useState(Math.ceil(1))
@@ -82,7 +89,7 @@ function Customers(props) {
         else {
             setFormValid(true)
         }
-    },[nameError, phoneError])
+    },[nameError, phoneError,name, phone])
 
     const blurHandler = (e) => {
         switch (e.target.name) {
