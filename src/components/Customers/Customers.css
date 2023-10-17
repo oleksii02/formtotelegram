@@ -23,6 +23,7 @@
 }
 .Customers .comments .steamy {
   background: #B5D5ED !important;
+  color: #FFFFFF;
 }
 .Customers .comments .steamy h4 {
   color: #FFFFFF !important;
@@ -54,7 +55,7 @@
   text-transform: capitalize;
 }
 .Customers .comments .comment h5 {
-  width: 170px;
+  width: 200px;
   margin: 7px auto 0;
   color: #003156;
   text-align: center;
@@ -66,10 +67,8 @@
   text-transform: capitalize;
 }
 .Customers .comments .comment p {
-  width: 80%;
-  height: auto;
   margin: 0 auto;
-  padding: 28px;
+  padding: 28px 28px 0;
   color: #003156;
   text-align: center;
   font-family: "Work Sans", sans-serif;
@@ -78,12 +77,64 @@
   font-weight: 400;
   line-height: 20px; /* 142.857% */
   text-transform: capitalize;
+  overflow: hidden;
+}
+.Customers .comments .comment .Button {
+  background-color: rgba(17, 255, 238, 0);
+  padding: 0 0 10px 0;
+  border: none;
+  display: flex;
+  width: 100%;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+}
+.Customers .comments .comment .Button .More__p {
+  margin: 0 10px 0 0;
+  padding: 0;
+  color: #003156;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.Customers .comments .comment .Button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+}
+.Customers .comments .comment .Button:hover {
+  cursor: pointer;
+}
+.Customers .comments .comment .More {
+  color: #F35D5D !important;
+}
+.Customers .comments .comment .More .More__p {
+  color: #F35D5D !important;
+}
+.Customers .comments .comment .Swap {
+  color: #F35D5D !important;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+.Customers .comments .comment .show {
+  height: 210px;
 }
 .Customers .MuiGrid-root {
   justify-content: center;
   display: flex;
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 599px) {
+  .Customers .comments .comment p {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
 .Modal {
   position: absolute;
   top: 50%;

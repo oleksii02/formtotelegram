@@ -16,6 +16,7 @@ import axios from "axios";
 import {sendMessage} from "../../api/bookSchedule.ts";
 import {MuiTelInput} from "mui-tel-input";
 import {enqueueSnackbar} from "notistack";
+import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
 
 
 const service_list = [
@@ -54,7 +55,6 @@ const service_list = [
 ];
 
 
-
 function Customers() {
 
 
@@ -66,7 +66,7 @@ function Customers() {
     const [phone, setPhone] = useState('')
     const [service, setService] = useState('')
     const [comment, setComment] = useState('')
-    const [rating, setRating] = useState();
+    const [rating, setRating] = useState('5');
     const [nameDirty, setNameDirty] = useState(false)
     const [commentDirty, setCommentDirty] = useState(false)
     const [phoneDirty, setPhoneDirty] = useState(false)
@@ -79,12 +79,19 @@ function Customers() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => {
         setOpen(false);
-        if(!formValid){
-            setFormValid( !formValid)
-        }
 
 
-    };
+    }
+
+    useEffect(() => {
+        setName('')
+        setNameError('Name cannot be empty')
+        setPhone('')
+        setPhoneError('Phone is incorrect')
+        setComment('')
+        setCommentError('Comment cannot be empty')
+        setFormValid(true)
+    }, [open]);
 
 
     useEffect(() => {
@@ -160,7 +167,7 @@ function Customers() {
             let data = axios.get('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json')
             data.then(res => {
 
-                setCostomers(Object.values(res.data))
+                setCostomers(Object.values(res.data).reverse())
                 setAllPage(Math.ceil(Object.values(res.data).length / 3))
 
             })
@@ -183,7 +190,8 @@ function Customers() {
                 Offering: service,
                 Massage: comment,
                 Rating: rating,
-                Phone: phone
+                Phone: phone,
+                steamy : Math.random()<0.5?0:1
             })
         }
         const res = await fetch('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json',
@@ -200,15 +208,26 @@ function Customers() {
         const message =
             `New feedback!!!${'%0A'}Name: ${name}${'%0A'}Phone: ${phone}${'%0A'}Type of Service: ${service}${'%0A'}Massage: ${comment}${'%0A'}Rating: ${rating}`
         await sendMessage(message)
-
-        setName('');
-        setPhone('');
-        setComment('');
-        setOpen(false);
         handleClose()
 
 
     };
+    const [more, setMore] = useState(true)
+    const [swap, setSwap] = useState(false)
+    const [name_list] = useState([])
+    const LearnMore = (name) => {
+        if (name_list.includes(name)) {
+            let index = name_list.indexOf(name);
+            name_list.splice(index, 1);
+
+
+        } else {
+            name_list.push(name)
+
+        }
+        setMore(!more)
+        setSwap(!swap)
+    }
 
 
     return (
@@ -220,10 +239,11 @@ function Customers() {
                 <Grid container className={'comments'}>
                     {costomers.slice((currentPage * 3) - 3, (currentPage * 3)).map((item) => (
                         <Grid item xs={12} md={4}>
-                            <div className={`comment ${(item.id % 2 === 0) ? 'steamy' : 'none'}`}>
+                            <div className={`comment ${item.steamy ? 'steamy' : 'none'}`}>
                                 <h4>{item.Name}</h4>
                                 <h5>{item.Offering}</h5>
-                                <p>{item.Massage}</p>
+                                <p className={`${name_list.includes(item.Name) ? 'none' : 'show'} `}>{item.Massage}</p>
+
 
                                 <Box
                                     sx={{
@@ -243,6 +263,16 @@ function Customers() {
                                     />
 
                                 </Box>
+                                <button className={`Button ${name_list.includes(item.Name) ? 'none' : 'More'}`}
+                                        onClick={() => LearnMore(item.Name)}
+                                     style={item.Massage.length < 300 ? {display:'none'} : null}
+                                >
+                                    <p className={'More__p'}>Learn More</p>
+
+                                    <span
+                                        className={`${name_list.includes(item.Name) ? 'none' : 'Swap'} ${(item.id % 2 === 0) ? 'steamy' : 'none'} `}><ExpandCircleDownOutlinedIcon/></span>
+
+                                </button>
                             </div>
                         </Grid>
 
@@ -302,6 +332,7 @@ function Customers() {
                                                 id="outlined-textarea"
                                                 placeholder="Jones Williams"
                                                 name={'name'}
+                                                value={name}
                                                 onChange={e => nameHandler(e)}
                                                 onBlur={e => blurHandler(e)}
                                             >
@@ -367,6 +398,7 @@ function Customers() {
                                                 multiline
                                                 type="comment"
                                                 rows={4}
+                                                value={comment}
                                                 placeholder="Comment"
                                                 name={'comment'}
                                                 onChange={e => commentHandler(e)}

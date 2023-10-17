@@ -1,6 +1,11 @@
 .hide {
   display: flex;
 }
+.hide .hide__button {
+  margin-right: 32px;
+  display: block;
+  padding: 10px;
+}
 
 .name-logo {
   margin: 0;
@@ -45,6 +50,11 @@
   .nav-wrapper {
     margin: 20px 30px 0;
     padding: 0;
+  }
+  .nav-wrapper .hide .hide__button {
+    margin-right: 15px;
+    display: block;
+    padding: 10px;
   }
   .nav-wrapper a {
     padding: 0;
