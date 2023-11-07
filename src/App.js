@@ -18,10 +18,11 @@ function App() {
         <SnackbarProvider maxSnack={3}>
 
             <Box className="App">
+                <BookSchedule/>
                 <HomePage/>
                 <Offering/>
                 <Gallery/>
-                <BookSchedule/>
+
                 <Customers/>
 
 

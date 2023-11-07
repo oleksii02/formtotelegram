@@ -32,10 +32,10 @@ const service_list = [
         value: 2,
         label: 'After Repair',
     },
-    {
-        value: 3,
-        label: 'Office/ Commercial',
-    },
+    // {
+    //     value: 3,
+    //     label: 'Office/ Commercial',
+    // },
     {
         value: 4,
         label: 'Move-in/ Move-out',
@@ -44,18 +44,18 @@ const service_list = [
         value: 5,
         label: 'Deep Cleaning',
     },
-    {
-        value: 6,
-        label: 'Basic Cleaning',
-    },
-    {
-        value: 7,
-        label: 'Pets and a Clean Home',
-    },
-    {
-        value: 8,
-        label: 'Holiday Cleaning',
-    },
+    // {
+    //     value: 6,
+    //     label: 'Basic Cleaning',
+    // },
+    // {
+    //     value: 7,
+    //     label: 'Pets and a Clean Home',
+    // },
+    // {
+    //     value: 8,
+    //     label: 'Holiday Cleaning',
+    // },
 ];
 const squareFootage_list = [
     {
@@ -275,55 +275,16 @@ export default function BookSchedule() {
                     noValidate
                     autoComplete="off"
                 >
-                    <div><h3>Book your cleaning 2 minutes!</h3></div>
+                    <div className={'background'}/>
+                    <div className={'logo'}>
+                        <h3>
+                            Book your cleaning 2 minutes!
 
-                    <div>
-                        <FormControl
-                            className={'width60ch'}
+                        </h3>
 
-                        >
-                            <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
-                                {[(nameError && nameDirty) ? <h4 className={' form_name Error'}>{nameError}</h4> :
-                                    <h4 className={'form_name'}>Name</h4>]}
-                            </InputLabel>
-                            <TextField
-                                multiline
-                                id="outlined-textarea"
-                                placeholder="Jones Williams"
-                                name={'name'}
-                                onChange={e => nameHandler(e)}
-                                onBlur={e => blurHandler(e)}
-                            >
-                            </TextField>
-                        </FormControl>
-                        <FormControl
-                            className={'width60ch'}
-                        >
-                            <InputLabel shrink htmlFor="bootstrap-input">
-                                {[(phoneError && phoneDirty) ? <h4 className={' form_name Error'}>{phoneError}</h4> :
-                                    <h4 className={'form_name'}>Phone</h4>]}
-                            </InputLabel>
-                            {/*<TextField
-                            id="outlined-select-currency"
-                            multiline
-                            type="tel"
-                            placeholder="+1 (331) 313-7082"
-                            name={'phone'}
-                            onChange={e => phoneHandler(e)}
-                            onBlur={e => blurHandler(e)}
-                        >
-
-
-                        */}
-                            <MuiTelInput name={'phone'}
-                                         defaultCountry="US" onChange={e => phoneHandler(e)}
-                                         onBlur={e => blurHandler(e)} value={phone}
-                                         inputProps={{maxLength: 20}}
-                            />
-
-
-                        </FormControl>
                     </div>
+
+
                     <div>
                         <FormControl
                             className={'width60ch'}
@@ -501,6 +462,53 @@ export default function BookSchedule() {
 
                         </FormControl>
                     </div>
+                    <div>
+                        <FormControl
+                            className={'width60ch'}
+
+                        >
+                            <InputLabel shrink htmlFor="bootstrap-input" size='medium'>
+                                {[(nameError && nameDirty) ? <h4 className={' form_name Error'}>{nameError}</h4> :
+                                    <h4 className={'form_name'}>Name</h4>]}
+                            </InputLabel>
+                            <TextField
+                                multiline
+                                id="outlined-textarea"
+                                placeholder="Jones Williams"
+                                name={'name'}
+                                onChange={e => nameHandler(e)}
+                                onBlur={e => blurHandler(e)}
+                            >
+                            </TextField>
+                        </FormControl>
+                        <FormControl
+                            className={'width60ch'}
+                        >
+                            <InputLabel shrink htmlFor="bootstrap-input">
+                                {[(phoneError && phoneDirty) ? <h4 className={' form_name Error'}>{phoneError}</h4> :
+                                    <h4 className={'form_name'}>Phone</h4>]}
+                            </InputLabel>
+                            {/*<TextField
+                            id="outlined-select-currency"
+                            multiline
+                            type="tel"
+                            placeholder="+1 (331) 313-7082"
+                            name={'phone'}
+                            onChange={e => phoneHandler(e)}
+                            onBlur={e => blurHandler(e)}
+                        >
+
+
+                        */}
+                            <MuiTelInput name={'phone'}
+                                         defaultCountry="US" onChange={e => phoneHandler(e)}
+                                         onBlur={e => blurHandler(e)} value={phone}
+                                         inputProps={{maxLength: 20}}
+                            />
+
+
+                        </FormControl>
+                    </div>
                     <div className={'button'}>
                         <Button variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
                                 onClick={handleSubmit}
@@ -508,6 +516,9 @@ export default function BookSchedule() {
                             Request a Quote
                         </Button>
                     </div>
+                    <div className={'ellipse ellipse__one'}></div>
+                    <div className={'ellipse ellipse__two'}></div>
+                    <div className={'ellipse ellipse__three'}></div>
                 </Box>
         </ThemeProvider>
     );

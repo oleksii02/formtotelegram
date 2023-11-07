@@ -3,14 +3,14 @@
   margin: 0 auto;
   position: relative;
   top: -80px;
-  z-index: 900;
+  z-index: 9999;
   justify-content: flex-end;
   display: flex;
 }
 .CleaningButton .MuiButtonBase-root {
   margin: 0 0 0 12px;
   background-color: #FFFFFF;
-  width: 288px;
+  width: 300px;
   height: 115px;
 }
 .CleaningButton .MuiButtonBase-root:hover {
@@ -74,7 +74,33 @@
 }
 @media only screen and (max-width: 599px) {
   .CleaningButton {
-    display: none;
+    position: revert;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .CleaningButton .MuiButtonBase-root {
+    margin: 0 3px;
+    width: 150px;
+    height: 67px;
+    min-height: 60px;
+  }
+  .CleaningButton .MuiButtonBase-root .regular-cleaning {
+    width: 35px;
+  }
+  .CleaningButton .MuiButtonBase-root .cleaning-after {
+    width: 35px;
+  }
+  .CleaningButton .MuiButtonBase-root .office-cleaning {
+    width: 35px;
+  }
+  .CleaningButton .span__name {
+    margin: 0 0 0 5px;
+    width: 90px;
+    height: 40px;
+  }
+  .CleaningButton .span__name h6 {
+    padding: 5px;
+    font-size: 10px;
   }
 }
 

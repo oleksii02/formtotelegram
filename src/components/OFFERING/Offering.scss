@@ -95,6 +95,14 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+
+      span{
+
+        font-size: 18px;
+        text-decoration: line-through;
+
+      }
     }
   }
 
@@ -290,6 +298,11 @@
 
       p {
         font-size: 24px;
+        span{
+
+          font-size: 12px;
+
+        }
 
       }
     }
@@ -357,12 +370,19 @@
       height: 110px;
 
       h4 {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 5px;
 
       }
 
       p {
-        font-size: 20px;
+        font-size: 14px;
+        white-space: nowrap;
+        span{
+
+          font-size: 10px;
+
+        }
 
       }
     }

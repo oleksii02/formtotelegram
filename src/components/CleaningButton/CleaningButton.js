@@ -27,12 +27,12 @@ function CleaningButton(props) {
                     <Button variant="outlined">
                         <img src={house} alt={'house'} className={'regular-cleaning'}/>
                         <span className={'span__name'}><h6>
-                        House<br/>cleaning
+                        Regular<br/>cleaning
                     </h6></span>
 
                     </Button>
                 </a>
-                <a href={'#cleaning-after'}>
+{/*                <a href={'#cleaning-after'}>
                     <Button variant="outlined">
                         <img src={lounge} alt={'lounge'} className={'cleaning-after'}/>
                         <span className={'span__name'}><h6>
@@ -40,13 +40,13 @@ function CleaningButton(props) {
                     </h6></span>
 
                     </Button>
-                </a>
-                <a href={'#office-cleaning'}>
+                </a>*/}
+                <a href={'#deep-cleaning'}>
                         <Button variant="outlined"
                                 to={'#office-cleaning'}
                         >
                             <img src={office} alt={'office'} className={'office-cleaning'}/>
-                            <span className={'span__name'}><h6>Office<br/>cleaning</h6></span>
+                            <span className={'span__name'}><h6>Deep<br/>cleaning</h6></span>
 
                         </Button>
                 </a>

@@ -265,7 +265,7 @@ function Customers() {
                                 </Box>
                                 <button className={`Button ${name_list.includes(item.Name) ? 'none' : 'More'}`}
                                         onClick={() => LearnMore(item.Name)}
-                                     style={item.Massage.length < 300 ? {display:'none'} : null}
+                                     style={item.Massage.length < 420 ? {display:'none'} : null}
                                 >
                                     <p className={'More__p'}>Learn More</p>
 

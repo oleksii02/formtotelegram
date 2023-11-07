@@ -8,7 +8,7 @@ import CleaningButton from "../CleaningButton/CleaningButton";
 function HomePage() {
     return (
         <Grid container className={'homePage'} id={'home'}>
-            <Grid item xs={12} sx={{zIndex:10}}><DrawerAppBar/></Grid>
+            <Grid item xs={12}><DrawerAppBar/></Grid>
             <Grid item xs={12}><CleaningButton/></Grid>
             <Grid container className={'text__container'}>
                 <Grid item  xs={12} md={5} sm={7} className={'text'}>

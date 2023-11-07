@@ -61,6 +61,8 @@ function DrawerAppBar(props) {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <BookScheduleButton/>
+
             </List>
         </Box>
     );
@@ -94,18 +96,6 @@ function DrawerAppBar(props) {
                         <a href="/" className="brand-logo"><img src={logo} alt={'logo'}/></a>
                         <h3 className={'name-logo'}>HIGHLY PROFESSIONAL CLEANING</h3>
                     </Typography>
-
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="end"
-                        onClick={handleDrawerToggle}
-
-                        sx={{mr: 2, display: {md: 'none'}, color: "#292D32"}}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-
                     <Box sx={{display: {xs: 'none', md: 'block'},
                     '& .MuiButtonBase-root':{
                         '&:hover':{
@@ -138,16 +128,32 @@ function DrawerAppBar(props) {
                         keepMounted: true // Better open performance on mobile.
                     }}
                     sx={{
-                        display: {sm: 'block', md: 'none'},
+                        display: {sm: 'block', md: 'block'},
                         "& .MuiDrawer-paper": {
                             boxSizing: "border-box",
-                            width: drawerWidth
+                            width: 'auto'
                         }
                     }}
                 >
                     {drawer}
                 </Drawer>
             </nav>
+
+            <IconButton
+                size="large"
+                color="inherit"
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                className={'MenuIcon'}
+
+                sx={{
+                    display: {md: 'block'}, color: "#292D32"}}
+            >
+                <MenuIcon
+                />
+            </IconButton>
+
 
         </Box>
         </ThemeProvider>
