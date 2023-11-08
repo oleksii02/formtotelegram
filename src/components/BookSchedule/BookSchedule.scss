@@ -45,8 +45,21 @@
   .button{
     margin-top: 50px;
     justify-content: center;
-    display: flex;
+    text-transform: initial;
+    position: relative;
+    display: inline-block;
+
+    &:disabled{
+      background-color: #003156;
+      opacity: 0.5;
+      color: #fff;
+      cursor: not-allowed;
+      pointer-events: auto;
+    }
+
   }
+
+
   .width60ch{
     width: 70ch;
   }

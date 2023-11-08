@@ -164,13 +164,18 @@ function Customers() {
     });
 
     useEffect(() => {
-            let data = axios.get('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json')
-            data.then(res => {
 
-                setCostomers(Object.values(res.data).reverse())
-                setAllPage(Math.ceil(Object.values(res.data).length / 3))
+            setTimeout(
+                ()=>{
+                    let data = axios.get('https://chicago-sparkle-elite-cleaning-default-rtdb.firebaseio.com/comments.json')
+                    data.then(res => {
 
-            })
+                        setCostomers(Object.values(res.data).reverse())
+                        setAllPage(Math.ceil(Object.values(res.data).length / 3))
+
+                    })
+
+                }, 1000);
 
         }
 
@@ -433,8 +438,8 @@ function Customers() {
 
 
                                     </div>
-                                    <div className={'button'}>
-                                        <Button variant="contained" sx={{p: 2, margin: '0 auto'}}
+                                    <div >
+                                        <Button className={'button'} variant="contained" sx={{p: 2, margin: '0 auto'}}
                                                 onClick={handleSubmit}
                                                 disabled={formValid}>
                                             Leave feedback

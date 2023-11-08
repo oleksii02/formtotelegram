@@ -1,7 +1,7 @@
 import React from 'react';
 import './TypeCleaning.css'
 import logo from '../imgs/logo2.png'
-import Regular from '../imgs/Regular.jpeg'
+import Regular from '../imgs/2023-11-08 17.27.31.webp'
 import {Grid} from "@mui/material";
 import BookScheduleButton from "../UI/BookScheduleButton/BookScheduleButton";
 

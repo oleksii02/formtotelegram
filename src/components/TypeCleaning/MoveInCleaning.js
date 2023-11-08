@@ -1,7 +1,7 @@
 import React from 'react';
 import './TypeCleaning.css'
 import logo from '../imgs/logo2.png'
-import MoveIn from '../imgs/Move-in.jpeg'
+import MoveIn from '../imgs/2023-11-08 17.24.36.webp'
 import {Grid} from "@mui/material";
 import BookScheduleButton from "../UI/BookScheduleButton/BookScheduleButton";
 

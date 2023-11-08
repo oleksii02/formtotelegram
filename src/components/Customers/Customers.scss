@@ -206,6 +206,14 @@
     margin: 50px auto 0 ;
     justify-content: center;
     display: flex;
+
+    &:disabled{
+      background-color: #003156;
+      opacity: 0.5;
+      color: #fff;
+      cursor: not-allowed;
+      pointer-events: auto;
+    }
   }
 
   @media only screen and  (max-width: 700px) {

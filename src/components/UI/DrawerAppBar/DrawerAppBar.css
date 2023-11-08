@@ -88,15 +88,19 @@
     background-color: #fff;
     right: 20px;
     top: 15px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+  }
+  .nav-wrapper a {
+    justify-content: center;
   }
   .nav-wrapper a img {
-    width: 100px;
+    width: 200px;
     height: auto;
   }
   .nav-wrapper h3 {
-    justify-content: flex-start;
+    margin: -5px 0 20px;
+    justify-content: center;
     max-width: 200px;
     font-size: 6px;
   }

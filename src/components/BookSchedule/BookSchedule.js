@@ -22,6 +22,13 @@ import { enqueueSnackbar} from 'notistack';
 
 const today = dayjs();
 
+const Price_list = {
+    'Regular Cleaning' :36,
+    'After Repair': 44,
+    'Move-in/ Move-out': 43,
+    'Deep Cleaning':43
+}
+
 
 const service_list = [
     {
@@ -108,6 +115,10 @@ const bedrooms_list = [
         value: 6,
         label: '6 Bedrooms'
     },
+    {
+        value: 7,
+        label: '0 Bedrooms'
+    },
 ];
 const bathrooms_list = [
     {
@@ -134,6 +145,10 @@ const bathrooms_list = [
         value: 6,
         label: '6 Bathrooms'
     },
+    {
+        value: 7,
+        label: '0 Bathrooms'
+    },
 ];
 
 function InputMask() {
@@ -157,9 +172,10 @@ export default function BookSchedule() {
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
-    const [service, setService] = useState('')
-    const [bedrooms, setBedrooms] = useState('')
+    const [service, setService] = useState('Regular Cleaning')
+    const [bedrooms, setBedrooms] = useState('1 Bedrooms')
     const [bathrooms, setBathrooms] = useState('')
+    const [price, setPrice] = useState('');
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
     const [address, setAddress] = useState('')
@@ -235,6 +251,12 @@ export default function BookSchedule() {
         setAddress(e.target.value)
 
     }
+
+    useEffect(() => {
+        setPrice(Number(Price_list[service]) + Number((bedrooms.split(' ')[0] * 9)) + Number((bathrooms.split(' ')[0] * 9)))
+    }, [service, bedrooms, bathrooms])
+
+
     const dateHandler = (e) => {
         setDate(e.$D, e.$M + 1, e.$y)
     }
@@ -298,7 +320,7 @@ export default function BookSchedule() {
                                 id="outlined-select-currency"
                                 select
                                 placeholder="Type of Service"
-                                defaultValue="Type of Service"
+                                defaultValue={service}
                                 onChange={e => serviceHandler(e)}
 
                             >
@@ -307,7 +329,7 @@ export default function BookSchedule() {
                                     <em>Type of Service</em>
                                 </MenuItem>
                                 {service_list.map((option) => (
-                                    <MenuItem key={option.value} value={option.label}>
+                                    <MenuItem key={option.value} value={option.label }>
                                         {option.label}
                                     </MenuItem>
                                 ))}
@@ -327,7 +349,7 @@ export default function BookSchedule() {
                                     <TextField
                                         id="outlined-select-currency"
                                         select
-                                        defaultValue="Bedrooms"
+                                        defaultValue="1 Bedrooms"
                                         onChange={e => bedroomsHandler(e)}
                                     >
                                         <MenuItem disabled value="Bedrooms">
@@ -509,11 +531,12 @@ export default function BookSchedule() {
 
                         </FormControl>
                     </div>
-                    <div className={'button'}>
-                        <Button variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
+                    <div>
+                        <Button className={'button'} variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
                                 onClick={handleSubmit}
                                 disabled={!formValid}>
-                            Request a Quote
+                            Booking From {(price) ? `$${price} to  $${Math.ceil(price * 1.3)}` : ''}
+
                         </Button>
                     </div>
                     <div className={'ellipse ellipse__one'}></div>

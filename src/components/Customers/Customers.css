@@ -164,6 +164,13 @@
   justify-content: center;
   display: flex;
 }
+.Modal .button:disabled {
+  background-color: #003156;
+  opacity: 0.5;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
 @media only screen and (max-width: 700px) {
   .Modal {
     padding: 20px 0 0;

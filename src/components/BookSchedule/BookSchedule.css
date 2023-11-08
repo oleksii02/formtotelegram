@@ -39,7 +39,16 @@
 .form .button {
   margin-top: 50px;
   justify-content: center;
-  display: flex;
+  text-transform: initial;
+  position: relative;
+  display: inline-block;
+}
+.form .button:disabled {
+  background-color: #003156;
+  opacity: 0.5;
+  color: #fff;
+  cursor: not-allowed;
+  pointer-events: auto;
 }
 .form .width60ch {
   width: 70ch;

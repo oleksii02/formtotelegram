@@ -28,6 +28,7 @@ function BookScheduleButton(props) {
                         textTransform: 'none',
                         fontSize: '18px',
                         fontWeight: 500,
+                        alignItems:'center'
                 }
                 }}
             ><a href={'#form'}>

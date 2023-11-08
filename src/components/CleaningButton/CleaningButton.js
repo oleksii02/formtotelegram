@@ -5,7 +5,7 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import house from '../imgs/home.svg'
 import lounge from '../imgs/lounge.svg'
-import office from '../imgs/office.svg'
+//import office from '../imgs/office.svg'
 
 
 
@@ -45,7 +45,7 @@ function CleaningButton(props) {
                         <Button variant="outlined"
                                 to={'#office-cleaning'}
                         >
-                            <img src={office} alt={'office'} className={'office-cleaning'}/>
+                            <img src={lounge} alt={'lounge'} className={'cleaning-after'}/>
                             <span className={'span__name'}><h6>Deep<br/>cleaning</h6></span>
 
                         </Button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './TypeCleaning.css'
 import logo from '../imgs/logo2.png'
-import After_Repair from '../imgs/After_Repair .jpeg'
+import After_Repair from '../imgs/After_Repair .webp'
 import After_Repair_big from '../imgs/After_Repair_big.jpeg'
 import {Grid} from "@mui/material";
 import './TypeCleaning.css'

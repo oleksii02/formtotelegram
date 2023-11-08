@@ -2,7 +2,7 @@ import React from 'react';
 import DrawerAppBar from "../UI/DrawerAppBar/DrawerAppBar";
 import {Grid} from "@mui/material";
 import './HomePage.css'
-import Kitchen from '../imgs/Kitchen.jpeg'
+import Kitchen from '../imgs/Kitchen.webp'
 import CleaningButton from "../CleaningButton/CleaningButton";
 
 function HomePage() {

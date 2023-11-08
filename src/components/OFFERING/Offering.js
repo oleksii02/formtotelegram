@@ -2,12 +2,19 @@ import React from 'react';
 import './Offering.css'
 import logo from '../imgs/logo2.png'
 import {Grid} from "@mui/material";
-import Regular from '../imgs/Regular.jpeg'
+//import Regular from '../imgs/Regular.jpeg'
+import Regular from '../imgs/2023-11-08 17.27.31.webp'
+
 //import One_Time from '../imgs/One_Time.jpeg'
-import Move_in from '../imgs/Move-in.jpeg'
+//import Move_in from '../imgs/Move-in.jpeg'
+import Deep from '../imgs/2023-11-08 17.26.10.webp'
+
 //import Office from '../imgs/Office.jpeg'
-import After_Repair from '../imgs/After_Repair .jpeg'
-import Deep from '../imgs/Deep.png'
+import After_Repair from '../imgs/After_Repair .webp'
+//import Deep from '../imgs/Deep.png'
+import Move_in from '../imgs/2023-11-08 17.24.36.webp'
+
+
 //import Holiday from '../imgs/Holiday.jpeg'
 //import Pets from '../imgs/Pets.png'
 
@@ -85,7 +92,7 @@ function Offering(props) {
                             <img src={Deep} alt={'Offering'}/>
                             <div className={'group'}>
                                 <h4>Deep Cleaning</h4>
-                                <p> <span>$50</span>$45/maid-hour</p>
+                                <p><span>$47</span>$43 /maid-hour</p>
                             </div>
                         </div>
                     </a>

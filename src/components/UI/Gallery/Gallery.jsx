@@ -138,7 +138,7 @@ export default function Gallery() {
                 <SwiperSlide>
                     <div className={'group Deep'}>
                         <h4>Deep Cleaning</h4>
-                        <p> <span className={'Discounto'}>$50</span>$45/maid-hour</p>
+                        <p> <span className={'Discounto'}>$47</span>$43/maid-hour</p>
                     </div>
                 </SwiperSlide>{/*
                 <SwiperSlide>

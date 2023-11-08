@@ -38,9 +38,10 @@ function Footer(props) {
                         <Grid item xs={12} sm={4} className={'links Services'}>
                             <h4>Services</h4>
                             <hr/>
-                            <a href={'#regular-cleaning'}>House Cleaning</a>
-                            <a href={'#office-cleaning'}>Office Cleaning</a>
-                            <a href={'#cleaning-after'}>Apartment Cleaning</a>
+                            <a href={'#regular-cleaning'}>Regular Cleaning</a>
+                            <a href={'#deep-cleaning'}>Deep Cleaning</a>
+                            <a href={'#move-in-cleaning'}>Move-in/ Move-out Cleaning</a>
+                            <a href={'#cleaning-after'}>After Repair Cleaning</a>
                         </Grid>
                         <Grid item xs={12} sm={4} className={'links'}>
                             <h4>Contact</h4>
@@ -51,7 +52,7 @@ function Footer(props) {
                             <a href={'tel:+13313137082'}><LocalPhoneOutlinedIcon/>&nbsp;+1 (331) 313-7082</a>
                             <a href={'mailto:chsparklee@gmail.com'}><EmailOutlinedIcon/>&nbsp;chsparklee@gmail.com</a>
                             <a href={'https://www.instagram.com/sparkle_elite.cleaning/'} target={"_blank"} rel={'noreferrer'}><InstagramIcon/>&nbsp;sparkle_elite_cleaning</a>
-                            <a href={'https://www.google.com/maps/dir//5024+N+Delphia+Ave,+Chicago,+IL+60656-2919,+%D0%A1%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D1%96+%D0%A8%D1%82%D0%B0%D1%82%D0%B8+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8/@41.9765261,-87.8556932,12.88z/data=!4m9!4m8!1m1!4e2!1m5!1m1!1s0x880fca1a368bb063:0x1b261ea9dce4a938!2m2!1d-87.8412959!2d41.9709473?entry=ttu'} target={"_blank"} rel={'noreferrer'} style={{width:"auto"}}><FmdGoodOutlinedIcon/>&nbsp;5024 N Delphia Ave,<br/>&nbsp;Chicago, IL 60656</a>
+                            <a href={'https://www.google.com/maps/contrib/101126728402981810923?g_ep=CAISDDYuOTEuMS4yMjk5MBgAIIG9BCoJLDQ3MDcxNzA0QgJVUw%3D%3D&g_st=it'} target={"_blank"} rel={'noreferrer'} style={{width:"auto"}}><FmdGoodOutlinedIcon/>&nbsp;5024 N Delphia Ave,<br/>&nbsp;Chicago, IL 60656</a>
                         </Grid>
                     </Grid>
 
