@@ -60,7 +60,13 @@ function DrawerAppBar(props) {
                             <ListItemText primary={<a href={item.id}>{item.name}</a>}/>
                         </ListItemButton>
                     </ListItem>
+
                 ))}
+                <ListItem  disablePadding>
+                    <ListItemButton sx={{textAlign: "center"}}>
+                        <ListItemText primary={<a href={'#customers'}>CUSTOMERS</a>}/>
+                    </ListItemButton>
+                </ListItem>
                 <BookScheduleButton/>
 
             </List>

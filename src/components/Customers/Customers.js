@@ -237,7 +237,8 @@ function Customers() {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className={'Customers'}>
+            <div className={'Customers'}
+            id={'customers'}>
                 <div className={'background'}>
                     <h3>Happy Customers</h3>
                 </div>

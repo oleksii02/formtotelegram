@@ -253,7 +253,7 @@ export default function BookSchedule() {
     }
 
     useEffect(() => {
-        setPrice(Number(Price_list[service]) + Number((bedrooms.split(' ')[0] * 9)) + Number((bathrooms.split(' ')[0] * 9)))
+        setPrice(Number(Price_list[service]) + Number((bedrooms.split(' ')[0] * 10)) + Number((bathrooms.split(' ')[0] * 25)))
     }, [service, bedrooms, bathrooms])
 
 
@@ -535,7 +535,7 @@ export default function BookSchedule() {
                         <Button className={'button'} variant="contained" sx={{p: 2, width: '300px', margin: '0 auto'}}
                                 onClick={handleSubmit}
                                 disabled={!formValid}>
-                            Booking From {(price) ? `$${price} to  $${Math.ceil(price * 1.3)}` : ''}
+                            Booking From {(price) ? `$${price} to  $${Math.ceil(price * 1.35)}` : ''}
 
                         </Button>
                     </div>
