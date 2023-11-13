@@ -8,6 +8,7 @@ import Offering from "./components/OFFERING/Offering";
 import Gallery from "./components/UI/Gallery/Gallery";
 import Customers from "./components/Customers/Customers";
 import {SnackbarProvider} from 'notistack';
+import DrawerAppBar from "./components/UI/DrawerAppBar/DrawerAppBar";
 
 
 
@@ -18,6 +19,11 @@ function App() {
         <SnackbarProvider maxSnack={3}>
 
             <Box className="App">
+<<<<<<< Updated upstream
+=======
+                <DrawerAppBar/>
+                <BookSchedule/>
+>>>>>>> Stashed changes
                 <HomePage/>
                 <Offering/>
                 <Gallery/>

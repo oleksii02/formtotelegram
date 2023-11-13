@@ -18,6 +18,7 @@ import logo from '../../imgs/logo2.png'
 import BookScheduleButton from "../BookScheduleButton/BookScheduleButton";
 import './DrawerAppBar.css'
 import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {useState} from "react";
 
 const drawerWidth = 240;
 const navItems = [
@@ -37,8 +38,23 @@ const theme = createTheme({
     },
 });
 
-function DrawerAppBar(props) {
-    const {window} = props;
+function DrawerAppBar() {
+
+    const [scrollAppBar, setScrollAppBar] = useState(false)
+
+    const changeScrollAppBar = () => {
+        if(window.scrollY >= 30) {
+            setScrollAppBar(true)
+        }
+        else{
+            setScrollAppBar(false)
+        }
+
+
+    }
+
+    window.addEventListener('scroll', changeScrollAppBar)
+
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -65,20 +81,14 @@ function DrawerAppBar(props) {
         </Box>
     );
 
-    const container =
-        window !== undefined ? () => window().document.body : undefined;
 
     return (
         <ThemeProvider theme={theme}>
         <Box
-            sx={{display: "flex",
-            '& .MuiToolbar-root':{
-                paddingLeft:0,
-                paddingRight:'0',
-            }}}
-             className={'nav-wrapper'} >
+             className={` ${scrollAppBar ? 'nav-wrapper scrollAppBar' : 'nav-wrapper'}`} >
             <CssBaseline/>
-            <AppBar component="nav" sx={{
+            <AppBar
+                component="nav" sx={{
                 zIndex:999,
                 backgroundColor: '#11ffee00',
                 padding:'0',
@@ -89,23 +99,39 @@ function DrawerAppBar(props) {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{flexGrow: 1, color: "#292D32"}}
+                        sx={{ color: "#292D32"}}
                     >
                         <a href="/" className="brand-logo"><img src={logo} alt={'logo'}/></a>
-                        <h3 className={'name-logo'}>HIGHLY PROFESSIONAL CLEANING</h3>
+                        {scrollAppBar ? null :  <h3 className={'name-logo'}>HIGHLY PROFESSIONAL CLEANING</h3>  }
+
                     </Typography>
 
                     <IconButton
+<<<<<<< Updated upstream
+=======
+                        size="large"
+>>>>>>> Stashed changes
                         color="inherit"
                         aria-label="open drawer"
                         edge="end"
                         onClick={handleDrawerToggle}
+<<<<<<< Updated upstream
 
                         sx={{mr: 2, display: {md: 'none'}, color: "#292D32"}}
                     >
                         <MenuIcon/>
                     </IconButton>
 
+=======
+                        className={'MenuIcon'}
+
+                        sx={{
+                            display: {md: 'none'}, color: "#292D32"}}
+                    >
+                        <MenuIcon
+                        />
+                    </IconButton>
+>>>>>>> Stashed changes
                     <Box sx={{display: {xs: 'none', md: 'block'},
                     '& .MuiButtonBase-root':{
                         '&:hover':{
@@ -130,7 +156,6 @@ function DrawerAppBar(props) {
             </AppBar>
             <nav>
                 <Drawer
-                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
@@ -149,17 +174,16 @@ function DrawerAppBar(props) {
                 </Drawer>
             </nav>
 
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
         </Box>
         </ThemeProvider>
     );
 }
 
-DrawerAppBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func
-};
 
 export default DrawerAppBar;

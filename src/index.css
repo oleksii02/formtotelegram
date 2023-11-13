@@ -13,4 +13,5 @@ code {
 *, html {
 
   scroll-behavior: smooth !important;
+  scroll-padding-top: 70px;
 }

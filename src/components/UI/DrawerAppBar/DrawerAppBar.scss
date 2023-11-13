@@ -1,11 +1,11 @@
 
-a{
+a {
 }
 
 .hide {
   display: flex;
 
-  .hide__button{
+  .hide__button {
     margin-right: 32px;
     display: block;
     padding: 10px;
@@ -14,8 +14,8 @@ a{
 
 }
 
-.name-logo{
-  margin: 0 ;
+.name-logo {
+  margin: 0;
   text-align: left;
   font-size: 18px;
   font-weight: 400;
@@ -24,38 +24,72 @@ a{
 }
 
 .nav-wrapper {
+<<<<<<< Updated upstream
 
+=======
+  z-index: 1000;
+>>>>>>> Stashed changes
   padding: 0 50px;
   max-width: 1440px;
-  margin: 34px auto 0;
+  margin: 0 auto 0;
 
+<<<<<<< Updated upstream
+=======
+  .MuiToolbar-root {
+    transition-duration: 2s;
+
+    transition-property: background-color;
+    justify-content: space-between;
+    z-index: 1000;
+    position: absolute;
+    padding: 30px 50px 0;
+    width: 100%;
+    left: 0;
+  }
+
+
+  .MenuIcon {
+    z-index: 9999;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border: #003156 1px solid;
+    align-items: center;
+  }
+
+>>>>>>> Stashed changes
 
   a {
+    display: contents;
 
-    padding: 0  ;
+    padding: 0;
     text-decoration: none;
     color: #003156;
     font-style: normal;
     line-height: normal;
 
-    img{
-      width: 425px;
-      height: auto;
+    img {
+      transition: width 2s,
+      height 2s;
+
+      width: auto;
+      height: 132px;
       background-color: #003156;
 
     }
-    .MuiButtonBase-root{
+
+    .MuiButtonBase-root {
       font-family: 'Zen Antique', serif;
 
     }
   }
 
-  h3{
+  h3 {
     justify-content: center;
     display: flex;
     max-width: 425px;
-    color:  #003156;
-    font-family: 'Work Sans',sans-serif;
+    color: #003156;
+    font-family: 'Work Sans', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -63,10 +97,15 @@ a{
   }
 
   @media only screen and (min-width: 600px) and (max-width: 1439px) {
+    margin: 0 auto 0;
+    padding: 0 30px;
+    .MuiToolbar-root {
+      padding: 10px 30px 0;
+    }
 
     .hide {
 
-      .hide__button{
+      .hide__button {
         margin-right: 15px;
         display: block;
         padding: 10px;
@@ -75,25 +114,21 @@ a{
 
     }
 
-    margin: 20px 30px 0;
-    padding: 0 ;
 
-    a{
+    a {
       padding: 0;
-      img{
-        width: 200px;
-        height: auto;
+
+      img {
+        width: auto;
+        height: 61px;
       }
     }
-    h3{
+    h3 {
       max-width: 200px;
       font-size: 10px;
     }
-  }
-  @media only screen and  (max-width: 599px) {
-    margin: 10px auto 0;
-    padding: 0 15px;
 
+<<<<<<< Updated upstream
     a{
       img{
         width: 100px;
@@ -101,9 +136,94 @@ a{
       }
     }
     h3{
+=======
+  }
+  @media only screen and (max-width: 599px) {
+    margin: 0 auto 0;
+    padding: 0 15px;
+     .MuiToolbar-root {
+       padding: 5px 10px 0;
+    }
+
+    .MenuIcon {
+      background-color: #fff;
+
+      right: 20px;
+      width: 35px;
+      height: 35px;
+    }
+
+    a {
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 61px;
+      }
+    }
+    h3 {
+      margin: -5px 0 20px;
+      justify-content: center;
+>>>>>>> Stashed changes
       max-width: 200px;
       font-size: 6px;
     }
 
   }
+}
+
+.scrollAppBar {
+
+  .MuiToolbar-root {
+    height: 65px;
+    position: fixed;
+    padding: 5px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #003156;
+    box-shadow: 0px 3px 5px #003156;
+  }
+
+  a {
+
+
+    img {
+
+      width: auto;
+      height: 53px;
+    }
+
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 1439px) {
+    transition: 2s ease-in;
+
+    .MuiToolbar-root {
+      height: 65px;
+      position: fixed;
+      padding: 5px 30px;
+
+    }
+
+  }
+  @media only screen and (max-width: 599px) {
+    .MuiToolbar-root {
+      max-height: 30px;
+      position: fixed;
+      padding: 10px 10px;
+
+    }
+    a {
+
+
+      img {
+        transition: width 2s,
+        height 2s;
+
+        width: auto;
+        height: 35px;
+      }
+
+    }
+  }
+
 }
