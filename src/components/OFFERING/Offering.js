@@ -2,17 +2,14 @@ import React from 'react';
 import './Offering.css'
 import logo from '../imgs/logo2.png'
 import {Grid} from "@mui/material";
-//import Regular from '../imgs/Regular.jpeg'
-import Regular from '../imgs/2023-11-08 17.27.31.webp'
+import Regular from '../imgs/Regular.jpeg'
 
 //import One_Time from '../imgs/One_Time.jpeg'
-//import Move_in from '../imgs/Move-in.jpeg'
-import Deep from '../imgs/2023-11-08 17.26.10.webp'
+import Move_in from '../imgs/Move-in.jpeg'
 
 //import Office from '../imgs/Office.jpeg'
 import After_Repair from '../imgs/After_Repair .webp'
-//import Deep from '../imgs/Deep.png'
-import Move_in from '../imgs/2023-11-08 17.24.36.webp'
+import Deep from '../imgs/Deep.png'
 
 
 //import Holiday from '../imgs/Holiday.jpeg'

@@ -1,7 +1,7 @@
 import React from 'react';
 import './TypeCleaning.css'
 import logo from '../imgs/logo2.png'
-import Deep from '../imgs/2023-11-08 17.26.10.webp'
+import Deep from '../imgs/Deep.png'
 import {Grid} from "@mui/material";
 import './TypeCleaning.css'
 import BookScheduleButton from "../UI/BookScheduleButton/BookScheduleButton";

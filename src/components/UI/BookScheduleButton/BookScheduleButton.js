@@ -5,7 +5,7 @@ import EditCalendarOutlinedIcon from '@mui/icons-material/EditCalendarOutlined';
 import Box from "@mui/material/Box";
 
 
-function BookScheduleButton(props) {
+function BookScheduleButton( props) {
 
     const theme = createTheme({
         palette: {
@@ -38,7 +38,9 @@ function BookScheduleButton(props) {
                     variant="contained">
                     <EditCalendarOutlinedIcon/>
                     &nbsp;
-                    <span>Book Schedule</span>
+                    <span
+                    style={{whiteSpace:'nowrap',
+                    textAlign:'start'}}>Book Schedule</span>
                 </Button>
             </a>
             </Box>

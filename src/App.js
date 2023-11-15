@@ -1,5 +1,4 @@
 import './App.css';
-import BookSchedule from "./components/BookSchedule/BookSchedule";
 import HomePage from "./components/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
 import React from 'react';
@@ -18,7 +17,6 @@ function App() {
         <SnackbarProvider maxSnack={3}>
 
             <Box className="App">
-                <BookSchedule/>
                 <HomePage/>
                 <Offering/>
                 <Gallery/>
